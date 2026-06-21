@@ -143,336 +143,336 @@
       "metric": "Abonnement",
       "ar": 2020,
       "tilbyder": "Telenor",
-      "absolute": "2691497",
+      "absolute": 2691497,
       "value": 46.12642166879976
     },
     {
       "metric": "Abonnement",
       "ar": 2020,
       "tilbyder": "Telia",
-      "absolute": "2048542",
+      "absolute": 2048542,
       "value": 35.1075673122602
     },
     {
       "metric": "Abonnement",
       "ar": 2020,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "639390",
+      "absolute": 639390,
       "value": 10.957757987771815
     },
     {
       "metric": "Abonnement",
       "ar": 2020,
       "tilbyder": "Øvrige",
-      "absolute": "455615",
+      "absolute": 455615,
       "value": 7.808253031168231
     },
     {
       "metric": "Abonnement",
       "ar": 2021,
       "tilbyder": "Telenor",
-      "absolute": "2636670",
+      "absolute": 2636670,
       "value": 44.48956389202312
     },
     {
       "metric": "Abonnement",
       "ar": 2021,
       "tilbyder": "Telia",
-      "absolute": "2065329",
+      "absolute": 2065329,
       "value": 34.849103795146235
     },
     {
       "metric": "Abonnement",
       "ar": 2021,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "693624",
+      "absolute": 693624,
       "value": 11.703788970572974
     },
     {
       "metric": "Abonnement",
       "ar": 2021,
       "tilbyder": "Øvrige",
-      "absolute": "530868",
+      "absolute": 530868,
       "value": 8.95754334225767
     },
     {
       "metric": "Abonnement",
       "ar": 2022,
       "tilbyder": "Telenor",
-      "absolute": "2588474",
+      "absolute": 2588474,
       "value": 42.99998554747414
     },
     {
       "metric": "Abonnement",
       "ar": 2022,
       "tilbyder": "Telia",
-      "absolute": "2084113",
+      "absolute": 2084113,
       "value": 34.62149083950736
     },
     {
       "metric": "Abonnement",
       "ar": 2022,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "757305",
+      "absolute": 757305,
       "value": 12.580425399300863
     },
     {
       "metric": "Abonnement",
       "ar": 2022,
       "tilbyder": "Øvrige",
-      "absolute": "589817",
+      "absolute": 589817,
       "value": 9.79809821371764
     },
     {
       "metric": "Abonnement",
       "ar": 2023,
       "tilbyder": "Telenor",
-      "absolute": "2561819",
+      "absolute": 2561819,
       "value": 42.32712888116967
     },
     {
       "metric": "Abonnement",
       "ar": 2023,
       "tilbyder": "Telia",
-      "absolute": "2065166",
+      "absolute": 2065166,
       "value": 34.12128157493158
     },
     {
       "metric": "Abonnement",
       "ar": 2023,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "882075",
+      "absolute": 882075,
       "value": 14.57390323354528
     },
     {
       "metric": "Abonnement",
       "ar": 2023,
       "tilbyder": "Øvrige",
-      "absolute": "543368",
+      "absolute": 543368,
       "value": 8.977686310353464
     },
     {
       "metric": "Abonnement",
       "ar": 2024,
       "tilbyder": "Telenor",
-      "absolute": "2520956",
+      "absolute": 2520956,
       "value": 41.34146795439141
     },
     {
       "metric": "Abonnement",
       "ar": 2024,
       "tilbyder": "Telia",
-      "absolute": "2054756",
+      "absolute": 2054756,
       "value": 33.69619673175315
     },
     {
       "metric": "Abonnement",
       "ar": 2024,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "978504",
+      "absolute": 978504,
       "value": 16.046607619983774
     },
     {
       "metric": "Abonnement",
       "ar": 2024,
       "tilbyder": "Øvrige",
-      "absolute": "543671",
+      "absolute": 543671,
       "value": 8.915727693871665
     },
     {
       "metric": "Abonnement",
       "ar": 2025,
       "tilbyder": "Telenor",
-      "absolute": "2475133",
+      "absolute": 2475133,
       "value": 40.4420016064824
     },
     {
       "metric": "Abonnement",
       "ar": 2025,
       "tilbyder": "Telia",
-      "absolute": "2009230",
+      "absolute": 2009230,
       "value": 32.82946124018088
     },
     {
       "metric": "Abonnement",
       "ar": 2025,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "1048751",
+      "absolute": 1048751,
       "value": 17.135883052264273
     },
     {
       "metric": "Abonnement",
       "ar": 2025,
       "tilbyder": "Øvrige",
-      "absolute": "587090",
+      "absolute": 587090,
       "value": 9.592654101072448
     },
     {
       "metric": "Omsetning",
       "ar": 2020,
       "tilbyder": "Telenor",
-      "absolute": "10122289",
+      "absolute": 10122289,
       "value": 56.260165321906285
     },
     {
       "metric": "Omsetning",
       "ar": 2020,
       "tilbyder": "Telia",
-      "absolute": "5669129",
+      "absolute": 5669129,
       "value": 31.509289526431544
     },
     {
       "metric": "Omsetning",
       "ar": 2020,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "1359987",
+      "absolute": 1359987,
       "value": 7.558872647841151
     },
     {
       "metric": "Omsetning",
       "ar": 2020,
       "tilbyder": "Øvrige",
-      "absolute": "840524",
+      "absolute": 840524,
       "value": 4.671672503821019
     },
     {
       "metric": "Omsetning",
       "ar": 2021,
       "tilbyder": "Telenor",
-      "absolute": "10129387",
+      "absolute": 10129387,
       "value": 54.87760307861939
     },
     {
       "metric": "Omsetning",
       "ar": 2021,
       "tilbyder": "Telia",
-      "absolute": "5799598",
+      "absolute": 5799598,
       "value": 31.420266306298185
     },
     {
       "metric": "Omsetning",
       "ar": 2021,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "1542116",
+      "absolute": 1542116,
       "value": 8.354664477641956
     },
     {
       "metric": "Omsetning",
       "ar": 2021,
       "tilbyder": "Øvrige",
-      "absolute": "987043",
+      "absolute": 987043,
       "value": 5.34746613744047
     },
     {
       "metric": "Omsetning",
       "ar": 2022,
       "tilbyder": "Telenor",
-      "absolute": "10185874",
+      "absolute": 10185874,
       "value": 53.46389827393874
     },
     {
       "metric": "Omsetning",
       "ar": 2022,
       "tilbyder": "Telia",
-      "absolute": "6007656",
+      "absolute": 6007656,
       "value": 31.533151622415286
     },
     {
       "metric": "Omsetning",
       "ar": 2022,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "1651755",
+      "absolute": 1651755,
       "value": 8.669777506914937
     },
     {
       "metric": "Omsetning",
       "ar": 2022,
       "tilbyder": "Øvrige",
-      "absolute": "1206588",
+      "absolute": 1206588,
       "value": 6.333172596731041
     },
     {
       "metric": "Omsetning",
       "ar": 2023,
       "tilbyder": "Telenor",
-      "absolute": "9850160",
+      "absolute": 9850160,
       "value": 51.25289437564036
     },
     {
       "metric": "Omsetning",
       "ar": 2023,
       "tilbyder": "Telia",
-      "absolute": "6243781",
+      "absolute": 6243781,
       "value": 32.4879847736108
     },
     {
       "metric": "Omsetning",
       "ar": 2023,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "1876847",
+      "absolute": 1876847,
       "value": 9.765713556961256
     },
     {
       "metric": "Omsetning",
       "ar": 2023,
       "tilbyder": "Øvrige",
-      "absolute": "1247951",
+      "absolute": 1247951,
       "value": 6.493407293787589
     },
     {
       "metric": "Omsetning",
       "ar": 2024,
       "tilbyder": "Telenor",
-      "absolute": "10234886",
+      "absolute": 10234886,
       "value": 50.89671715252894
     },
     {
       "metric": "Omsetning",
       "ar": 2024,
       "tilbyder": "Telia",
-      "absolute": "6247215",
+      "absolute": 6247215,
       "value": 31.06656340344544
     },
     {
       "metric": "Omsetning",
       "ar": 2024,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "2223582",
+      "absolute": 2223582,
       "value": 11.057575445340047
     },
     {
       "metric": "Omsetning",
       "ar": 2024,
       "tilbyder": "Øvrige",
-      "absolute": "1403445",
+      "absolute": 1403445,
       "value": 6.979143998685572
     },
     {
       "metric": "Omsetning",
       "ar": 2025,
       "tilbyder": "Telenor",
-      "absolute": "10707664",
+      "absolute": 10707664,
       "value": 50.75646234937839
     },
     {
       "metric": "Omsetning",
       "ar": 2025,
       "tilbyder": "Telia",
-      "absolute": "6400522",
+      "absolute": 6400522,
       "value": 30.33975047306005
     },
     {
       "metric": "Omsetning",
       "ar": 2025,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "2537547",
+      "absolute": 2537547,
       "value": 12.028478738712577
     },
     {
       "metric": "Omsetning",
       "ar": 2025,
       "tilbyder": "Øvrige",
-      "absolute": "1450426",
+      "absolute": 1450426,
       "value": 6.875308438848987
     }
   ],
@@ -708,7 +708,7 @@
       "segment": "Bedrift",
       "ar": 2020,
       "tilbyder": "Telenor",
-      "absolute": "887930",
+      "absolute": 887930,
       "value": 58.12810139178025
     },
     {
@@ -716,7 +716,7 @@
       "segment": "Bedrift",
       "ar": 2020,
       "tilbyder": "Telia",
-      "absolute": "524841",
+      "absolute": 524841,
       "value": 34.35857653482069
     },
     {
@@ -724,7 +724,7 @@
       "segment": "Bedrift",
       "ar": 2020,
       "tilbyder": "Øvrige",
-      "absolute": "73358",
+      "absolute": 73358,
       "value": 4.802361967608049
     },
     {
@@ -732,7 +732,7 @@
       "segment": "Bedrift",
       "ar": 2020,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "41411",
+      "absolute": 41411,
       "value": 2.71096010579101
     },
     {
@@ -740,7 +740,7 @@
       "segment": "Bedrift",
       "ar": 2021,
       "tilbyder": "Telenor",
-      "absolute": "905214",
+      "absolute": 905214,
       "value": 56.41846747574268
     },
     {
@@ -748,7 +748,7 @@
       "segment": "Bedrift",
       "ar": 2021,
       "tilbyder": "Telia",
-      "absolute": "563880",
+      "absolute": 563880,
       "value": 35.14444699288984
     },
     {
@@ -756,7 +756,7 @@
       "segment": "Bedrift",
       "ar": 2021,
       "tilbyder": "Øvrige",
-      "absolute": "88012",
+      "absolute": 88012,
       "value": 5.485445606757148
     },
     {
@@ -764,7 +764,7 @@
       "segment": "Bedrift",
       "ar": 2021,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "47358",
+      "absolute": 47358,
       "value": 2.9516399246103373
     },
     {
@@ -772,7 +772,7 @@
       "segment": "Bedrift",
       "ar": 2022,
       "tilbyder": "Telenor",
-      "absolute": "880888",
+      "absolute": 880888,
       "value": 52.99958004074447
     },
     {
@@ -780,7 +780,7 @@
       "segment": "Bedrift",
       "ar": 2022,
       "tilbyder": "Telia",
-      "absolute": "606478",
+      "absolute": 606478,
       "value": 36.48940535454067
     },
     {
@@ -788,7 +788,7 @@
       "segment": "Bedrift",
       "ar": 2022,
       "tilbyder": "Øvrige",
-      "absolute": "120581",
+      "absolute": 120581,
       "value": 7.2548863883865025
     },
     {
@@ -796,7 +796,7 @@
       "segment": "Bedrift",
       "ar": 2022,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "54119",
+      "absolute": 54119,
       "value": 3.256128216328353
     },
     {
@@ -804,7 +804,7 @@
       "segment": "Bedrift",
       "ar": 2023,
       "tilbyder": "Telenor",
-      "absolute": "888904",
+      "absolute": 888904,
       "value": 51.996951210595185
     },
     {
@@ -812,7 +812,7 @@
       "segment": "Bedrift",
       "ar": 2023,
       "tilbyder": "Telia",
-      "absolute": "621733",
+      "absolute": 621733,
       "value": 36.3686297586882
     },
     {
@@ -820,7 +820,7 @@
       "segment": "Bedrift",
       "ar": 2023,
       "tilbyder": "Øvrige",
-      "absolute": "136171",
+      "absolute": 136171,
       "value": 7.965401036892574
     },
     {
@@ -828,7 +828,7 @@
       "segment": "Bedrift",
       "ar": 2023,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "62723",
+      "absolute": 62723,
       "value": 3.669017993824037
     },
     {
@@ -836,7 +836,7 @@
       "segment": "Bedrift",
       "ar": 2024,
       "tilbyder": "Telenor",
-      "absolute": "892910",
+      "absolute": 892910,
       "value": 51.493045143133955
     },
     {
@@ -844,7 +844,7 @@
       "segment": "Bedrift",
       "ar": 2024,
       "tilbyder": "Telia",
-      "absolute": "628506",
+      "absolute": 628506,
       "value": 36.24518465548661
     },
     {
@@ -852,7 +852,7 @@
       "segment": "Bedrift",
       "ar": 2024,
       "tilbyder": "Øvrige",
-      "absolute": "139402",
+      "absolute": 139402,
       "value": 8.039145579110055
     },
     {
@@ -860,7 +860,7 @@
       "segment": "Bedrift",
       "ar": 2024,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "73222",
+      "absolute": 73222,
       "value": 4.222624622269382
     },
     {
@@ -868,7 +868,7 @@
       "segment": "Bedrift",
       "ar": 2025,
       "tilbyder": "Telenor",
-      "absolute": "890041",
+      "absolute": 890041,
       "value": 50.73600876495432
     },
     {
@@ -876,7 +876,7 @@
       "segment": "Bedrift",
       "ar": 2025,
       "tilbyder": "Telia",
-      "absolute": "626519",
+      "absolute": 626519,
       "value": 35.71416763431169
     },
     {
@@ -884,7 +884,7 @@
       "segment": "Bedrift",
       "ar": 2025,
       "tilbyder": "Øvrige",
-      "absolute": "146056",
+      "absolute": 146056,
       "value": 8.325794537750697
     },
     {
@@ -892,7 +892,7 @@
       "segment": "Bedrift",
       "ar": 2025,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "91643",
+      "absolute": 91643,
       "value": 5.224029062983288
     },
     {
@@ -900,7 +900,7 @@
       "segment": "Privat",
       "ar": 2020,
       "tilbyder": "Telenor",
-      "absolute": "1803567",
+      "absolute": 1803567,
       "value": 41.87034997529892
     },
     {
@@ -908,7 +908,7 @@
       "segment": "Privat",
       "ar": 2020,
       "tilbyder": "Telia",
-      "absolute": "1523701",
+      "absolute": 1523701,
       "value": 35.37317667029444
     },
     {
@@ -916,7 +916,7 @@
       "segment": "Privat",
       "ar": 2020,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "597979",
+      "absolute": 597979,
       "value": 13.88226221031948
     },
     {
@@ -924,7 +924,7 @@
       "segment": "Privat",
       "ar": 2020,
       "tilbyder": "Øvrige",
-      "absolute": "382257",
+      "absolute": 382257,
       "value": 8.874211144087155
     },
     {
@@ -932,7 +932,7 @@
       "segment": "Privat",
       "ar": 2021,
       "tilbyder": "Telenor",
-      "absolute": "1731456",
+      "absolute": 1731456,
       "value": 40.06120276435108
     },
     {
@@ -940,7 +940,7 @@
       "segment": "Privat",
       "ar": 2021,
       "tilbyder": "Telia",
-      "absolute": "1501449",
+      "absolute": 1501449,
       "value": 34.73946368220282
     },
     {
@@ -948,7 +948,7 @@
       "segment": "Privat",
       "ar": 2021,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "646266",
+      "absolute": 646266,
       "value": 14.952845042384048
     },
     {
@@ -956,7 +956,7 @@
       "segment": "Privat",
       "ar": 2021,
       "tilbyder": "Øvrige",
-      "absolute": "442856",
+      "absolute": 442856,
       "value": 10.246488511062054
     },
     {
@@ -964,7 +964,7 @@
       "segment": "Privat",
       "ar": 2022,
       "tilbyder": "Telenor",
-      "absolute": "1707586",
+      "absolute": 1707586,
       "value": 39.18600032173356
     },
     {
@@ -972,7 +972,7 @@
       "segment": "Privat",
       "ar": 2022,
       "tilbyder": "Telia",
-      "absolute": "1477635",
+      "absolute": 1477635,
       "value": 33.9090421129037
     },
     {
@@ -980,7 +980,7 @@
       "segment": "Privat",
       "ar": 2022,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "703186",
+      "absolute": 703186,
       "value": 16.13684278404633
     },
     {
@@ -988,7 +988,7 @@
       "segment": "Privat",
       "ar": 2022,
       "tilbyder": "Øvrige",
-      "absolute": "469236",
+      "absolute": 469236,
       "value": 10.768114781316413
     },
     {
@@ -996,7 +996,7 @@
       "segment": "Privat",
       "ar": 2023,
       "tilbyder": "Telenor",
-      "absolute": "1672915",
+      "absolute": 1672915,
       "value": 38.52071555001189
     },
     {
@@ -1004,7 +1004,7 @@
       "segment": "Privat",
       "ar": 2023,
       "tilbyder": "Telia",
-      "absolute": "1443433",
+      "absolute": 1443433,
       "value": 33.236639045319286
     },
     {
@@ -1012,7 +1012,7 @@
       "segment": "Privat",
       "ar": 2023,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "819352",
+      "absolute": 819352,
       "value": 18.866484745090663
     },
     {
@@ -1020,7 +1020,7 @@
       "segment": "Privat",
       "ar": 2023,
       "tilbyder": "Øvrige",
-      "absolute": "407197",
+      "absolute": 407197,
       "value": 9.376160659578158
     },
     {
@@ -1028,7 +1028,7 @@
       "segment": "Privat",
       "ar": 2024,
       "tilbyder": "Telenor",
-      "absolute": "1628046",
+      "absolute": 1628046,
       "value": 37.30758663170363
     },
     {
@@ -1036,7 +1036,7 @@
       "segment": "Privat",
       "ar": 2024,
       "tilbyder": "Telia",
-      "absolute": "1426250",
+      "absolute": 1426250,
       "value": 32.68331818232858
     },
     {
@@ -1044,7 +1044,7 @@
       "segment": "Privat",
       "ar": 2024,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "905282",
+      "absolute": 905282,
       "value": 20.74504445275006
     },
     {
@@ -1052,7 +1052,7 @@
       "segment": "Privat",
       "ar": 2024,
       "tilbyder": "Øvrige",
-      "absolute": "404269",
+      "absolute": 404269,
       "value": 9.264050733217731
     },
     {
@@ -1060,7 +1060,7 @@
       "segment": "Privat",
       "ar": 2025,
       "tilbyder": "Telenor",
-      "absolute": "1585092",
+      "absolute": 1585092,
       "value": 36.30581695371792
     },
     {
@@ -1068,7 +1068,7 @@
       "segment": "Privat",
       "ar": 2025,
       "tilbyder": "Telia",
-      "absolute": "1382711",
+      "absolute": 1382711,
       "value": 31.670371477423558
     },
     {
@@ -1076,7 +1076,7 @@
       "segment": "Privat",
       "ar": 2025,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "957108",
+      "absolute": 957108,
       "value": 21.922126824776768
     },
     {
@@ -1084,7 +1084,7 @@
       "segment": "Privat",
       "ar": 2025,
       "tilbyder": "Øvrige",
-      "absolute": "441034",
+      "absolute": 441034,
       "value": 10.101684744081751
     },
     {
@@ -1092,7 +1092,7 @@
       "segment": "Bedrift",
       "ar": 2020,
       "tilbyder": "Telenor",
-      "absolute": "3383563",
+      "absolute": 3383563,
       "value": 66.49065198338305
     },
     {
@@ -1100,7 +1100,7 @@
       "segment": "Bedrift",
       "ar": 2020,
       "tilbyder": "Telia",
-      "absolute": "1318191",
+      "absolute": 1318191,
       "value": 25.903870868852653
     },
     {
@@ -1108,7 +1108,7 @@
       "segment": "Bedrift",
       "ar": 2020,
       "tilbyder": "Øvrige",
-      "absolute": "252849",
+      "absolute": 252849,
       "value": 4.968754789949654
     },
     {
@@ -1116,7 +1116,7 @@
       "segment": "Bedrift",
       "ar": 2020,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "134177",
+      "absolute": 134177,
       "value": 2.636722357814643
     },
     {
@@ -1124,7 +1124,7 @@
       "segment": "Bedrift",
       "ar": 2021,
       "tilbyder": "Telenor",
-      "absolute": "3315231",
+      "absolute": 3315231,
       "value": 63.737735666593544
     },
     {
@@ -1132,7 +1132,7 @@
       "segment": "Bedrift",
       "ar": 2021,
       "tilbyder": "Telia",
-      "absolute": "1431506",
+      "absolute": 1431506,
       "value": 27.521747664987043
     },
     {
@@ -1140,7 +1140,7 @@
       "segment": "Bedrift",
       "ar": 2021,
       "tilbyder": "Øvrige",
-      "absolute": "312742",
+      "absolute": 312742,
       "value": 6.012693211375557
     },
     {
@@ -1148,7 +1148,7 @@
       "segment": "Bedrift",
       "ar": 2021,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "141884",
+      "absolute": 141884,
       "value": 2.7278234570438555
     },
     {
@@ -1156,7 +1156,7 @@
       "segment": "Bedrift",
       "ar": 2022,
       "tilbyder": "Telenor",
-      "absolute": "3290390",
+      "absolute": 3290390,
       "value": 60.948475561076286
     },
     {
@@ -1164,7 +1164,7 @@
       "segment": "Bedrift",
       "ar": 2022,
       "tilbyder": "Telia",
-      "absolute": "1544636",
+      "absolute": 1544636,
       "value": 28.611565649287357
     },
     {
@@ -1172,7 +1172,7 @@
       "segment": "Bedrift",
       "ar": 2022,
       "tilbyder": "Øvrige",
-      "absolute": "400606",
+      "absolute": 400606,
       "value": 7.420495746893385
     },
     {
@@ -1180,7 +1180,7 @@
       "segment": "Bedrift",
       "ar": 2022,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "163010",
+      "absolute": 163010,
       "value": 3.0194630427429714
     },
     {
@@ -1188,7 +1188,7 @@
       "segment": "Bedrift",
       "ar": 2023,
       "tilbyder": "Telenor",
-      "absolute": "3171300",
+      "absolute": 3171300,
       "value": 58.23113093218285
     },
     {
@@ -1196,7 +1196,7 @@
       "segment": "Bedrift",
       "ar": 2023,
       "tilbyder": "Telia",
-      "absolute": "1606077",
+      "absolute": 1606077,
       "value": 29.4906442386931
     },
     {
@@ -1204,7 +1204,7 @@
       "segment": "Bedrift",
       "ar": 2023,
       "tilbyder": "Øvrige",
-      "absolute": "483664",
+      "absolute": 483664,
       "value": 8.880995715064259
     },
     {
@@ -1212,7 +1212,7 @@
       "segment": "Bedrift",
       "ar": 2023,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "185015",
+      "absolute": 185015,
       "value": 3.3972291140597894
     },
     {
@@ -1220,7 +1220,7 @@
       "segment": "Bedrift",
       "ar": 2024,
       "tilbyder": "Telenor",
-      "absolute": "3195059",
+      "absolute": 3195059,
       "value": 57.35845066465458
     },
     {
@@ -1228,7 +1228,7 @@
       "segment": "Bedrift",
       "ar": 2024,
       "tilbyder": "Telia",
-      "absolute": "1608747",
+      "absolute": 1608747,
       "value": 28.880604530749217
     },
     {
@@ -1236,7 +1236,7 @@
       "segment": "Bedrift",
       "ar": 2024,
       "tilbyder": "Øvrige",
-      "absolute": "554593",
+      "absolute": 554593,
       "value": 9.956183979533016
     },
     {
@@ -1244,7 +1244,7 @@
       "segment": "Bedrift",
       "ar": 2024,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "211938",
+      "absolute": 211938,
       "value": 3.8047608250631875
     },
     {
@@ -1252,7 +1252,7 @@
       "segment": "Bedrift",
       "ar": 2025,
       "tilbyder": "Telenor",
-      "absolute": "3293376",
+      "absolute": 3293376,
       "value": 58.02287387094705
     },
     {
@@ -1260,7 +1260,7 @@
       "segment": "Bedrift",
       "ar": 2025,
       "tilbyder": "Telia",
-      "absolute": "1598791",
+      "absolute": 1598791,
       "value": 28.167585037057812
     },
     {
@@ -1268,7 +1268,7 @@
       "segment": "Bedrift",
       "ar": 2025,
       "tilbyder": "Øvrige",
-      "absolute": "537993",
+      "absolute": 537993,
       "value": 9.478389343473815
     },
     {
@@ -1276,7 +1276,7 @@
       "segment": "Bedrift",
       "ar": 2025,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "245836",
+      "absolute": 245836,
       "value": 4.331151748521317
     },
     {
@@ -1284,7 +1284,7 @@
       "segment": "Privat",
       "ar": 2020,
       "tilbyder": "Telenor",
-      "absolute": "6738726",
+      "absolute": 6738726,
       "value": 52.22543737191596
     },
     {
@@ -1292,7 +1292,7 @@
       "segment": "Privat",
       "ar": 2020,
       "tilbyder": "Telia",
-      "absolute": "4350938",
+      "absolute": 4350938,
       "value": 33.719970218122725
     },
     {
@@ -1300,7 +1300,7 @@
       "segment": "Privat",
       "ar": 2020,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "1225810",
+      "absolute": 1225810,
       "value": 9.500084049250303
     },
     {
@@ -1308,7 +1308,7 @@
       "segment": "Privat",
       "ar": 2020,
       "tilbyder": "Øvrige",
-      "absolute": "587675",
+      "absolute": 587675,
       "value": 4.554508360711017
     },
     {
@@ -1316,7 +1316,7 @@
       "segment": "Privat",
       "ar": 2021,
       "tilbyder": "Telenor",
-      "absolute": "6814156",
+      "absolute": 6814156,
       "value": 51.401286632101716
     },
     {
@@ -1324,7 +1324,7 @@
       "segment": "Privat",
       "ar": 2021,
       "tilbyder": "Telia",
-      "absolute": "4368092",
+      "absolute": 4368092,
       "value": 32.94986920278762
     },
     {
@@ -1332,7 +1332,7 @@
       "segment": "Privat",
       "ar": 2021,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "1400232",
+      "absolute": 1400232,
       "value": 10.562383130565406
     },
     {
@@ -1340,7 +1340,7 @@
       "segment": "Privat",
       "ar": 2021,
       "tilbyder": "Øvrige",
-      "absolute": "674301",
+      "absolute": 674301,
       "value": 5.086461034545264
     },
     {
@@ -1348,7 +1348,7 @@
       "segment": "Privat",
       "ar": 2022,
       "tilbyder": "Telenor",
-      "absolute": "6895484",
+      "absolute": 6895484,
       "value": 50.50441173960947
     },
     {
@@ -1356,7 +1356,7 @@
       "segment": "Privat",
       "ar": 2022,
       "tilbyder": "Telia",
-      "absolute": "4463020",
+      "absolute": 4463020,
       "value": 32.688379768862035
     },
     {
@@ -1364,7 +1364,7 @@
       "segment": "Privat",
       "ar": 2022,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "1488745",
+      "absolute": 1488745,
       "value": 10.903975769544953
     },
     {
@@ -1372,7 +1372,7 @@
       "segment": "Privat",
       "ar": 2022,
       "tilbyder": "Øvrige",
-      "absolute": "805982",
+      "absolute": 805982,
       "value": 5.903232721983536
     },
     {
@@ -1380,7 +1380,7 @@
       "segment": "Privat",
       "ar": 2023,
       "tilbyder": "Telenor",
-      "absolute": "6678860",
+      "absolute": 6678860,
       "value": 48.493528820782416
     },
     {
@@ -1388,7 +1388,7 @@
       "segment": "Privat",
       "ar": 2023,
       "tilbyder": "Telia",
-      "absolute": "4637704",
+      "absolute": 4637704,
       "value": 33.67320659307994
     },
     {
@@ -1396,7 +1396,7 @@
       "segment": "Privat",
       "ar": 2023,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "1691832",
+      "absolute": 1691832,
       "value": 12.283968199950584
     },
     {
@@ -1404,7 +1404,7 @@
       "segment": "Privat",
       "ar": 2023,
       "tilbyder": "Øvrige",
-      "absolute": "764287",
+      "absolute": 764287,
       "value": 5.549296386187063
     },
     {
@@ -1412,7 +1412,7 @@
       "segment": "Privat",
       "ar": 2024,
       "tilbyder": "Telenor",
-      "absolute": "7039827",
+      "absolute": 7039827,
       "value": 48.420993189873904
     },
     {
@@ -1420,7 +1420,7 @@
       "segment": "Privat",
       "ar": 2024,
       "tilbyder": "Telia",
-      "absolute": "4638468",
+      "absolute": 4638468,
       "value": 31.904083358788224
     },
     {
@@ -1428,7 +1428,7 @@
       "segment": "Privat",
       "ar": 2024,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "2011644",
+      "absolute": 2011644,
       "value": 13.836391210245749
     },
     {
@@ -1436,7 +1436,7 @@
       "segment": "Privat",
       "ar": 2024,
       "tilbyder": "Øvrige",
-      "absolute": "848852",
+      "absolute": 848852,
       "value": 5.838532241092124
     },
     {
@@ -1444,7 +1444,7 @@
       "segment": "Privat",
       "ar": 2025,
       "tilbyder": "Telenor",
-      "absolute": "7414288",
+      "absolute": 7414288,
       "value": 48.08177449226704
     },
     {
@@ -1452,7 +1452,7 @@
       "segment": "Privat",
       "ar": 2025,
       "tilbyder": "Telia",
-      "absolute": "4801731",
+      "absolute": 4801731,
       "value": 31.139301186375267
     },
     {
@@ -1460,7 +1460,7 @@
       "segment": "Privat",
       "ar": 2025,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "2291711",
+      "absolute": 2291711,
       "value": 14.861781940956137
     },
     {
@@ -1468,7 +1468,7 @@
       "segment": "Privat",
       "ar": 2025,
       "tilbyder": "Øvrige",
-      "absolute": "912433",
+      "absolute": 912433,
       "value": 5.917142380401556
     }
   ],
@@ -1477,504 +1477,504 @@
       "metric": "Abonnement",
       "ar": 2020,
       "tilbyder": "Chili mobil",
-      "absolute": "70650",
+      "absolute": 70650,
       "value": 1.6401609841801656
     },
     {
       "metric": "Abonnement",
       "ar": 2020,
       "tilbyder": "Fjordkraft",
-      "absolute": "166872",
+      "absolute": 166872,
       "value": 3.873983634141721
     },
     {
       "metric": "Abonnement",
       "ar": 2020,
       "tilbyder": "Happybytes",
-      "absolute": "13649",
+      "absolute": 13649,
       "value": 0.31686563726928635
     },
     {
       "metric": "Abonnement",
       "ar": 2020,
       "tilbyder": "Lycamobile",
-      "absolute": "61910",
+      "absolute": 61910,
       "value": 1.4372592573332492
     },
     {
       "metric": "Abonnement",
       "ar": 2020,
       "tilbyder": "Plussmobil",
-      "absolute": "0",
+      "absolute": 0,
       "value": 0.0
     },
     {
       "metric": "Abonnement",
       "ar": 2020,
       "tilbyder": "Xplora",
-      "absolute": "55168",
+      "absolute": 55168,
       "value": 1.2807417009943578
     },
     {
       "metric": "Abonnement",
       "ar": 2021,
       "tilbyder": "Chili mobil",
-      "absolute": "80380",
+      "absolute": 80380,
       "value": 1.8597755173671984
     },
     {
       "metric": "Abonnement",
       "ar": 2021,
       "tilbyder": "Fjordkraft",
-      "absolute": "152210",
+      "absolute": 152210,
       "value": 3.5217271895802593
     },
     {
       "metric": "Abonnement",
       "ar": 2021,
       "tilbyder": "Happybytes",
-      "absolute": "27581",
+      "absolute": 27581,
       "value": 0.6381496459878664
     },
     {
       "metric": "Abonnement",
       "ar": 2021,
       "tilbyder": "Lycamobile",
-      "absolute": "59356",
+      "absolute": 59356,
       "value": 1.3733370939144989
     },
     {
       "metric": "Abonnement",
       "ar": 2021,
       "tilbyder": "Plussmobil",
-      "absolute": "0",
+      "absolute": 0,
       "value": 0.0
     },
     {
       "metric": "Abonnement",
       "ar": 2021,
       "tilbyder": "Xplora",
-      "absolute": "74759",
+      "absolute": 74759,
       "value": 1.7297207999857473
     },
     {
       "metric": "Abonnement",
       "ar": 2022,
       "tilbyder": "Chili mobil",
-      "absolute": "84821",
+      "absolute": 84821,
       "value": 1.9464880441100842
     },
     {
       "metric": "Abonnement",
       "ar": 2022,
       "tilbyder": "Fjordkraft",
-      "absolute": "137085",
+      "absolute": 137085,
       "value": 3.1458520122001734
     },
     {
       "metric": "Abonnement",
       "ar": 2022,
       "tilbyder": "Happybytes",
-      "absolute": "41208",
+      "absolute": 41208,
       "value": 0.9456488289655669
     },
     {
       "metric": "Abonnement",
       "ar": 2022,
       "tilbyder": "Lycamobile",
-      "absolute": "61435",
+      "absolute": 61435,
       "value": 1.4098217775067852
     },
     {
       "metric": "Abonnement",
       "ar": 2022,
       "tilbyder": "Plussmobil",
-      "absolute": "11694",
+      "absolute": 11694,
       "value": 0.26835608148717094
     },
     {
       "metric": "Abonnement",
       "ar": 2022,
       "tilbyder": "Xplora",
-      "absolute": "82313",
+      "absolute": 82313,
       "value": 1.8889339948224304
     },
     {
       "metric": "Abonnement",
       "ar": 2023,
       "tilbyder": "Chili mobil",
-      "absolute": "82829",
+      "absolute": 82829,
       "value": 1.9072292066793204
     },
     {
       "metric": "Abonnement",
       "ar": 2023,
       "tilbyder": "Fjordkraft",
-      "absolute": "114775",
+      "absolute": 114775,
       "value": 2.642821139898091
     },
     {
       "metric": "Abonnement",
       "ar": 2023,
       "tilbyder": "Happybytes",
-      "absolute": "48928",
+      "absolute": 48928,
       "value": 1.1266212392327057
     },
     {
       "metric": "Abonnement",
       "ar": 2023,
       "tilbyder": "Lycamobile",
-      "absolute": "25973",
+      "absolute": 25973,
       "value": 0.5980570112530875
     },
     {
       "metric": "Abonnement",
       "ar": 2023,
       "tilbyder": "Plussmobil",
-      "absolute": "45555",
+      "absolute": 45555,
       "value": 1.048954188874385
     },
     {
       "metric": "Abonnement",
       "ar": 2023,
       "tilbyder": "Xplora",
-      "absolute": "86061",
+      "absolute": 86061,
       "value": 1.9816495763081647
     },
     {
       "metric": "Abonnement",
       "ar": 2024,
       "tilbyder": "Chili mobil",
-      "absolute": "88116",
+      "absolute": 88116,
       "value": 2.0192275302044274
     },
     {
       "metric": "Abonnement",
       "ar": 2024,
       "tilbyder": "Fjordkraft",
-      "absolute": "111958",
+      "absolute": 111958,
       "value": 2.5655803239664454
     },
     {
       "metric": "Abonnement",
       "ar": 2024,
       "tilbyder": "Happybytes",
-      "absolute": "40904",
+      "absolute": 40904,
       "value": 0.937338087242747
     },
     {
       "metric": "Abonnement",
       "ar": 2024,
       "tilbyder": "Lycamobile",
-      "absolute": "23043",
+      "absolute": 23043,
       "value": 0.5280432609117598
     },
     {
       "metric": "Abonnement",
       "ar": 2024,
       "tilbyder": "Plussmobil",
-      "absolute": "48518",
+      "absolute": 48518,
       "value": 1.1118171649922648
     },
     {
       "metric": "Abonnement",
       "ar": 2024,
       "tilbyder": "Xplora",
-      "absolute": "88777",
+      "absolute": 88777,
       "value": 2.0343747157038274
     },
     {
       "metric": "Abonnement",
       "ar": 2025,
       "tilbyder": "Chili mobil",
-      "absolute": "91955",
+      "absolute": 91955,
       "value": 2.1061877783618437
     },
     {
       "metric": "Abonnement",
       "ar": 2025,
       "tilbyder": "Fjordkraft",
-      "absolute": "112213",
+      "absolute": 112213,
       "value": 2.5701881265109843
     },
     {
       "metric": "Abonnement",
       "ar": 2025,
       "tilbyder": "Happybytes",
-      "absolute": "75298",
+      "absolute": 75298,
       "value": 1.7246667101853093
     },
     {
       "metric": "Abonnement",
       "ar": 2025,
       "tilbyder": "Lycamobile",
-      "absolute": "23276",
+      "absolute": 23276,
       "value": 0.5331262762128245
     },
     {
       "metric": "Abonnement",
       "ar": 2025,
       "tilbyder": "Plussmobil",
-      "absolute": "48637",
+      "absolute": 48637,
       "value": 1.1140085365253112
     },
     {
       "metric": "Abonnement",
       "ar": 2025,
       "tilbyder": "Xplora",
-      "absolute": "86587",
+      "absolute": 86587,
       "value": 1.9832361607853513
     },
     {
       "metric": "Omsetning",
       "ar": 2020,
       "tilbyder": "Chili mobil",
-      "absolute": "191428",
+      "absolute": 191428,
       "value": 1.483575830985134
     },
     {
       "metric": "Omsetning",
       "ar": 2020,
       "tilbyder": "Fjordkraft",
-      "absolute": "291061",
+      "absolute": 291061,
       "value": 2.255736177269595
     },
     {
       "metric": "Omsetning",
       "ar": 2020,
       "tilbyder": "Happybytes",
-      "absolute": "15221",
+      "absolute": 15221,
       "value": 0.11796345217744908
     },
     {
       "metric": "Omsetning",
       "ar": 2020,
       "tilbyder": "Lycamobile",
-      "absolute": "36901",
+      "absolute": 36901,
       "value": 0.28598445232245245
     },
     {
       "metric": "Omsetning",
       "ar": 2020,
       "tilbyder": "Plussmobil",
-      "absolute": "0",
+      "absolute": 0,
       "value": 0.0
     },
     {
       "metric": "Omsetning",
       "ar": 2020,
       "tilbyder": "Xplora",
-      "absolute": "33964",
+      "absolute": 33964,
       "value": 0.2632225668323291
     },
     {
       "metric": "Omsetning",
       "ar": 2021,
       "tilbyder": "Chili mobil",
-      "absolute": "200133",
+      "absolute": 200133,
       "value": 1.509665129113923
     },
     {
       "metric": "Omsetning",
       "ar": 2021,
       "tilbyder": "Fjordkraft",
-      "absolute": "284015",
+      "absolute": 284015,
       "value": 2.142413003579074
     },
     {
       "metric": "Omsetning",
       "ar": 2021,
       "tilbyder": "Happybytes",
-      "absolute": "37583",
+      "absolute": 37583,
       "value": 0.2835001951076962
     },
     {
       "metric": "Omsetning",
       "ar": 2021,
       "tilbyder": "Lycamobile",
-      "absolute": "29104",
+      "absolute": 29104,
       "value": 0.21954047517266823
     },
     {
       "metric": "Omsetning",
       "ar": 2021,
       "tilbyder": "Plussmobil",
-      "absolute": "0",
+      "absolute": 0,
       "value": 0.0
     },
     {
       "metric": "Omsetning",
       "ar": 2021,
       "tilbyder": "Xplora",
-      "absolute": "42483",
+      "absolute": 42483,
       "value": 0.3204624108974871
     },
     {
       "metric": "Omsetning",
       "ar": 2022,
       "tilbyder": "Chili mobil",
-      "absolute": "212344",
+      "absolute": 212344,
       "value": 1.5552655631476535
     },
     {
       "metric": "Omsetning",
       "ar": 2022,
       "tilbyder": "Fjordkraft",
-      "absolute": "292989",
+      "absolute": 292989,
       "value": 2.1459316113526534
     },
     {
       "metric": "Omsetning",
       "ar": 2022,
       "tilbyder": "Happybytes",
-      "absolute": "82015",
+      "absolute": 82015,
       "value": 0.6007003031004163
     },
     {
       "metric": "Omsetning",
       "ar": 2022,
       "tilbyder": "Lycamobile",
-      "absolute": "21717",
+      "absolute": 21717,
       "value": 0.15906125077646455
     },
     {
       "metric": "Omsetning",
       "ar": 2022,
       "tilbyder": "Plussmobil",
-      "absolute": "13295",
+      "absolute": 13295,
       "value": 0.09737621812741613
     },
     {
       "metric": "Omsetning",
       "ar": 2022,
       "tilbyder": "Xplora",
-      "absolute": "57886",
+      "absolute": 57886,
       "value": 0.42397290428910195
     },
     {
       "metric": "Omsetning",
       "ar": 2023,
       "tilbyder": "Chili mobil",
-      "absolute": "225484",
+      "absolute": 225484,
       "value": 1.6371828205150731
     },
     {
       "metric": "Omsetning",
       "ar": 2023,
       "tilbyder": "Fjordkraft",
-      "absolute": "249571",
+      "absolute": 249571,
       "value": 1.812072491612564
     },
     {
       "metric": "Omsetning",
       "ar": 2023,
       "tilbyder": "Happybytes",
-      "absolute": "113140",
+      "absolute": 113140,
       "value": 0.8214811885236886
     },
     {
       "metric": "Omsetning",
       "ar": 2023,
       "tilbyder": "Lycamobile",
-      "absolute": "17368",
+      "absolute": 17368,
       "value": 0.12610469579529276
     },
     {
       "metric": "Omsetning",
       "ar": 2023,
       "tilbyder": "Plussmobil",
-      "absolute": "77459",
+      "absolute": 77459,
       "value": 0.5624103887383454
     },
     {
       "metric": "Omsetning",
       "ar": 2023,
       "tilbyder": "Xplora",
-      "absolute": "73583",
+      "absolute": 73583,
       "value": 0.5342677240157201
     },
     {
       "metric": "Omsetning",
       "ar": 2024,
       "tilbyder": "Chili mobil",
-      "absolute": "235317",
+      "absolute": 235317,
       "value": 1.6185458612067538
     },
     {
       "metric": "Omsetning",
       "ar": 2024,
       "tilbyder": "Fjordkraft",
-      "absolute": "264235",
+      "absolute": 264235,
       "value": 1.817448232112285
     },
     {
       "metric": "Omsetning",
       "ar": 2024,
       "tilbyder": "Happybytes",
-      "absolute": "108587",
+      "absolute": 108587,
       "value": 0.746877783716679
     },
     {
       "metric": "Omsetning",
       "ar": 2024,
       "tilbyder": "Lycamobile",
-      "absolute": "20738",
+      "absolute": 20738,
       "value": 0.14263909564419766
     },
     {
       "metric": "Omsetning",
       "ar": 2024,
       "tilbyder": "Plussmobil",
-      "absolute": "102195",
+      "absolute": 102195,
       "value": 0.7029126424611235
     },
     {
       "metric": "Omsetning",
       "ar": 2024,
       "tilbyder": "Xplora",
-      "absolute": "108080",
+      "absolute": 108080,
       "value": 0.743390561154638
     },
     {
       "metric": "Omsetning",
       "ar": 2025,
       "tilbyder": "Chili mobil",
-      "absolute": "233153",
+      "absolute": 233153,
       "value": 1.5120008783305339
     },
     {
       "metric": "Omsetning",
       "ar": 2025,
       "tilbyder": "Fjordkraft",
-      "absolute": "263556",
+      "absolute": 263556,
       "value": 1.7091648123304533
     },
     {
       "metric": "Omsetning",
       "ar": 2025,
       "tilbyder": "Happybytes",
-      "absolute": "143314",
+      "absolute": 143314,
       "value": 0.9293935479151549
     },
     {
       "metric": "Omsetning",
       "ar": 2025,
       "tilbyder": "Lycamobile",
-      "absolute": "22782",
+      "absolute": 22782,
       "value": 0.1477416289309004
     },
     {
       "metric": "Omsetning",
       "ar": 2025,
       "tilbyder": "Plussmobil",
-      "absolute": "118775",
+      "absolute": 118775,
       "value": 0.7702577463026817
     },
     {
       "metric": "Omsetning",
       "ar": 2025,
       "tilbyder": "Xplora",
-      "absolute": "120821",
+      "absolute": 120821,
       "value": 0.7835260885374558
     }
   ],
@@ -1983,336 +1983,336 @@
       "metric": "Abonnement",
       "ar": 2020,
       "tilbyder": "Nortel",
-      "absolute": "12371",
+      "absolute": 12371,
       "value": 0.8098642261413777
     },
     {
       "metric": "Abonnement",
       "ar": 2020,
       "tilbyder": "SMB mobil",
-      "absolute": "0",
+      "absolute": 0,
       "value": 0.0
     },
     {
       "metric": "Abonnement",
       "ar": 2020,
       "tilbyder": "Saga mobil",
-      "absolute": "1897",
+      "absolute": 1897,
       "value": 0.12418660067821465
     },
     {
       "metric": "Abonnement",
       "ar": 2020,
       "tilbyder": "Unifon",
-      "absolute": "34727",
+      "absolute": 34727,
       "value": 2.273393822747686
     },
     {
       "metric": "Abonnement",
       "ar": 2021,
       "tilbyder": "Nortel",
-      "absolute": "25787",
+      "absolute": 25787,
       "value": 1.6072034025070054
     },
     {
       "metric": "Abonnement",
       "ar": 2021,
       "tilbyder": "SMB mobil",
-      "absolute": "0",
+      "absolute": 0,
       "value": 0.0
     },
     {
       "metric": "Abonnement",
       "ar": 2021,
       "tilbyder": "Saga mobil",
-      "absolute": "2993",
+      "absolute": 2993,
       "value": 0.1865420476869534
     },
     {
       "metric": "Abonnement",
       "ar": 2021,
       "tilbyder": "Unifon",
-      "absolute": "39773",
+      "absolute": 39773,
       "value": 2.4788963791023044
     },
     {
       "metric": "Abonnement",
       "ar": 2022,
       "tilbyder": "Nortel",
-      "absolute": "60380",
+      "absolute": 60380,
       "value": 3.6328280585728847
     },
     {
       "metric": "Abonnement",
       "ar": 2022,
       "tilbyder": "SMB mobil",
-      "absolute": "1596",
+      "absolute": 1596,
       "value": 0.09602506759659364
     },
     {
       "metric": "Abonnement",
       "ar": 2022,
       "tilbyder": "Saga mobil",
-      "absolute": "2673",
+      "absolute": 2673,
       "value": 0.16082393839955814
     },
     {
       "metric": "Abonnement",
       "ar": 2022,
       "tilbyder": "Unifon",
-      "absolute": "54099",
+      "absolute": 54099,
       "value": 3.254924894679273
     },
     {
       "metric": "Abonnement",
       "ar": 2023,
       "tilbyder": "Nortel",
-      "absolute": "0",
+      "absolute": 0,
       "value": 0.0
     },
     {
       "metric": "Abonnement",
       "ar": 2023,
       "tilbyder": "SMB mobil",
-      "absolute": "6368",
+      "absolute": 6368,
       "value": 0.37249982597566234
     },
     {
       "metric": "Abonnement",
       "ar": 2023,
       "tilbyder": "Saga mobil",
-      "absolute": "2340",
+      "absolute": 2340,
       "value": 0.136879647107891
     },
     {
       "metric": "Abonnement",
       "ar": 2023,
       "tilbyder": "Unifon",
-      "absolute": "126907",
+      "absolute": 126907,
       "value": 7.423498023726975
     },
     {
       "metric": "Abonnement",
       "ar": 2024,
       "tilbyder": "Nortel",
-      "absolute": "0",
+      "absolute": 0,
       "value": 0.0
     },
     {
       "metric": "Abonnement",
       "ar": 2024,
       "tilbyder": "SMB mobil",
-      "absolute": "11820",
+      "absolute": 11820,
       "value": 0.6816451754284791
     },
     {
       "metric": "Abonnement",
       "ar": 2024,
       "tilbyder": "Saga mobil",
-      "absolute": "2440",
+      "absolute": 2440,
       "value": 0.14071186362482987
     },
     {
       "metric": "Abonnement",
       "ar": 2024,
       "tilbyder": "Unifon",
-      "absolute": "124531",
+      "absolute": 124531,
       "value": 7.181552905353971
     },
     {
       "metric": "Abonnement",
       "ar": 2025,
       "tilbyder": "Nortel",
-      "absolute": "0",
+      "absolute": 0,
       "value": 0.0
     },
     {
       "metric": "Abonnement",
       "ar": 2025,
       "tilbyder": "SMB mobil",
-      "absolute": "13397",
+      "absolute": 13397,
       "value": 0.7636842678304628
     },
     {
       "metric": "Abonnement",
       "ar": 2025,
       "tilbyder": "Saga mobil",
-      "absolute": "2300",
+      "absolute": 2300,
       "value": 0.13110948839367506
     },
     {
       "metric": "Abonnement",
       "ar": 2025,
       "tilbyder": "Unifon",
-      "absolute": "128746",
+      "absolute": 128746,
       "value": 7.339053127274821
     },
     {
       "metric": "Omsetning",
       "ar": 2020,
       "tilbyder": "Nortel",
-      "absolute": "31555",
+      "absolute": 31555,
       "value": 0.6200896875085974
     },
     {
       "metric": "Omsetning",
       "ar": 2020,
       "tilbyder": "SMB mobil",
-      "absolute": "0",
+      "absolute": 0,
       "value": 0.0
     },
     {
       "metric": "Omsetning",
       "ar": 2020,
       "tilbyder": "Saga mobil",
-      "absolute": "6304",
+      "absolute": 6304,
       "value": 0.12388037997319594
     },
     {
       "metric": "Omsetning",
       "ar": 2020,
       "tilbyder": "Unifon",
-      "absolute": "144383",
+      "absolute": 144383,
       "value": 2.8372812344019587
     },
     {
       "metric": "Omsetning",
       "ar": 2021,
       "tilbyder": "Nortel",
-      "absolute": "101663",
+      "absolute": 101663,
       "value": 1.9545453758947415
     },
     {
       "metric": "Omsetning",
       "ar": 2021,
       "tilbyder": "SMB mobil",
-      "absolute": "0",
+      "absolute": 0,
       "value": 0.0
     },
     {
       "metric": "Omsetning",
       "ar": 2021,
       "tilbyder": "Saga mobil",
-      "absolute": "8403",
+      "absolute": 8403,
       "value": 0.16155380810760564
     },
     {
       "metric": "Omsetning",
       "ar": 2021,
       "tilbyder": "Unifon",
-      "absolute": "140647",
+      "absolute": 140647,
       "value": 2.7040412291931943
     },
     {
       "metric": "Omsetning",
       "ar": 2022,
       "tilbyder": "Nortel",
-      "absolute": "185214",
+      "absolute": 185214,
       "value": 3.4307516593987897
     },
     {
       "metric": "Omsetning",
       "ar": 2022,
       "tilbyder": "SMB mobil",
-      "absolute": "2510",
+      "absolute": 2510,
       "value": 0.046493173653670686
     },
     {
       "metric": "Omsetning",
       "ar": 2022,
       "tilbyder": "Saga mobil",
-      "absolute": "12541",
+      "absolute": 12541,
       "value": 0.23229915967756334
     },
     {
       "metric": "Omsetning",
       "ar": 2022,
       "tilbyder": "Unifon",
-      "absolute": "174056",
+      "absolute": 174056,
       "value": 3.2240700531726314
     },
     {
       "metric": "Omsetning",
       "ar": 2023,
       "tilbyder": "Nortel",
-      "absolute": "0",
+      "absolute": 0,
       "value": 0.0
     },
     {
       "metric": "Omsetning",
       "ar": 2023,
       "tilbyder": "SMB mobil",
-      "absolute": "23211",
+      "absolute": 23211,
       "value": 0.4261983350887321
     },
     {
       "metric": "Omsetning",
       "ar": 2023,
       "tilbyder": "Saga mobil",
-      "absolute": "12218",
+      "absolute": 12218,
       "value": 0.22434583852975437
     },
     {
       "metric": "Omsetning",
       "ar": 2023,
       "tilbyder": "Unifon",
-      "absolute": "446338",
+      "absolute": 446338,
       "value": 8.195618994736742
     },
     {
       "metric": "Omsetning",
       "ar": 2024,
       "tilbyder": "Nortel",
-      "absolute": "0",
+      "absolute": 0,
       "value": 0.0
     },
     {
       "metric": "Omsetning",
       "ar": 2024,
       "tilbyder": "SMB mobil",
-      "absolute": "50479",
+      "absolute": 50479,
       "value": 0.9062108809574717
     },
     {
       "metric": "Omsetning",
       "ar": 2024,
       "tilbyder": "Saga mobil",
-      "absolute": "10739",
+      "absolute": 10739,
       "value": 0.1927890538759145
     },
     {
       "metric": "Omsetning",
       "ar": 2024,
       "tilbyder": "Unifon",
-      "absolute": "491312",
+      "absolute": 491312,
       "value": 8.820148583469905
     },
     {
       "metric": "Omsetning",
       "ar": 2025,
       "tilbyder": "Nortel",
-      "absolute": "0",
+      "absolute": 0,
       "value": 0.0
     },
     {
       "metric": "Omsetning",
       "ar": 2025,
       "tilbyder": "SMB mobil",
-      "absolute": "47986",
+      "absolute": 47986,
       "value": 0.8454199051584955
     },
     {
       "metric": "Omsetning",
       "ar": 2025,
       "tilbyder": "Saga mobil",
-      "absolute": "10280",
+      "absolute": 10280,
       "value": 0.18111358781789136
     },
     {
       "metric": "Omsetning",
       "ar": 2025,
       "tilbyder": "Unifon",
-      "absolute": "476944",
+      "absolute": 476944,
       "value": 8.402824808192253
     }
   ],
@@ -2320,109 +2320,109 @@
     {
       "ar": 2020,
       "segment": "Bedrift",
-      "omsetning": "5088780",
+      "omsetning": 5088780,
       "abonnement": 1527540.0,
       "abonnement_forrige_ar": null,
-      "abonnement_slutt_ar": "1527540",
+      "abonnement_slutt_ar": 1527540,
       "value": 277.61302486350604
     },
     {
       "ar": 2021,
       "segment": "Bedrift",
-      "omsetning": "5201363",
+      "omsetning": 5201363,
       "abonnement": 1566002.0,
-      "abonnement_forrige_ar": "1527540",
-      "abonnement_slutt_ar": "1604464",
+      "abonnement_forrige_ar": 1527540,
+      "abonnement_slutt_ar": 1604464,
       "value": 276.78567247466265
     },
     {
       "ar": 2022,
       "segment": "Bedrift",
-      "omsetning": "5398642",
+      "omsetning": 5398642,
       "abonnement": 1633265.0,
-      "abonnement_forrige_ar": "1604464",
-      "abonnement_slutt_ar": "1662066",
+      "abonnement_forrige_ar": 1604464,
+      "abonnement_slutt_ar": 1662066,
       "value": 275.45244239810035
     },
     {
       "ar": 2023,
       "segment": "Bedrift",
-      "omsetning": "5446056",
+      "omsetning": 5446056,
       "abonnement": 1685798.5,
-      "abonnement_forrige_ar": "1662066",
-      "abonnement_slutt_ar": "1709531",
+      "abonnement_forrige_ar": 1662066,
+      "abonnement_slutt_ar": 1709531,
       "value": 269.2124829865491
     },
     {
       "ar": 2024,
       "segment": "Bedrift",
-      "omsetning": "5570337",
+      "omsetning": 5570337,
       "abonnement": 1721785.5,
-      "abonnement_forrige_ar": "1709531",
-      "abonnement_slutt_ar": "1734040",
+      "abonnement_forrige_ar": 1709531,
+      "abonnement_slutt_ar": 1734040,
       "value": 269.60080102893187
     },
     {
       "ar": 2025,
       "segment": "Bedrift",
-      "omsetning": "5675996",
+      "omsetning": 5675996,
       "abonnement": 1744149.5,
-      "abonnement_forrige_ar": "1734040",
-      "abonnement_slutt_ar": "1754259",
+      "abonnement_forrige_ar": 1734040,
+      "abonnement_slutt_ar": 1754259,
       "value": 271.1921579352382
     },
     {
       "ar": 2020,
       "segment": "Privat",
-      "omsetning": "12903149",
+      "omsetning": 12903149,
       "abonnement": 4307504.0,
       "abonnement_forrige_ar": null,
-      "abonnement_slutt_ar": "4307504",
+      "abonnement_slutt_ar": 4307504,
       "value": 249.62540177946826
     },
     {
       "ar": 2021,
       "segment": "Privat",
-      "omsetning": "13256781",
+      "omsetning": 13256781,
       "abonnement": 4314765.5,
-      "abonnement_forrige_ar": "4307504",
-      "abonnement_slutt_ar": "4322027",
+      "abonnement_forrige_ar": 4307504,
+      "abonnement_slutt_ar": 4322027,
       "value": 256.0351773462544
     },
     {
       "ar": 2022,
       "segment": "Privat",
-      "omsetning": "13653231",
+      "omsetning": 13653231,
       "abonnement": 4339835.0,
-      "abonnement_forrige_ar": "4322027",
-      "abonnement_slutt_ar": "4357643",
+      "abonnement_forrige_ar": 4322027,
+      "abonnement_slutt_ar": 4357643,
       "value": 262.16878061032276
     },
     {
       "ar": 2023,
       "segment": "Privat",
-      "omsetning": "13772683",
+      "omsetning": 13772683,
       "abonnement": 4350270.0,
-      "abonnement_forrige_ar": "4357643",
-      "abonnement_slutt_ar": "4342897",
+      "abonnement_forrige_ar": 4357643,
+      "abonnement_slutt_ar": 4342897,
       "value": 263.82812637683026
     },
     {
       "ar": 2024,
       "segment": "Privat",
-      "omsetning": "14538791",
+      "omsetning": 14538791,
       "abonnement": 4353372.0,
-      "abonnement_forrige_ar": "4342897",
-      "abonnement_slutt_ar": "4363847",
+      "abonnement_forrige_ar": 4342897,
+      "abonnement_slutt_ar": 4363847,
       "value": 278.30516589592315
     },
     {
       "ar": 2025,
       "segment": "Privat",
-      "omsetning": "15420163",
+      "omsetning": 15420163,
       "abonnement": 4364896.0,
-      "abonnement_forrige_ar": "4363847",
-      "abonnement_slutt_ar": "4365945",
+      "abonnement_forrige_ar": 4363847,
+      "abonnement_slutt_ar": 4365945,
       "value": 294.397296827538
     }
   ],
@@ -2431,760 +2431,760 @@
       "ar": 2020,
       "segment": "Bedrift",
       "tilbyder": "Fjordkraft",
-      "omsetning": "940",
+      "omsetning": 940,
       "abonnement": 557.0,
       "abonnement_forrige_ar": null,
-      "abonnement_slutt_ar": "557",
+      "abonnement_slutt_ar": 557,
       "value": 140.63435068821065
     },
     {
       "ar": 2020,
       "segment": "Bedrift",
       "tilbyder": "Happybytes",
-      "omsetning": "505",
+      "omsetning": 505,
       "abonnement": 348.0,
       "abonnement_forrige_ar": null,
-      "abonnement_slutt_ar": "348",
+      "abonnement_slutt_ar": 348,
       "value": 120.92911877394636
     },
     {
       "ar": 2021,
       "segment": "Bedrift",
       "tilbyder": "Happybytes",
-      "omsetning": "910",
+      "omsetning": 910,
       "abonnement": 425.0,
-      "abonnement_forrige_ar": "348",
-      "abonnement_slutt_ar": "502",
+      "abonnement_forrige_ar": 348,
+      "abonnement_slutt_ar": 502,
       "value": 178.43137254901958
     },
     {
       "ar": 2022,
       "segment": "Bedrift",
       "tilbyder": "Happybytes",
-      "omsetning": "1593",
+      "omsetning": 1593,
       "abonnement": 516.0,
-      "abonnement_forrige_ar": "502",
-      "abonnement_slutt_ar": "530",
+      "abonnement_forrige_ar": 502,
+      "abonnement_slutt_ar": 530,
       "value": 257.2674418604651
     },
     {
       "ar": 2023,
       "segment": "Bedrift",
       "tilbyder": "Happybytes",
-      "omsetning": "1847",
+      "omsetning": 1847,
       "abonnement": 521.0,
-      "abonnement_forrige_ar": "530",
-      "abonnement_slutt_ar": "512",
+      "abonnement_forrige_ar": 530,
+      "abonnement_slutt_ar": 512,
       "value": 295.4254638515675
     },
     {
       "ar": 2024,
       "segment": "Bedrift",
       "tilbyder": "Happybytes",
-      "omsetning": "2035",
+      "omsetning": 2035,
       "abonnement": 535.5,
-      "abonnement_forrige_ar": "512",
-      "abonnement_slutt_ar": "559",
+      "abonnement_forrige_ar": 512,
+      "abonnement_slutt_ar": 559,
       "value": 316.68222844693435
     },
     {
       "ar": 2025,
       "segment": "Bedrift",
       "tilbyder": "Happybytes",
-      "omsetning": "2414",
+      "omsetning": 2414,
       "abonnement": 645.5,
-      "abonnement_forrige_ar": "559",
-      "abonnement_slutt_ar": "732",
+      "abonnement_forrige_ar": 559,
+      "abonnement_slutt_ar": 732,
       "value": 311.6447198554093
     },
     {
       "ar": 2020,
       "segment": "Bedrift",
       "tilbyder": "Ice",
-      "omsetning": "134177",
+      "omsetning": 134177,
       "abonnement": 41411.0,
       "abonnement_forrige_ar": null,
-      "abonnement_slutt_ar": "41411",
+      "abonnement_slutt_ar": 41411,
       "value": 270.01078618402516
     },
     {
       "ar": 2021,
       "segment": "Bedrift",
       "tilbyder": "Ice",
-      "omsetning": "141884",
+      "omsetning": 141884,
       "abonnement": 44384.5,
-      "abonnement_forrige_ar": "41411",
-      "abonnement_slutt_ar": "47358",
+      "abonnement_forrige_ar": 41411,
+      "abonnement_slutt_ar": 47358,
       "value": 266.391795934767
     },
     {
       "ar": 2022,
       "segment": "Bedrift",
       "tilbyder": "Ice",
-      "omsetning": "163010",
+      "omsetning": 163010,
       "abonnement": 50738.5,
-      "abonnement_forrige_ar": "47358",
-      "abonnement_slutt_ar": "54119",
+      "abonnement_forrige_ar": 47358,
+      "abonnement_slutt_ar": 54119,
       "value": 267.72897635260534
     },
     {
       "ar": 2023,
       "segment": "Bedrift",
       "tilbyder": "Ice",
-      "omsetning": "185015",
+      "omsetning": 185015,
       "abonnement": 58421.0,
-      "abonnement_forrige_ar": "54119",
-      "abonnement_slutt_ar": "62723",
+      "abonnement_forrige_ar": 54119,
+      "abonnement_slutt_ar": 62723,
       "value": 263.91052304251326
     },
     {
       "ar": 2024,
       "segment": "Bedrift",
       "tilbyder": "Ice",
-      "omsetning": "211938",
+      "omsetning": 211938,
       "abonnement": 67972.5,
-      "abonnement_forrige_ar": "62723",
-      "abonnement_slutt_ar": "73222",
+      "abonnement_forrige_ar": 62723,
+      "abonnement_slutt_ar": 73222,
       "value": 259.83302070690354
     },
     {
       "ar": 2025,
       "segment": "Bedrift",
       "tilbyder": "Ice",
-      "omsetning": "245836",
+      "omsetning": 245836,
       "abonnement": 82432.5,
-      "abonnement_forrige_ar": "73222",
-      "abonnement_slutt_ar": "91643",
+      "abonnement_forrige_ar": 73222,
+      "abonnement_slutt_ar": 91643,
       "value": 248.52252853344658
     },
     {
       "ar": 2020,
       "segment": "Bedrift",
       "tilbyder": "Telenor",
-      "omsetning": "3383563",
+      "omsetning": 3383563,
       "abonnement": 887930.0,
       "abonnement_forrige_ar": null,
-      "abonnement_slutt_ar": "887930",
+      "abonnement_slutt_ar": 887930,
       "value": 317.5515900277424
     },
     {
       "ar": 2021,
       "segment": "Bedrift",
       "tilbyder": "Telenor",
-      "omsetning": "3315231",
+      "omsetning": 3315231,
       "abonnement": 896572.0,
-      "abonnement_forrige_ar": "887930",
-      "abonnement_slutt_ar": "905214",
+      "abonnement_forrige_ar": 887930,
+      "abonnement_slutt_ar": 905214,
       "value": 308.1395024604828
     },
     {
       "ar": 2022,
       "segment": "Bedrift",
       "tilbyder": "Telenor",
-      "omsetning": "3290390",
+      "omsetning": 3290390,
       "abonnement": 893051.0,
-      "abonnement_forrige_ar": "905214",
-      "abonnement_slutt_ar": "880888",
+      "abonnement_forrige_ar": 905214,
+      "abonnement_slutt_ar": 880888,
       "value": 307.03640292286406
     },
     {
       "ar": 2023,
       "segment": "Bedrift",
       "tilbyder": "Telenor",
-      "omsetning": "3171300",
+      "omsetning": 3171300,
       "abonnement": 884896.0,
-      "abonnement_forrige_ar": "880888",
-      "abonnement_slutt_ar": "888904",
+      "abonnement_forrige_ar": 880888,
+      "abonnement_slutt_ar": 888904,
       "value": 298.6509149097747
     },
     {
       "ar": 2024,
       "segment": "Bedrift",
       "tilbyder": "Telenor",
-      "omsetning": "3195059",
+      "omsetning": 3195059,
       "abonnement": 890907.0,
-      "abonnement_forrige_ar": "888904",
-      "abonnement_slutt_ar": "892910",
+      "abonnement_forrige_ar": 888904,
+      "abonnement_slutt_ar": 892910,
       "value": 298.85826092585046
     },
     {
       "ar": 2025,
       "segment": "Bedrift",
       "tilbyder": "Telenor",
-      "omsetning": "3293376",
+      "omsetning": 3293376,
       "abonnement": 891475.5,
-      "abonnement_forrige_ar": "892910",
-      "abonnement_slutt_ar": "890041",
+      "abonnement_forrige_ar": 892910,
+      "abonnement_slutt_ar": 890041,
       "value": 307.8581520187599
     },
     {
       "ar": 2020,
       "segment": "Bedrift",
       "tilbyder": "Telia",
-      "omsetning": "1318191",
+      "omsetning": 1318191,
       "abonnement": 524841.0,
       "abonnement_forrige_ar": null,
-      "abonnement_slutt_ar": "524841",
+      "abonnement_slutt_ar": 524841,
       "value": 209.3000546832279
     },
     {
       "ar": 2021,
       "segment": "Bedrift",
       "tilbyder": "Telia",
-      "omsetning": "1431506",
+      "omsetning": 1431506,
       "abonnement": 544360.5,
-      "abonnement_forrige_ar": "524841",
-      "abonnement_slutt_ar": "563880",
+      "abonnement_forrige_ar": 524841,
+      "abonnement_slutt_ar": 563880,
       "value": 219.1418493198288
     },
     {
       "ar": 2022,
       "segment": "Bedrift",
       "tilbyder": "Telia",
-      "omsetning": "1544636",
+      "omsetning": 1544636,
       "abonnement": 585179.0,
-      "abonnement_forrige_ar": "563880",
-      "abonnement_slutt_ar": "606478",
+      "abonnement_forrige_ar": 563880,
+      "abonnement_slutt_ar": 606478,
       "value": 219.96631230216167
     },
     {
       "ar": 2023,
       "segment": "Bedrift",
       "tilbyder": "Telia",
-      "omsetning": "1606077",
+      "omsetning": 1606077,
       "abonnement": 614105.5,
-      "abonnement_forrige_ar": "606478",
-      "abonnement_slutt_ar": "621733",
+      "abonnement_forrige_ar": 606478,
+      "abonnement_slutt_ar": 621733,
       "value": 217.94260106773186
     },
     {
       "ar": 2024,
       "segment": "Bedrift",
       "tilbyder": "Telia",
-      "omsetning": "1608747",
+      "omsetning": 1608747,
       "abonnement": 625119.5,
-      "abonnement_forrige_ar": "621733",
-      "abonnement_slutt_ar": "628506",
+      "abonnement_forrige_ar": 621733,
+      "abonnement_slutt_ar": 628506,
       "value": 214.45859551653723
     },
     {
       "ar": 2025,
       "segment": "Bedrift",
       "tilbyder": "Telia",
-      "omsetning": "1598791",
+      "omsetning": 1598791,
       "abonnement": 627512.5,
-      "abonnement_forrige_ar": "628506",
-      "abonnement_slutt_ar": "626519",
+      "abonnement_forrige_ar": 628506,
+      "abonnement_slutt_ar": 626519,
       "value": 212.31861251103896
     },
     {
       "ar": 2020,
       "segment": "Bedrift",
       "tilbyder": "Unifon",
-      "omsetning": "175938",
+      "omsetning": 175938,
       "abonnement": 47098.0,
       "abonnement_forrige_ar": null,
-      "abonnement_slutt_ar": "47098",
+      "abonnement_slutt_ar": 47098,
       "value": 311.29771964839273
     },
     {
       "ar": 2021,
       "segment": "Bedrift",
       "tilbyder": "Unifon",
-      "omsetning": "242310",
+      "omsetning": 242310,
       "abonnement": 56329.0,
-      "abonnement_forrige_ar": "47098",
-      "abonnement_slutt_ar": "65560",
+      "abonnement_forrige_ar": 47098,
+      "abonnement_slutt_ar": 65560,
       "value": 358.4743205098617
     },
     {
       "ar": 2022,
       "segment": "Bedrift",
       "tilbyder": "Unifon",
-      "omsetning": "359270",
+      "omsetning": 359270,
       "abonnement": 90019.5,
-      "abonnement_forrige_ar": "65560",
-      "abonnement_slutt_ar": "114479",
+      "abonnement_forrige_ar": 65560,
+      "abonnement_slutt_ar": 114479,
       "value": 332.58534724883685
     },
     {
       "ar": 2023,
       "segment": "Bedrift",
       "tilbyder": "Unifon",
-      "omsetning": "446338",
+      "omsetning": 446338,
       "abonnement": 120693.0,
-      "abonnement_forrige_ar": "114479",
-      "abonnement_slutt_ar": "126907",
+      "abonnement_forrige_ar": 114479,
+      "abonnement_slutt_ar": 126907,
       "value": 308.17722099320866
     },
     {
       "ar": 2024,
       "segment": "Bedrift",
       "tilbyder": "Unifon",
-      "omsetning": "491312",
+      "omsetning": 491312,
       "abonnement": 125719.0,
-      "abonnement_forrige_ar": "126907",
-      "abonnement_slutt_ar": "124531",
+      "abonnement_forrige_ar": 126907,
+      "abonnement_slutt_ar": 124531,
       "value": 325.66809047691015
     },
     {
       "ar": 2025,
       "segment": "Bedrift",
       "tilbyder": "Unifon",
-      "omsetning": "476944",
+      "omsetning": 476944,
       "abonnement": 126638.5,
-      "abonnement_forrige_ar": "124531",
-      "abonnement_slutt_ar": "128746",
+      "abonnement_forrige_ar": 124531,
+      "abonnement_slutt_ar": 128746,
       "value": 313.8487374166097
     },
     {
       "ar": 2020,
       "segment": "Privat",
       "tilbyder": "Chili mobil",
-      "omsetning": "191428",
+      "omsetning": 191428,
       "abonnement": 70650.0,
       "abonnement_forrige_ar": null,
-      "abonnement_slutt_ar": "70650",
+      "abonnement_slutt_ar": 70650,
       "value": 225.793819297004
     },
     {
       "ar": 2021,
       "segment": "Privat",
       "tilbyder": "Chili mobil",
-      "omsetning": "200133",
+      "omsetning": 200133,
       "abonnement": 75515.0,
-      "abonnement_forrige_ar": "70650",
-      "abonnement_slutt_ar": "80380",
+      "abonnement_forrige_ar": 70650,
+      "abonnement_slutt_ar": 80380,
       "value": 220.85347281996954
     },
     {
       "ar": 2022,
       "segment": "Privat",
       "tilbyder": "Chili mobil",
-      "omsetning": "212344",
+      "omsetning": 212344,
       "abonnement": 82600.5,
-      "abonnement_forrige_ar": "80380",
-      "abonnement_slutt_ar": "84821",
+      "abonnement_forrige_ar": 80380,
+      "abonnement_slutt_ar": 84821,
       "value": 214.2279203313943
     },
     {
       "ar": 2023,
       "segment": "Privat",
       "tilbyder": "Chili mobil",
-      "omsetning": "225484",
+      "omsetning": 225484,
       "abonnement": 83825.0,
-      "abonnement_forrige_ar": "84821",
-      "abonnement_slutt_ar": "82829",
+      "abonnement_forrige_ar": 84821,
+      "abonnement_slutt_ar": 82829,
       "value": 224.16144745998608
     },
     {
       "ar": 2024,
       "segment": "Privat",
       "tilbyder": "Chili mobil",
-      "omsetning": "235317",
+      "omsetning": 235317,
       "abonnement": 85472.5,
-      "abonnement_forrige_ar": "82829",
-      "abonnement_slutt_ar": "88116",
+      "abonnement_forrige_ar": 82829,
+      "abonnement_slutt_ar": 88116,
       "value": 229.4275936704788
     },
     {
       "ar": 2025,
       "segment": "Privat",
       "tilbyder": "Chili mobil",
-      "omsetning": "233153",
+      "omsetning": 233153,
       "abonnement": 90035.5,
-      "abonnement_forrige_ar": "88116",
-      "abonnement_slutt_ar": "91955",
+      "abonnement_forrige_ar": 88116,
+      "abonnement_slutt_ar": 91955,
       "value": 215.79728736627962
     },
     {
       "ar": 2020,
       "segment": "Privat",
       "tilbyder": "Fjordkraft",
-      "omsetning": "291061",
+      "omsetning": 291061,
       "abonnement": 166872.0,
       "abonnement_forrige_ar": null,
-      "abonnement_slutt_ar": "166872",
+      "abonnement_slutt_ar": 166872,
       "value": 145.3514270418844
     },
     {
       "ar": 2021,
       "segment": "Privat",
       "tilbyder": "Fjordkraft",
-      "omsetning": "284015",
+      "omsetning": 284015,
       "abonnement": 159541.0,
-      "abonnement_forrige_ar": "166872",
-      "abonnement_slutt_ar": "152210",
+      "abonnement_forrige_ar": 166872,
+      "abonnement_slutt_ar": 152210,
       "value": 148.35005839669216
     },
     {
       "ar": 2022,
       "segment": "Privat",
       "tilbyder": "Fjordkraft",
-      "omsetning": "292989",
+      "omsetning": 292989,
       "abonnement": 144647.5,
-      "abonnement_forrige_ar": "152210",
-      "abonnement_slutt_ar": "137085",
+      "abonnement_forrige_ar": 152210,
+      "abonnement_slutt_ar": 137085,
       "value": 168.7948288079642
     },
     {
       "ar": 2023,
       "segment": "Privat",
       "tilbyder": "Fjordkraft",
-      "omsetning": "249571",
+      "omsetning": 249571,
       "abonnement": 125930.0,
-      "abonnement_forrige_ar": "137085",
-      "abonnement_slutt_ar": "114775",
+      "abonnement_forrige_ar": 137085,
+      "abonnement_slutt_ar": 114775,
       "value": 165.15193626088566
     },
     {
       "ar": 2024,
       "segment": "Privat",
       "tilbyder": "Fjordkraft",
-      "omsetning": "264235",
+      "omsetning": 264235,
       "abonnement": 113366.5,
-      "abonnement_forrige_ar": "114775",
-      "abonnement_slutt_ar": "111958",
+      "abonnement_forrige_ar": 114775,
+      "abonnement_slutt_ar": 111958,
       "value": 194.23359928491516
     },
     {
       "ar": 2025,
       "segment": "Privat",
       "tilbyder": "Fjordkraft",
-      "omsetning": "263556",
+      "omsetning": 263556,
       "abonnement": 112085.5,
-      "abonnement_forrige_ar": "111958",
-      "abonnement_slutt_ar": "112213",
+      "abonnement_forrige_ar": 111958,
+      "abonnement_slutt_ar": 112213,
       "value": 195.94862850234867
     },
     {
       "ar": 2020,
       "segment": "Privat",
       "tilbyder": "Happybytes",
-      "omsetning": "15221",
+      "omsetning": 15221,
       "abonnement": 13649.0,
       "abonnement_forrige_ar": null,
-      "abonnement_slutt_ar": "13649",
+      "abonnement_slutt_ar": 13649,
       "value": 92.9311060639363
     },
     {
       "ar": 2021,
       "segment": "Privat",
       "tilbyder": "Happybytes",
-      "omsetning": "37583",
+      "omsetning": 37583,
       "abonnement": 20615.0,
-      "abonnement_forrige_ar": "13649",
-      "abonnement_slutt_ar": "27581",
+      "abonnement_forrige_ar": 13649,
+      "abonnement_slutt_ar": 27581,
       "value": 151.92416525183927
     },
     {
       "ar": 2022,
       "segment": "Privat",
       "tilbyder": "Happybytes",
-      "omsetning": "82015",
+      "omsetning": 82015,
       "abonnement": 34394.5,
-      "abonnement_forrige_ar": "27581",
-      "abonnement_slutt_ar": "41208",
+      "abonnement_forrige_ar": 27581,
+      "abonnement_slutt_ar": 41208,
       "value": 198.71151879903277
     },
     {
       "ar": 2023,
       "segment": "Privat",
       "tilbyder": "Happybytes",
-      "omsetning": "113140",
+      "omsetning": 113140,
       "abonnement": 45068.0,
-      "abonnement_forrige_ar": "41208",
-      "abonnement_slutt_ar": "48928",
+      "abonnement_forrige_ar": 41208,
+      "abonnement_slutt_ar": 48928,
       "value": 209.20239046182064
     },
     {
       "ar": 2024,
       "segment": "Privat",
       "tilbyder": "Happybytes",
-      "omsetning": "108587",
+      "omsetning": 108587,
       "abonnement": 44916.0,
-      "abonnement_forrige_ar": "48928",
-      "abonnement_slutt_ar": "40904",
+      "abonnement_forrige_ar": 48928,
+      "abonnement_slutt_ar": 40904,
       "value": 201.4631014931576
     },
     {
       "ar": 2025,
       "segment": "Privat",
       "tilbyder": "Happybytes",
-      "omsetning": "143314",
+      "omsetning": 143314,
       "abonnement": 58101.0,
-      "abonnement_forrige_ar": "40904",
-      "abonnement_slutt_ar": "75298",
+      "abonnement_forrige_ar": 40904,
+      "abonnement_slutt_ar": 75298,
       "value": 205.55297384439743
     },
     {
       "ar": 2020,
       "segment": "Privat",
       "tilbyder": "Ice",
-      "omsetning": "1225810",
+      "omsetning": 1225810,
       "abonnement": 597979.0,
       "abonnement_forrige_ar": null,
-      "abonnement_slutt_ar": "597979",
+      "abonnement_slutt_ar": 597979,
       "value": 170.82679046142644
     },
     {
       "ar": 2021,
       "segment": "Privat",
       "tilbyder": "Ice",
-      "omsetning": "1400232",
+      "omsetning": 1400232,
       "abonnement": 622122.5,
-      "abonnement_forrige_ar": "597979",
-      "abonnement_slutt_ar": "646266",
+      "abonnement_forrige_ar": 597979,
+      "abonnement_slutt_ar": 646266,
       "value": 187.5611314491921
     },
     {
       "ar": 2022,
       "segment": "Privat",
       "tilbyder": "Ice",
-      "omsetning": "1488745",
+      "omsetning": 1488745,
       "abonnement": 674726.0,
-      "abonnement_forrige_ar": "646266",
-      "abonnement_slutt_ar": "703186",
+      "abonnement_forrige_ar": 646266,
+      "abonnement_slutt_ar": 703186,
       "value": 183.87031674091904
     },
     {
       "ar": 2023,
       "segment": "Privat",
       "tilbyder": "Ice",
-      "omsetning": "1691832",
+      "omsetning": 1691832,
       "abonnement": 761269.0,
-      "abonnement_forrige_ar": "703186",
-      "abonnement_slutt_ar": "819352",
+      "abonnement_forrige_ar": 703186,
+      "abonnement_slutt_ar": 819352,
       "value": 185.19866170827922
     },
     {
       "ar": 2024,
       "segment": "Privat",
       "tilbyder": "Ice",
-      "omsetning": "2011644",
+      "omsetning": 2011644,
       "abonnement": 862317.0,
-      "abonnement_forrige_ar": "819352",
-      "abonnement_slutt_ar": "905282",
+      "abonnement_forrige_ar": 819352,
+      "abonnement_slutt_ar": 905282,
       "value": 194.4029863727608
     },
     {
       "ar": 2025,
       "segment": "Privat",
       "tilbyder": "Ice",
-      "omsetning": "2291711",
+      "omsetning": 2291711,
       "abonnement": 931195.0,
-      "abonnement_forrige_ar": "905282",
-      "abonnement_slutt_ar": "957108",
+      "abonnement_forrige_ar": 905282,
+      "abonnement_slutt_ar": 957108,
       "value": 205.08692235962033
     },
     {
       "ar": 2022,
       "segment": "Privat",
       "tilbyder": "Plussmobil",
-      "omsetning": "13295",
+      "omsetning": 13295,
       "abonnement": 11694.0,
       "abonnement_forrige_ar": null,
-      "abonnement_slutt_ar": "11694",
+      "abonnement_slutt_ar": 11694,
       "value": 94.74231799783365
     },
     {
       "ar": 2023,
       "segment": "Privat",
       "tilbyder": "Plussmobil",
-      "omsetning": "77459",
+      "omsetning": 77459,
       "abonnement": 28624.5,
-      "abonnement_forrige_ar": "11694",
-      "abonnement_slutt_ar": "45555",
+      "abonnement_forrige_ar": 11694,
+      "abonnement_slutt_ar": 45555,
       "value": 225.50321111868038
     },
     {
       "ar": 2024,
       "segment": "Privat",
       "tilbyder": "Plussmobil",
-      "omsetning": "102195",
+      "omsetning": 102195,
       "abonnement": 47036.5,
-      "abonnement_forrige_ar": "45555",
-      "abonnement_slutt_ar": "48518",
+      "abonnement_forrige_ar": 45555,
+      "abonnement_slutt_ar": 48518,
       "value": 181.05620103536614
     },
     {
       "ar": 2025,
       "segment": "Privat",
       "tilbyder": "Plussmobil",
-      "omsetning": "118775",
+      "omsetning": 118775,
       "abonnement": 48577.5,
-      "abonnement_forrige_ar": "48518",
-      "abonnement_slutt_ar": "48637",
+      "abonnement_forrige_ar": 48518,
+      "abonnement_slutt_ar": 48637,
       "value": 203.75516785891958
     },
     {
       "ar": 2020,
       "segment": "Privat",
       "tilbyder": "Telenor",
-      "omsetning": "6738726",
+      "omsetning": 6738726,
       "abonnement": 1803567.0,
       "abonnement_forrige_ar": null,
-      "abonnement_slutt_ar": "1803567",
+      "abonnement_slutt_ar": 1803567,
       "value": 311.3610417578055
     },
     {
       "ar": 2021,
       "segment": "Privat",
       "tilbyder": "Telenor",
-      "omsetning": "6814156",
+      "omsetning": 6814156,
       "abonnement": 1767511.5,
-      "abonnement_forrige_ar": "1803567",
-      "abonnement_slutt_ar": "1731456",
+      "abonnement_forrige_ar": 1803567,
+      "abonnement_slutt_ar": 1731456,
       "value": 321.26881965595885
     },
     {
       "ar": 2022,
       "segment": "Privat",
       "tilbyder": "Telenor",
-      "omsetning": "6895484",
+      "omsetning": 6895484,
       "abonnement": 1719521.0,
-      "abonnement_forrige_ar": "1731456",
-      "abonnement_slutt_ar": "1707586",
+      "abonnement_forrige_ar": 1731456,
+      "abonnement_slutt_ar": 1707586,
       "value": 334.17659142672096
     },
     {
       "ar": 2023,
       "segment": "Privat",
       "tilbyder": "Telenor",
-      "omsetning": "6678860",
+      "omsetning": 6678860,
       "abonnement": 1690250.5,
-      "abonnement_forrige_ar": "1707586",
-      "abonnement_slutt_ar": "1672915",
+      "abonnement_forrige_ar": 1707586,
+      "abonnement_slutt_ar": 1672915,
       "value": 329.28353913616155
     },
     {
       "ar": 2024,
       "segment": "Privat",
       "tilbyder": "Telenor",
-      "omsetning": "7039827",
+      "omsetning": 7039827,
       "abonnement": 1650480.5,
-      "abonnement_forrige_ar": "1672915",
-      "abonnement_slutt_ar": "1628046",
+      "abonnement_forrige_ar": 1672915,
+      "abonnement_slutt_ar": 1628046,
       "value": 355.4433087818972
     },
     {
       "ar": 2025,
       "segment": "Privat",
       "tilbyder": "Telenor",
-      "omsetning": "7414288",
+      "omsetning": 7414288,
       "abonnement": 1606569.0,
-      "abonnement_forrige_ar": "1628046",
-      "abonnement_slutt_ar": "1585092",
+      "abonnement_forrige_ar": 1628046,
+      "abonnement_slutt_ar": 1585092,
       "value": 384.5818843344627
     },
     {
       "ar": 2020,
       "segment": "Privat",
       "tilbyder": "Telia",
-      "omsetning": "4350938",
+      "omsetning": 4350938,
       "abonnement": 1523701.0,
       "abonnement_forrige_ar": null,
-      "abonnement_slutt_ar": "1523701",
+      "abonnement_slutt_ar": 1523701,
       "value": 237.95886900820219
     },
     {
       "ar": 2021,
       "segment": "Privat",
       "tilbyder": "Telia",
-      "omsetning": "4368092",
+      "omsetning": 4368092,
       "abonnement": 1512575.0,
-      "abonnement_forrige_ar": "1523701",
-      "abonnement_slutt_ar": "1501449",
+      "abonnement_forrige_ar": 1523701,
+      "abonnement_slutt_ar": 1501449,
       "value": 240.65429262460816
     },
     {
       "ar": 2022,
       "segment": "Privat",
       "tilbyder": "Telia",
-      "omsetning": "4463020",
+      "omsetning": 4463020,
       "abonnement": 1489542.0,
-      "abonnement_forrige_ar": "1501449",
-      "abonnement_slutt_ar": "1477635",
+      "abonnement_forrige_ar": 1501449,
+      "abonnement_slutt_ar": 1477635,
       "value": 249.68636891966344
     },
     {
       "ar": 2023,
       "segment": "Privat",
       "tilbyder": "Telia",
-      "omsetning": "4637704",
+      "omsetning": 4637704,
       "abonnement": 1460534.0,
-      "abonnement_forrige_ar": "1477635",
-      "abonnement_slutt_ar": "1443433",
+      "abonnement_forrige_ar": 1477635,
+      "abonnement_slutt_ar": 1443433,
       "value": 264.6123495470378
     },
     {
       "ar": 2024,
       "segment": "Privat",
       "tilbyder": "Telia",
-      "omsetning": "4638468",
+      "omsetning": 4638468,
       "abonnement": 1434841.5,
-      "abonnement_forrige_ar": "1443433",
-      "abonnement_slutt_ar": "1426250",
+      "abonnement_forrige_ar": 1443433,
+      "abonnement_slutt_ar": 1426250,
       "value": 269.39491226034374
     },
     {
       "ar": 2025,
       "segment": "Privat",
       "tilbyder": "Telia",
-      "omsetning": "4801731",
+      "omsetning": 4801731,
       "abonnement": 1404480.5,
-      "abonnement_forrige_ar": "1426250",
-      "abonnement_slutt_ar": "1382711",
+      "abonnement_forrige_ar": 1426250,
+      "abonnement_slutt_ar": 1382711,
       "value": 284.9055220061795
     },
     {
       "ar": 2021,
       "segment": "Privat",
       "tilbyder": "Unifon",
-      "omsetning": "7233",
+      "omsetning": 7233,
       "abonnement": 3624.0,
       "abonnement_forrige_ar": null,
-      "abonnement_slutt_ar": "3624",
+      "abonnement_slutt_ar": 3624,
       "value": 166.32174392935983
     },
     {
       "ar": 2022,
       "segment": "Privat",
       "tilbyder": "Unifon",
-      "omsetning": "890",
+      "omsetning": 890,
       "abonnement": 2059.0,
-      "abonnement_forrige_ar": "3624",
-      "abonnement_slutt_ar": "494",
+      "abonnement_forrige_ar": 3624,
+      "abonnement_slutt_ar": 494,
       "value": 36.02072203334952
     },
     {
       "ar": 2023,
       "segment": "Privat",
       "tilbyder": "Unifon",
-      "omsetning": "2681",
+      "omsetning": 2681,
       "abonnement": 808.0,
-      "abonnement_forrige_ar": "494",
-      "abonnement_slutt_ar": "1122",
+      "abonnement_forrige_ar": 494,
+      "abonnement_slutt_ar": 1122,
       "value": 276.50577557755776
     },
     {
       "ar": 2024,
       "segment": "Privat",
       "tilbyder": "Unifon",
-      "omsetning": "3576",
+      "omsetning": 3576,
       "abonnement": 1032.5,
-      "abonnement_forrige_ar": "1122",
-      "abonnement_slutt_ar": "943",
+      "abonnement_forrige_ar": 1122,
+      "abonnement_slutt_ar": 943,
       "value": 288.61985472154964
     },
     {
       "ar": 2025,
       "segment": "Privat",
       "tilbyder": "Unifon",
-      "omsetning": "4024",
+      "omsetning": 4024,
       "abonnement": 1011.5,
-      "abonnement_forrige_ar": "943",
-      "abonnement_slutt_ar": "1080",
+      "abonnement_forrige_ar": 943,
+      "abonnement_slutt_ar": 1080,
       "value": 331.52084363157024
     }
   ],
@@ -3192,169 +3192,169 @@
     {
       "ar": 2020,
       "tilbyder": "Ice",
-      "inntekter": "1359987",
-      "datatrafikk_gb": "37159970",
+      "inntekter": 1359987,
+      "datatrafikk_gb": 37159970,
       "value": 36.598172711118984
     },
     {
       "ar": 2021,
       "tilbyder": "Ice",
-      "inntekter": "1542116",
-      "datatrafikk_gb": "56445173",
+      "inntekter": 1542116,
+      "datatrafikk_gb": 56445173,
       "value": 27.320600115797323
     },
     {
       "ar": 2022,
       "tilbyder": "Ice",
-      "inntekter": "1651755",
-      "datatrafikk_gb": "84185868",
+      "inntekter": 1651755,
+      "datatrafikk_gb": 84185868,
       "value": 19.620335802678902
     },
     {
       "ar": 2023,
       "tilbyder": "Ice",
-      "inntekter": "1876847",
-      "datatrafikk_gb": "108395040",
+      "inntekter": 1876847,
+      "datatrafikk_gb": 108395040,
       "value": 17.3148789833926
     },
     {
       "ar": 2024,
       "tilbyder": "Ice",
-      "inntekter": "2223582",
-      "datatrafikk_gb": "135612079",
+      "inntekter": 2223582,
+      "datatrafikk_gb": 135612079,
       "value": 16.39663676271787
     },
     {
       "ar": 2025,
       "tilbyder": "Ice",
-      "inntekter": "2537547",
-      "datatrafikk_gb": "170097436",
+      "inntekter": 2537547,
+      "datatrafikk_gb": 170097436,
       "value": 14.918196650536226
     },
     {
       "ar": 2020,
       "tilbyder": "Telenor",
-      "inntekter": "10122289",
-      "datatrafikk_gb": "169506863",
+      "inntekter": 10122289,
+      "datatrafikk_gb": 169506863,
       "value": 59.716101288477034
     },
     {
       "ar": 2021,
       "tilbyder": "Telenor",
-      "inntekter": "10129387",
-      "datatrafikk_gb": "224783593",
+      "inntekter": 10129387,
+      "datatrafikk_gb": 224783593,
       "value": 45.06283961748044
     },
     {
       "ar": 2022,
       "tilbyder": "Telenor",
-      "inntekter": "10185874",
-      "datatrafikk_gb": "279323386",
+      "inntekter": 10185874,
+      "datatrafikk_gb": 279323386,
       "value": 36.46624131930006
     },
     {
       "ar": 2023,
       "tilbyder": "Telenor",
-      "inntekter": "9850160",
-      "datatrafikk_gb": "338407793",
+      "inntekter": 9850160,
+      "datatrafikk_gb": 338407793,
       "value": 29.107367512662453
     },
     {
       "ar": 2024,
       "tilbyder": "Telenor",
-      "inntekter": "10234886",
-      "datatrafikk_gb": "389117891",
+      "inntekter": 10234886,
+      "datatrafikk_gb": 389117891,
       "value": 26.302789557419757
     },
     {
       "ar": 2025,
       "tilbyder": "Telenor",
-      "inntekter": "10707664",
-      "datatrafikk_gb": "408825962",
+      "inntekter": 10707664,
+      "datatrafikk_gb": 408825962,
       "value": 26.191252501718566
     },
     {
       "ar": 2020,
       "tilbyder": "Telia",
-      "inntekter": "5669129",
-      "datatrafikk_gb": "128671627",
+      "inntekter": 5669129,
+      "datatrafikk_gb": 128671627,
       "value": 44.058889532810525
     },
     {
       "ar": 2021,
       "tilbyder": "Telia",
-      "inntekter": "5799598",
-      "datatrafikk_gb": "182550290",
+      "inntekter": 5799598,
+      "datatrafikk_gb": 182550290,
       "value": 31.76986462196253
     },
     {
       "ar": 2022,
       "tilbyder": "Telia",
-      "inntekter": "6007656",
-      "datatrafikk_gb": "210806785",
+      "inntekter": 6007656,
+      "datatrafikk_gb": 210806785,
       "value": 28.49839961270696
     },
     {
       "ar": 2023,
       "tilbyder": "Telia",
-      "inntekter": "6243781",
-      "datatrafikk_gb": "254040331",
+      "inntekter": 6243781,
+      "datatrafikk_gb": 254040331,
       "value": 24.577912394548093
     },
     {
       "ar": 2024,
       "tilbyder": "Telia",
-      "inntekter": "6247215",
-      "datatrafikk_gb": "296340055",
+      "inntekter": 6247215,
+      "datatrafikk_gb": 296340055,
       "value": 21.081237229304016
     },
     {
       "ar": 2025,
       "tilbyder": "Telia",
-      "inntekter": "6400522",
-      "datatrafikk_gb": "322144924",
+      "inntekter": 6400522,
+      "datatrafikk_gb": 322144924,
       "value": 19.86845522979589
     },
     {
       "ar": 2020,
       "tilbyder": "Øvrige",
-      "inntekter": "840524",
-      "datatrafikk_gb": "20710304",
+      "inntekter": 840524,
+      "datatrafikk_gb": 20710304,
       "value": 40.5848219321165
     },
     {
       "ar": 2021,
       "tilbyder": "Øvrige",
-      "inntekter": "987043",
-      "datatrafikk_gb": "30437357",
+      "inntekter": 987043,
+      "datatrafikk_gb": 30437357,
       "value": 32.42866980861709
     },
     {
       "ar": 2022,
       "tilbyder": "Øvrige",
-      "inntekter": "1206588",
-      "datatrafikk_gb": "39823017",
+      "inntekter": 1206588,
+      "datatrafikk_gb": 39823017,
       "value": 30.298759132187296
     },
     {
       "ar": 2023,
       "tilbyder": "Øvrige",
-      "inntekter": "1247951",
-      "datatrafikk_gb": "47771310",
+      "inntekter": 1247951,
+      "datatrafikk_gb": 47771310,
       "value": 26.12344103605281
     },
     {
       "ar": 2024,
       "tilbyder": "Øvrige",
-      "inntekter": "1403445",
-      "datatrafikk_gb": "48874416",
+      "inntekter": 1403445,
+      "datatrafikk_gb": 48874416,
       "value": 28.715330327425292
     },
     {
       "ar": 2025,
       "tilbyder": "Øvrige",
-      "inntekter": "1450426",
-      "datatrafikk_gb": "62105407",
+      "inntekter": 1450426,
+      "datatrafikk_gb": 62105407,
       "value": 23.354262858304754
     }
   ],
@@ -3362,323 +3362,323 @@
     {
       "ar": 2020,
       "tilbyder": "Chili mobil",
-      "inntekter": "191428",
-      "datatrafikk_gb": "10957000",
+      "inntekter": 191428,
+      "datatrafikk_gb": 10957000,
       "value": 17.470840558547046
     },
     {
       "ar": 2021,
       "tilbyder": "Chili mobil",
-      "inntekter": "200133",
-      "datatrafikk_gb": "15041482",
+      "inntekter": 200133,
+      "datatrafikk_gb": 15041482,
       "value": 13.305404347789667
     },
     {
       "ar": 2022,
       "tilbyder": "Chili mobil",
-      "inntekter": "212344",
-      "datatrafikk_gb": "15610585",
+      "inntekter": 212344,
+      "datatrafikk_gb": 15610585,
       "value": 13.6025651825348
     },
     {
       "ar": 2023,
       "tilbyder": "Chili mobil",
-      "inntekter": "225484",
-      "datatrafikk_gb": "18246600",
+      "inntekter": 225484,
+      "datatrafikk_gb": 18246600,
       "value": 12.357589907160786
     },
     {
       "ar": 2024,
       "tilbyder": "Chili mobil",
-      "inntekter": "235317",
-      "datatrafikk_gb": "18722437",
+      "inntekter": 235317,
+      "datatrafikk_gb": 18722437,
       "value": 12.56871634819762
     },
     {
       "ar": 2025,
       "tilbyder": "Chili mobil",
-      "inntekter": "233153",
-      "datatrafikk_gb": "21041335",
+      "inntekter": 233153,
+      "datatrafikk_gb": 21041335,
       "value": 11.080713272232964
     },
     {
       "ar": 2020,
       "tilbyder": "Fjordkraft",
-      "inntekter": "292001",
-      "datatrafikk_gb": "4881292",
+      "inntekter": 292001,
+      "datatrafikk_gb": 4881292,
       "value": 59.8204327870572
     },
     {
       "ar": 2021,
       "tilbyder": "Fjordkraft",
-      "inntekter": "284015",
-      "datatrafikk_gb": "5196359",
+      "inntekter": 284015,
+      "datatrafikk_gb": 5196359,
       "value": 54.656539319165596
     },
     {
       "ar": 2022,
       "tilbyder": "Fjordkraft",
-      "inntekter": "292989",
-      "datatrafikk_gb": "5740291",
+      "inntekter": 292989,
+      "datatrafikk_gb": 5740291,
       "value": 51.04079218283533
     },
     {
       "ar": 2023,
       "tilbyder": "Fjordkraft",
-      "inntekter": "249571",
-      "datatrafikk_gb": "6209512",
+      "inntekter": 249571,
+      "datatrafikk_gb": 6209512,
       "value": 40.19172521125654
     },
     {
       "ar": 2024,
       "tilbyder": "Fjordkraft",
-      "inntekter": "264235",
-      "datatrafikk_gb": "4971537",
+      "inntekter": 264235,
+      "datatrafikk_gb": 4971537,
       "value": 53.14955918059143
     },
     {
       "ar": 2025,
       "tilbyder": "Fjordkraft",
-      "inntekter": "263556",
-      "datatrafikk_gb": "9438652",
+      "inntekter": 263556,
+      "datatrafikk_gb": 9438652,
       "value": 27.923055114226056
     },
     {
       "ar": 2020,
       "tilbyder": "Happybytes",
-      "inntekter": "15726",
-      "datatrafikk_gb": "535956",
+      "inntekter": 15726,
+      "datatrafikk_gb": 535956,
       "value": 29.341960907238654
     },
     {
       "ar": 2021,
       "tilbyder": "Happybytes",
-      "inntekter": "38493",
-      "datatrafikk_gb": "1894251",
+      "inntekter": 38493,
+      "datatrafikk_gb": 1894251,
       "value": 20.320960632988974
     },
     {
       "ar": 2022,
       "tilbyder": "Happybytes",
-      "inntekter": "83608",
-      "datatrafikk_gb": "4083127",
+      "inntekter": 83608,
+      "datatrafikk_gb": 4083127,
       "value": 20.47646325965369
     },
     {
       "ar": 2023,
       "tilbyder": "Happybytes",
-      "inntekter": "114987",
-      "datatrafikk_gb": "6005838",
+      "inntekter": 114987,
+      "datatrafikk_gb": 6005838,
       "value": 19.14587106745137
     },
     {
       "ar": 2024,
       "tilbyder": "Happybytes",
-      "inntekter": "110622",
-      "datatrafikk_gb": "5234543",
+      "inntekter": 110622,
+      "datatrafikk_gb": 5234543,
       "value": 21.133076946736324
     },
     {
       "ar": 2025,
       "tilbyder": "Happybytes",
-      "inntekter": "145728",
-      "datatrafikk_gb": "7324867",
+      "inntekter": 145728,
+      "datatrafikk_gb": 7324867,
       "value": 19.89496874141196
     },
     {
       "ar": 2020,
       "tilbyder": "Ice",
-      "inntekter": "1359987",
-      "datatrafikk_gb": "37159970",
+      "inntekter": 1359987,
+      "datatrafikk_gb": 37159970,
       "value": 36.598172711118984
     },
     {
       "ar": 2021,
       "tilbyder": "Ice",
-      "inntekter": "1542116",
-      "datatrafikk_gb": "56445173",
+      "inntekter": 1542116,
+      "datatrafikk_gb": 56445173,
       "value": 27.320600115797323
     },
     {
       "ar": 2022,
       "tilbyder": "Ice",
-      "inntekter": "1651755",
-      "datatrafikk_gb": "84185868",
+      "inntekter": 1651755,
+      "datatrafikk_gb": 84185868,
       "value": 19.620335802678902
     },
     {
       "ar": 2023,
       "tilbyder": "Ice",
-      "inntekter": "1876847",
-      "datatrafikk_gb": "108395040",
+      "inntekter": 1876847,
+      "datatrafikk_gb": 108395040,
       "value": 17.3148789833926
     },
     {
       "ar": 2024,
       "tilbyder": "Ice",
-      "inntekter": "2223582",
-      "datatrafikk_gb": "135612079",
+      "inntekter": 2223582,
+      "datatrafikk_gb": 135612079,
       "value": 16.39663676271787
     },
     {
       "ar": 2025,
       "tilbyder": "Ice",
-      "inntekter": "2537547",
-      "datatrafikk_gb": "170097436",
+      "inntekter": 2537547,
+      "datatrafikk_gb": 170097436,
       "value": 14.918196650536226
     },
     {
       "ar": 2022,
       "tilbyder": "Plussmobil",
-      "inntekter": "13295",
-      "datatrafikk_gb": "356476",
+      "inntekter": 13295,
+      "datatrafikk_gb": 356476,
       "value": 37.29563841605045
     },
     {
       "ar": 2023,
       "tilbyder": "Plussmobil",
-      "inntekter": "77459",
-      "datatrafikk_gb": "2509163",
+      "inntekter": 77459,
+      "datatrafikk_gb": 2509163,
       "value": 30.870453613416107
     },
     {
       "ar": 2024,
       "tilbyder": "Plussmobil",
-      "inntekter": "102195",
-      "datatrafikk_gb": "3393647",
+      "inntekter": 102195,
+      "datatrafikk_gb": 3393647,
       "value": 30.113621127948782
     },
     {
       "ar": 2025,
       "tilbyder": "Plussmobil",
-      "inntekter": "118775",
-      "datatrafikk_gb": "3992191",
+      "inntekter": 118775,
+      "datatrafikk_gb": 3992191,
       "value": 29.751833016005495
     },
     {
       "ar": 2020,
       "tilbyder": "Telenor",
-      "inntekter": "10122289",
-      "datatrafikk_gb": "169506863",
+      "inntekter": 10122289,
+      "datatrafikk_gb": 169506863,
       "value": 59.716101288477034
     },
     {
       "ar": 2021,
       "tilbyder": "Telenor",
-      "inntekter": "10129387",
-      "datatrafikk_gb": "224783593",
+      "inntekter": 10129387,
+      "datatrafikk_gb": 224783593,
       "value": 45.06283961748044
     },
     {
       "ar": 2022,
       "tilbyder": "Telenor",
-      "inntekter": "10185874",
-      "datatrafikk_gb": "279323386",
+      "inntekter": 10185874,
+      "datatrafikk_gb": 279323386,
       "value": 36.46624131930006
     },
     {
       "ar": 2023,
       "tilbyder": "Telenor",
-      "inntekter": "9850160",
-      "datatrafikk_gb": "338407793",
+      "inntekter": 9850160,
+      "datatrafikk_gb": 338407793,
       "value": 29.107367512662453
     },
     {
       "ar": 2024,
       "tilbyder": "Telenor",
-      "inntekter": "10234886",
-      "datatrafikk_gb": "389117891",
+      "inntekter": 10234886,
+      "datatrafikk_gb": 389117891,
       "value": 26.302789557419757
     },
     {
       "ar": 2025,
       "tilbyder": "Telenor",
-      "inntekter": "10707664",
-      "datatrafikk_gb": "408825962",
+      "inntekter": 10707664,
+      "datatrafikk_gb": 408825962,
       "value": 26.191252501718566
     },
     {
       "ar": 2020,
       "tilbyder": "Telia",
-      "inntekter": "5669129",
-      "datatrafikk_gb": "128671627",
+      "inntekter": 5669129,
+      "datatrafikk_gb": 128671627,
       "value": 44.058889532810525
     },
     {
       "ar": 2021,
       "tilbyder": "Telia",
-      "inntekter": "5799598",
-      "datatrafikk_gb": "182550290",
+      "inntekter": 5799598,
+      "datatrafikk_gb": 182550290,
       "value": 31.76986462196253
     },
     {
       "ar": 2022,
       "tilbyder": "Telia",
-      "inntekter": "6007656",
-      "datatrafikk_gb": "210806785",
+      "inntekter": 6007656,
+      "datatrafikk_gb": 210806785,
       "value": 28.49839961270696
     },
     {
       "ar": 2023,
       "tilbyder": "Telia",
-      "inntekter": "6243781",
-      "datatrafikk_gb": "254040331",
+      "inntekter": 6243781,
+      "datatrafikk_gb": 254040331,
       "value": 24.577912394548093
     },
     {
       "ar": 2024,
       "tilbyder": "Telia",
-      "inntekter": "6247215",
-      "datatrafikk_gb": "296340055",
+      "inntekter": 6247215,
+      "datatrafikk_gb": 296340055,
       "value": 21.081237229304016
     },
     {
       "ar": 2025,
       "tilbyder": "Telia",
-      "inntekter": "6400522",
-      "datatrafikk_gb": "322144924",
+      "inntekter": 6400522,
+      "datatrafikk_gb": 322144924,
       "value": 19.86845522979589
     },
     {
       "ar": 2020,
       "tilbyder": "Unifon",
-      "inntekter": "175938",
-      "datatrafikk_gb": "2582721",
+      "inntekter": 175938,
+      "datatrafikk_gb": 2582721,
       "value": 68.12117917498638
     },
     {
       "ar": 2021,
       "tilbyder": "Unifon",
-      "inntekter": "249543",
-      "datatrafikk_gb": "4886704",
+      "inntekter": 249543,
+      "datatrafikk_gb": 4886704,
       "value": 51.065708092816756
     },
     {
       "ar": 2022,
       "tilbyder": "Unifon",
-      "inntekter": "360160",
-      "datatrafikk_gb": "8183723",
+      "inntekter": 360160,
+      "datatrafikk_gb": 8183723,
       "value": 44.00930969926524
     },
     {
       "ar": 2023,
       "tilbyder": "Unifon",
-      "inntekter": "449019",
-      "datatrafikk_gb": "13473807",
+      "inntekter": 449019,
+      "datatrafikk_gb": 13473807,
       "value": 33.325325203188676
     },
     {
       "ar": 2024,
       "tilbyder": "Unifon",
-      "inntekter": "494888",
-      "datatrafikk_gb": "14041024",
+      "inntekter": 494888,
+      "datatrafikk_gb": 14041024,
       "value": 35.24586241003505
     },
     {
       "ar": 2025,
       "tilbyder": "Unifon",
-      "inntekter": "480968",
-      "datatrafikk_gb": "16535859",
+      "inntekter": 480968,
+      "datatrafikk_gb": 16535859,
       "value": 29.086363157789382
     }
   ],
@@ -3687,547 +3687,547 @@
       "ar": 2020,
       "period": "Helår",
       "provider": "telenor norge",
-      "abonnement": "2691497"
+      "abonnement": 2691497
     },
     {
       "ar": 2020,
       "period": "Helår",
       "provider": "telia norge",
-      "abonnement": "2048542"
+      "abonnement": 2048542
     },
     {
       "ar": 2020,
       "period": "Helår",
       "provider": "lyse tele",
-      "abonnement": "639390"
+      "abonnement": 639390
     },
     {
       "ar": 2020,
       "period": "Helår",
       "provider": "fjordkraft mobil",
-      "abonnement": "167429"
+      "abonnement": 167429
     },
     {
       "ar": 2020,
       "period": "Helår",
       "provider": "chili mobil",
-      "abonnement": "70650"
+      "abonnement": 70650
     },
     {
       "ar": 2020,
       "period": "Helår",
       "provider": "lycamobile norway ltd",
-      "abonnement": "61910"
+      "abonnement": 61910
     },
     {
       "ar": 2020,
       "period": "Helår",
       "provider": "xplora mobile",
-      "abonnement": "55168"
+      "abonnement": 55168
     },
     {
       "ar": 2020,
       "period": "Helår",
       "provider": "unifon",
-      "abonnement": "47098"
+      "abonnement": 47098
     },
     {
       "ar": 2020,
       "period": "Helår",
       "provider": "atea",
-      "abonnement": "18004"
+      "abonnement": 18004
     },
     {
       "ar": 2020,
       "period": "Helår",
       "provider": "happybytes",
-      "abonnement": "13997"
+      "abonnement": 13997
     },
     {
       "ar": 2020,
       "period": "Helår",
       "provider": "gudbrandsdal energi",
-      "abonnement": "7121"
+      "abonnement": 7121
     },
     {
       "ar": 2020,
       "period": "Helår",
       "provider": "bitpro",
-      "abonnement": "5440"
+      "abonnement": 5440
     },
     {
       "ar": 2020,
       "period": "Helår",
       "provider": "vipps mobil",
-      "abonnement": "4823"
+      "abonnement": 4823
     },
     {
       "ar": 2020,
       "period": "Helår",
       "provider": "saga mobil",
-      "abonnement": "3704"
+      "abonnement": 3704
     },
     {
       "ar": 2020,
       "period": "Helår",
       "provider": "release mobile",
-      "abonnement": "217"
+      "abonnement": 217
     },
     {
       "ar": 2020,
       "period": "Helår",
       "provider": "primafon",
-      "abonnement": "54"
+      "abonnement": 54
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "telenor norge",
-      "abonnement": "2636670"
+      "abonnement": 2636670
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "telia norge",
-      "abonnement": "2065329"
+      "abonnement": 2065329
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "lyse tele",
-      "abonnement": "693624"
+      "abonnement": 693624
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "fjordkraft mobil",
-      "abonnement": "152210"
+      "abonnement": 152210
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "chili mobil",
-      "abonnement": "80380"
+      "abonnement": 80380
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "xplora mobile",
-      "abonnement": "74759"
+      "abonnement": 74759
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "unifon",
-      "abonnement": "69184"
+      "abonnement": 69184
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "lycamobile norway ltd",
-      "abonnement": "59356"
+      "abonnement": 59356
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "happybytes",
-      "abonnement": "28083"
+      "abonnement": 28083
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "atea",
-      "abonnement": "18040"
+      "abonnement": 18040
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "vipps mobil",
-      "abonnement": "17158"
+      "abonnement": 17158
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "norgesenergi",
-      "abonnement": "11802"
+      "abonnement": 11802
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "gudbrandsdal energi",
-      "abonnement": "7712"
+      "abonnement": 7712
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "release mobile",
-      "abonnement": "7343"
+      "abonnement": 7343
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "saga mobil",
-      "abonnement": "4749"
+      "abonnement": 4749
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "primafon",
-      "abonnement": "52"
+      "abonnement": 52
     },
     {
       "ar": 2021,
       "period": "Helår",
       "provider": "bitpro",
-      "abonnement": "40"
+      "abonnement": 40
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "telenor norge",
-      "abonnement": "2588474"
+      "abonnement": 2588474
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "telia norge",
-      "abonnement": "2084113"
+      "abonnement": 2084113
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "lyse tele",
-      "abonnement": "757305"
+      "abonnement": 757305
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "fjordkraft mobil",
-      "abonnement": "137085"
+      "abonnement": 137085
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "unifon",
-      "abonnement": "114973"
+      "abonnement": 114973
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "chili mobil",
-      "abonnement": "84821"
+      "abonnement": 84821
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "xplora mobile",
-      "abonnement": "82313"
+      "abonnement": 82313
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "lycamobile norway ltd",
-      "abonnement": "61435"
+      "abonnement": 61435
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "happybytes",
-      "abonnement": "41738"
+      "abonnement": 41738
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "vipps mobil",
-      "abonnement": "16193"
+      "abonnement": 16193
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "norgesenergi",
-      "abonnement": "15359"
+      "abonnement": 15359
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "release mobile",
-      "abonnement": "11767"
+      "abonnement": 11767
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "plussmobil",
-      "abonnement": "11694"
+      "abonnement": 11694
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "gudbrandsdal energi",
-      "abonnement": "6525"
+      "abonnement": 6525
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "saga mobil",
-      "abonnement": "4278"
+      "abonnement": 4278
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "smb mobil",
-      "abonnement": "1596"
+      "abonnement": 1596
     },
     {
       "ar": 2022,
       "period": "Helår",
       "provider": "primafon",
-      "abonnement": "40"
+      "abonnement": 40
     },
     {
       "ar": 2023,
       "period": "Helår",
       "provider": "telenor norge",
-      "abonnement": "2561819"
+      "abonnement": 2561819
     },
     {
       "ar": 2023,
       "period": "Helår",
       "provider": "telia norge",
-      "abonnement": "2065166"
+      "abonnement": 2065166
     },
     {
       "ar": 2023,
       "period": "Helår",
       "provider": "lyse tele",
-      "abonnement": "882075"
+      "abonnement": 882075
     },
     {
       "ar": 2023,
       "period": "Helår",
       "provider": "unifon",
-      "abonnement": "128029"
+      "abonnement": 128029
     },
     {
       "ar": 2023,
       "period": "Helår",
       "provider": "fjordkraft mobil",
-      "abonnement": "114775"
+      "abonnement": 114775
     },
     {
       "ar": 2023,
       "period": "Helår",
       "provider": "xplora mobile",
-      "abonnement": "86061"
+      "abonnement": 86061
     },
     {
       "ar": 2023,
       "period": "Helår",
       "provider": "chili mobil",
-      "abonnement": "82829"
+      "abonnement": 82829
     },
     {
       "ar": 2023,
       "period": "Helår",
       "provider": "happybytes",
-      "abonnement": "49440"
+      "abonnement": 49440
     },
     {
       "ar": 2023,
       "period": "Helår",
       "provider": "plussmobil",
-      "abonnement": "45555"
+      "abonnement": 45555
     },
     {
       "ar": 2023,
       "period": "Helår",
       "provider": "lycamobile norway ltd",
-      "abonnement": "25973"
+      "abonnement": 25973
     },
     {
       "ar": 2023,
       "period": "Helår",
       "provider": "smb mobil",
-      "abonnement": "6544"
+      "abonnement": 6544
     },
     {
       "ar": 2023,
       "period": "Helår",
       "provider": "saga mobil",
-      "abonnement": "4100"
+      "abonnement": 4100
     },
     {
       "ar": 2023,
       "period": "Helår",
       "provider": "intility",
-      "abonnement": "32"
+      "abonnement": 32
     },
     {
       "ar": 2023,
       "period": "Helår",
       "provider": "primafon",
-      "abonnement": "30"
+      "abonnement": 30
     },
     {
       "ar": 2024,
       "period": "Helår",
       "provider": "telenor norge",
-      "abonnement": "2520956"
+      "abonnement": 2520956
     },
     {
       "ar": 2024,
       "period": "Helår",
       "provider": "telia norge",
-      "abonnement": "2054756"
+      "abonnement": 2054756
     },
     {
       "ar": 2024,
       "period": "Helår",
       "provider": "lyse tele",
-      "abonnement": "978504"
+      "abonnement": 978504
     },
     {
       "ar": 2024,
       "period": "Helår",
       "provider": "unifon",
-      "abonnement": "125474"
+      "abonnement": 125474
     },
     {
       "ar": 2024,
       "period": "Helår",
       "provider": "fjordkraft mobil",
-      "abonnement": "111958"
+      "abonnement": 111958
     },
     {
       "ar": 2024,
       "period": "Helår",
       "provider": "xplora mobile",
-      "abonnement": "88777"
+      "abonnement": 88777
     },
     {
       "ar": 2024,
       "period": "Helår",
       "provider": "chili mobil",
-      "abonnement": "88116"
+      "abonnement": 88116
     },
     {
       "ar": 2024,
       "period": "Helår",
       "provider": "plussmobil",
-      "abonnement": "48518"
+      "abonnement": 48518
     },
     {
       "ar": 2024,
       "period": "Helår",
       "provider": "happybytes",
-      "abonnement": "41463"
+      "abonnement": 41463
     },
     {
       "ar": 2024,
       "period": "Helår",
       "provider": "lycamobile norway ltd",
-      "abonnement": "23043"
+      "abonnement": 23043
     },
     {
       "ar": 2024,
       "period": "Helår",
       "provider": "smb mobil",
-      "abonnement": "12009"
+      "abonnement": 12009
     },
     {
       "ar": 2024,
       "period": "Helår",
       "provider": "saga mobil",
-      "abonnement": "4243"
+      "abonnement": 4243
     },
     {
       "ar": 2024,
       "period": "Helår",
       "provider": "intility",
-      "abonnement": "40"
+      "abonnement": 40
     },
     {
       "ar": 2024,
       "period": "Helår",
       "provider": "primafon",
-      "abonnement": "30"
+      "abonnement": 30
     },
     {
       "ar": 2025,
       "period": "Helår",
       "provider": "telenor norge",
-      "abonnement": "2475133"
+      "abonnement": 2475133
     },
     {
       "ar": 2025,
       "period": "Helår",
       "provider": "telia norge",
-      "abonnement": "2009230"
+      "abonnement": 2009230
     },
     {
       "ar": 2025,
       "period": "Helår",
       "provider": "lyse tele",
-      "abonnement": "1048751"
+      "abonnement": 1048751
     },
     {
       "ar": 2025,
       "period": "Helår",
       "provider": "unifon",
-      "abonnement": "129826"
+      "abonnement": 129826
     },
     {
       "ar": 2025,
       "period": "Helår",
       "provider": "fjordkraft mobil",
-      "abonnement": "112213"
+      "abonnement": 112213
     },
     {
       "ar": 2025,
       "period": "Helår",
       "provider": "chili mobil",
-      "abonnement": "91955"
+      "abonnement": 91955
     },
     {
       "ar": 2025,
       "period": "Helår",
       "provider": "xplora mobile",
-      "abonnement": "86587"
+      "abonnement": 86587
     },
     {
       "ar": 2025,
       "period": "Helår",
       "provider": "happybytes",
-      "abonnement": "76030"
+      "abonnement": 76030
     },
     {
       "ar": 2025,
       "period": "Helår",
       "provider": "plussmobil",
-      "abonnement": "48637"
+      "abonnement": 48637
     },
     {
       "ar": 2025,
       "period": "Helår",
       "provider": "lycamobile norway ltd",
-      "abonnement": "23276"
+      "abonnement": 23276
     },
     {
       "ar": 2025,
       "period": "Helår",
       "provider": "smb mobil",
-      "abonnement": "13670"
+      "abonnement": 13670
     },
     {
       "ar": 2025,
       "period": "Helår",
       "provider": "saga mobil",
-      "abonnement": "4015"
+      "abonnement": 4015
     },
     {
       "ar": 2025,
       "period": "Helår",
       "provider": "intility",
-      "abonnement": "881"
+      "abonnement": 881
     }
   ],
   "providers": [
@@ -4682,73 +4682,73 @@
       "ar": 2020,
       "period": "Helår",
       "metric": "Abonnement",
-      "value": "5835044"
+      "value": 5835044
     },
     {
       "ar": 2021,
       "period": "Helår",
       "metric": "Abonnement",
-      "value": "5926491"
+      "value": 5926491
     },
     {
       "ar": 2022,
       "period": "Helår",
       "metric": "Abonnement",
-      "value": "6019709"
+      "value": 6019709
     },
     {
       "ar": 2023,
       "period": "Helår",
       "metric": "Abonnement",
-      "value": "6052428"
+      "value": 6052428
     },
     {
       "ar": 2024,
       "period": "Helår",
       "metric": "Abonnement",
-      "value": "6097887"
+      "value": 6097887
     },
     {
       "ar": 2025,
       "period": "Helår",
       "metric": "Abonnement",
-      "value": "6120204"
+      "value": 6120204
     },
     {
       "ar": 2020,
       "period": "Helår",
       "metric": "Inntekter",
-      "value": "17991929"
+      "value": 17991929
     },
     {
       "ar": 2021,
       "period": "Helår",
       "metric": "Inntekter",
-      "value": "18458144"
+      "value": 18458144
     },
     {
       "ar": 2022,
       "period": "Helår",
       "metric": "Inntekter",
-      "value": "19051873"
+      "value": 19051873
     },
     {
       "ar": 2023,
       "period": "Helår",
       "metric": "Inntekter",
-      "value": "19218739"
+      "value": 19218739
     },
     {
       "ar": 2024,
       "period": "Helår",
       "metric": "Inntekter",
-      "value": "20109128"
+      "value": 20109128
     },
     {
       "ar": 2025,
       "period": "Helår",
       "metric": "Inntekter",
-      "value": "21096159"
+      "value": 21096159
     }
   ],
   "providerShareTrend": [
@@ -4757,7 +4757,7 @@
       "period": "Helår",
       "ar": 2020,
       "tilbyder": "Telenor",
-      "absolute": "2691497",
+      "absolute": 2691497,
       "value": 46.12642166879976
     },
     {
@@ -4765,7 +4765,7 @@
       "period": "Helår",
       "ar": 2020,
       "tilbyder": "Telia",
-      "absolute": "2048542",
+      "absolute": 2048542,
       "value": 35.1075673122602
     },
     {
@@ -4773,7 +4773,7 @@
       "period": "Helår",
       "ar": 2020,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "639390",
+      "absolute": 639390,
       "value": 10.957757987771815
     },
     {
@@ -4781,7 +4781,7 @@
       "period": "Helår",
       "ar": 2020,
       "tilbyder": "Øvrige",
-      "absolute": "455615",
+      "absolute": 455615,
       "value": 7.808253031168231
     },
     {
@@ -4789,7 +4789,7 @@
       "period": "Helår",
       "ar": 2021,
       "tilbyder": "Telenor",
-      "absolute": "2636670",
+      "absolute": 2636670,
       "value": 44.48956389202312
     },
     {
@@ -4797,7 +4797,7 @@
       "period": "Helår",
       "ar": 2021,
       "tilbyder": "Telia",
-      "absolute": "2065329",
+      "absolute": 2065329,
       "value": 34.849103795146235
     },
     {
@@ -4805,7 +4805,7 @@
       "period": "Helår",
       "ar": 2021,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "693624",
+      "absolute": 693624,
       "value": 11.703788970572974
     },
     {
@@ -4813,7 +4813,7 @@
       "period": "Helår",
       "ar": 2021,
       "tilbyder": "Øvrige",
-      "absolute": "530868",
+      "absolute": 530868,
       "value": 8.95754334225767
     },
     {
@@ -4821,7 +4821,7 @@
       "period": "Helår",
       "ar": 2022,
       "tilbyder": "Telenor",
-      "absolute": "2588474",
+      "absolute": 2588474,
       "value": 42.99998554747414
     },
     {
@@ -4829,7 +4829,7 @@
       "period": "Helår",
       "ar": 2022,
       "tilbyder": "Telia",
-      "absolute": "2084113",
+      "absolute": 2084113,
       "value": 34.62149083950736
     },
     {
@@ -4837,7 +4837,7 @@
       "period": "Helår",
       "ar": 2022,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "757305",
+      "absolute": 757305,
       "value": 12.580425399300863
     },
     {
@@ -4845,7 +4845,7 @@
       "period": "Helår",
       "ar": 2022,
       "tilbyder": "Øvrige",
-      "absolute": "589817",
+      "absolute": 589817,
       "value": 9.79809821371764
     },
     {
@@ -4853,7 +4853,7 @@
       "period": "Helår",
       "ar": 2023,
       "tilbyder": "Telenor",
-      "absolute": "2561819",
+      "absolute": 2561819,
       "value": 42.32712888116967
     },
     {
@@ -4861,7 +4861,7 @@
       "period": "Helår",
       "ar": 2023,
       "tilbyder": "Telia",
-      "absolute": "2065166",
+      "absolute": 2065166,
       "value": 34.12128157493158
     },
     {
@@ -4869,7 +4869,7 @@
       "period": "Helår",
       "ar": 2023,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "882075",
+      "absolute": 882075,
       "value": 14.57390323354528
     },
     {
@@ -4877,7 +4877,7 @@
       "period": "Helår",
       "ar": 2023,
       "tilbyder": "Øvrige",
-      "absolute": "543368",
+      "absolute": 543368,
       "value": 8.977686310353464
     },
     {
@@ -4885,7 +4885,7 @@
       "period": "Helår",
       "ar": 2024,
       "tilbyder": "Telenor",
-      "absolute": "2520956",
+      "absolute": 2520956,
       "value": 41.34146795439141
     },
     {
@@ -4893,7 +4893,7 @@
       "period": "Helår",
       "ar": 2024,
       "tilbyder": "Telia",
-      "absolute": "2054756",
+      "absolute": 2054756,
       "value": 33.69619673175315
     },
     {
@@ -4901,7 +4901,7 @@
       "period": "Helår",
       "ar": 2024,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "978504",
+      "absolute": 978504,
       "value": 16.046607619983774
     },
     {
@@ -4909,7 +4909,7 @@
       "period": "Helår",
       "ar": 2024,
       "tilbyder": "Øvrige",
-      "absolute": "543671",
+      "absolute": 543671,
       "value": 8.915727693871665
     },
     {
@@ -4917,7 +4917,7 @@
       "period": "Helår",
       "ar": 2025,
       "tilbyder": "Telenor",
-      "absolute": "2475133",
+      "absolute": 2475133,
       "value": 40.4420016064824
     },
     {
@@ -4925,7 +4925,7 @@
       "period": "Helår",
       "ar": 2025,
       "tilbyder": "Telia",
-      "absolute": "2009230",
+      "absolute": 2009230,
       "value": 32.82946124018088
     },
     {
@@ -4933,7 +4933,7 @@
       "period": "Helår",
       "ar": 2025,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "1048751",
+      "absolute": 1048751,
       "value": 17.135883052264273
     },
     {
@@ -4941,7 +4941,7 @@
       "period": "Helår",
       "ar": 2025,
       "tilbyder": "Øvrige",
-      "absolute": "587090",
+      "absolute": 587090,
       "value": 9.592654101072448
     },
     {
@@ -4949,7 +4949,7 @@
       "period": "Helår",
       "ar": 2020,
       "tilbyder": "Telenor",
-      "absolute": "10122289",
+      "absolute": 10122289,
       "value": 56.260165321906285
     },
     {
@@ -4957,7 +4957,7 @@
       "period": "Helår",
       "ar": 2020,
       "tilbyder": "Telia",
-      "absolute": "5669129",
+      "absolute": 5669129,
       "value": 31.509289526431544
     },
     {
@@ -4965,7 +4965,7 @@
       "period": "Helår",
       "ar": 2020,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "1359987",
+      "absolute": 1359987,
       "value": 7.558872647841151
     },
     {
@@ -4973,7 +4973,7 @@
       "period": "Helår",
       "ar": 2020,
       "tilbyder": "Øvrige",
-      "absolute": "840524",
+      "absolute": 840524,
       "value": 4.671672503821019
     },
     {
@@ -4981,7 +4981,7 @@
       "period": "Helår",
       "ar": 2021,
       "tilbyder": "Telenor",
-      "absolute": "10129387",
+      "absolute": 10129387,
       "value": 54.87760307861939
     },
     {
@@ -4989,7 +4989,7 @@
       "period": "Helår",
       "ar": 2021,
       "tilbyder": "Telia",
-      "absolute": "5799598",
+      "absolute": 5799598,
       "value": 31.420266306298185
     },
     {
@@ -4997,7 +4997,7 @@
       "period": "Helår",
       "ar": 2021,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "1542116",
+      "absolute": 1542116,
       "value": 8.354664477641956
     },
     {
@@ -5005,7 +5005,7 @@
       "period": "Helår",
       "ar": 2021,
       "tilbyder": "Øvrige",
-      "absolute": "987043",
+      "absolute": 987043,
       "value": 5.34746613744047
     },
     {
@@ -5013,7 +5013,7 @@
       "period": "Helår",
       "ar": 2022,
       "tilbyder": "Telenor",
-      "absolute": "10185874",
+      "absolute": 10185874,
       "value": 53.46389827393874
     },
     {
@@ -5021,7 +5021,7 @@
       "period": "Helår",
       "ar": 2022,
       "tilbyder": "Telia",
-      "absolute": "6007656",
+      "absolute": 6007656,
       "value": 31.533151622415286
     },
     {
@@ -5029,7 +5029,7 @@
       "period": "Helår",
       "ar": 2022,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "1651755",
+      "absolute": 1651755,
       "value": 8.669777506914937
     },
     {
@@ -5037,7 +5037,7 @@
       "period": "Helår",
       "ar": 2022,
       "tilbyder": "Øvrige",
-      "absolute": "1206588",
+      "absolute": 1206588,
       "value": 6.333172596731041
     },
     {
@@ -5045,7 +5045,7 @@
       "period": "Helår",
       "ar": 2023,
       "tilbyder": "Telenor",
-      "absolute": "9850160",
+      "absolute": 9850160,
       "value": 51.25289437564036
     },
     {
@@ -5053,7 +5053,7 @@
       "period": "Helår",
       "ar": 2023,
       "tilbyder": "Telia",
-      "absolute": "6243781",
+      "absolute": 6243781,
       "value": 32.4879847736108
     },
     {
@@ -5061,7 +5061,7 @@
       "period": "Helår",
       "ar": 2023,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "1876847",
+      "absolute": 1876847,
       "value": 9.765713556961256
     },
     {
@@ -5069,7 +5069,7 @@
       "period": "Helår",
       "ar": 2023,
       "tilbyder": "Øvrige",
-      "absolute": "1247951",
+      "absolute": 1247951,
       "value": 6.493407293787589
     },
     {
@@ -5077,7 +5077,7 @@
       "period": "Helår",
       "ar": 2024,
       "tilbyder": "Telenor",
-      "absolute": "10234886",
+      "absolute": 10234886,
       "value": 50.89671715252894
     },
     {
@@ -5085,7 +5085,7 @@
       "period": "Helår",
       "ar": 2024,
       "tilbyder": "Telia",
-      "absolute": "6247215",
+      "absolute": 6247215,
       "value": 31.06656340344544
     },
     {
@@ -5093,7 +5093,7 @@
       "period": "Helår",
       "ar": 2024,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "2223582",
+      "absolute": 2223582,
       "value": 11.057575445340047
     },
     {
@@ -5101,7 +5101,7 @@
       "period": "Helår",
       "ar": 2024,
       "tilbyder": "Øvrige",
-      "absolute": "1403445",
+      "absolute": 1403445,
       "value": 6.979143998685572
     },
     {
@@ -5109,7 +5109,7 @@
       "period": "Helår",
       "ar": 2025,
       "tilbyder": "Telenor",
-      "absolute": "10707664",
+      "absolute": 10707664,
       "value": 50.75646234937839
     },
     {
@@ -5117,7 +5117,7 @@
       "period": "Helår",
       "ar": 2025,
       "tilbyder": "Telia",
-      "absolute": "6400522",
+      "absolute": 6400522,
       "value": 30.33975047306005
     },
     {
@@ -5125,7 +5125,7 @@
       "period": "Helår",
       "ar": 2025,
       "tilbyder": "Lyse Tele (Ice)",
-      "absolute": "2537547",
+      "absolute": 2537547,
       "value": 12.028478738712577
     },
     {
@@ -5133,7 +5133,7 @@
       "period": "Helår",
       "ar": 2025,
       "tilbyder": "Øvrige",
-      "absolute": "1450426",
+      "absolute": 1450426,
       "value": 6.875308438848987
     }
   ]
