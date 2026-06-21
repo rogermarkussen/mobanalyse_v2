@@ -5,8 +5,8 @@
     "latest_year": 2025,
     "provider_count": 26,
     "operator_count": 42,
-    "source": "data/mobil.parquet",
-    "built_from": "DuckDB CLI"
+    "source": "Helårsrapporterte mobilmarkedstall",
+    "built_from": "Statisk datauttak"
   },
   "order": {
     "groups": [
@@ -114,7 +114,7 @@
       "csvPath": "assets/exports/wholesale-market-shares.csv",
       "xlsxFilename": "wholesale-market-shares.xlsx",
       "xlsxPath": "assets/exports/wholesale-market-shares.xlsx",
-      "label": "Wholesale market shares"
+      "label": "Grossistandeler"
     },
     "concentration": {
       "csvFilename": "market-concentration.csv",

@@ -49,30 +49,28 @@ const METHODS = {
   "market-share": {
     title: "Markedsandeler",
     html: `
-      <p>Figuren viser markedsandel i sluttbrukermarkedet for mobiltelefoni. Alle tall hentes fra <code>mobil.parquet</code> og er helårstall.</p>
-      <h3>Filtre</h3>
-      <ul>
-        <li><code>dk = 'Mobiltelefoni'</code>, <code>tp = 'Sum'</code>, <code>sk = 'Sluttbruker'</code>, <code>delar = 'Helår'</code>.</li>
-        <li>Abonnement: <code>hg = 'Abonnement'</code>, <code>n1 IN ('Fakturert', 'Kontantkort')</code>, <code>n2 = 'Ingen'</code>.</li>
-        <li>Omsetning: <code>hg = 'Inntekter'</code>.</li>
-      </ul>
-      <h3>Gruppering</h3>
-      <p><code>fusnavn</code> grupperes til Telenor, Telia, Lyse Tele (Ice) og Øvrige. Lyse/Ice fanger opp navn som inneholder <code>lyse</code> eller <code>ice</code>.</p>
-      <h3>Formel</h3>
+      <p>Figuren viser hvor stor del av sluttbrukermarkedet som tilhører hver hovedaktør. Du kan bytte mellom abonnement og omsetning. Abonnement gir et bilde av kundemassen, mens omsetning viser hvor stor del av inntektene som tilfaller aktørene.</p>
+      <h3>Hva inngår?</h3>
+      <p>Alle beregninger bruker helårstall for mobiltelefoni i sluttbrukermarkedet. Abonnement omfatter fakturerte abonnement og kontantkort som ordinære mobilabonnement. Tilleggslinjer og andre underkategorier som ikke representerer et selvstendig mobilabonnement holdes utenfor. Omsetning er rapportert årsinntekt fra mobiltelefoni i sluttbrukermarkedet.</p>
+      <h3>Hvordan grupperes tilbyderne?</h3>
+      <p>Tilbydere samles i fire markedsgrupper: Telenor, Telia, Lyse Tele (Ice) og Øvrige. Sammenslåingen gjør at navneendringer og selskapsstrukturer ikke skaper kunstige hopp i tidsserien. Alle aktører som ikke inngår i de tre største gruppene legges i Øvrige.</p>
+      <h3>Beregning</h3>
       <div class="formula">\\[
         \\text{Markedsandel}_{g,y} =
         \\frac{\\sum \\text{svar}_{g,y}}{\\sum_h \\text{svar}_{h,y}} \\cdot 100
       \\]</div>
-      <p>Telleren er summen for valgt tilbydergruppe \(g\) og år \(y\). Nevneren er summen for alle tilbydergrupper i samme år og samme grunnlag.</p>
+      <p>Telleren er verdien for markedsgruppen \\(g\\) i år \\(y\\). Nevneren er totalen for alle markedsgrupper i samme år og samme grunnlag. Summen av andelene skal derfor være 100 prosent innenfor hvert år.</p>
+      <h3>Slik bør figuren leses</h3>
+      <p>Endringer fra år til år er prosentpoeng, ikke prosentvis vekst. Dersom en aktør går fra 40 til 42 prosent, er økningen 2 prosentpoeng. Sammenlign abonnement og omsetning for å se om en aktør har høyere inntektsandel enn abonnementsandel.</p>
     `,
   },
   projection: {
     title: "Lineær framskriving",
     html: `
-      <p>Framskrivingen er en enkel lineær trend basert på historiske helårsandeler fra markedsandelsfiguren. Den er ment som en teknisk trendlinje, ikke som en prognosemodell.</p>
-      <h3>Datagrunnlag</h3>
-      <p>For hver serie brukes markedsandelene for 2020-2025. Serien beregnes separat for hvert grunnlag, for eksempel abonnement og omsetning.</p>
-      <h3>Formel</h3>
+      <p>Framskrivingen viser hvordan markedsandelen ville utviklet seg dersom den historiske retningen fortsatte som en rett linje. Dette er en enkel trendindikator. Den tar ikke hensyn til kampanjer, strategiske beslutninger, prisendringer, regulatoriske tiltak eller andre forhold som kan endre utviklingen framover.</p>
+      <h3>Hva inngår?</h3>
+      <p>For hver aktør brukes de samme helårsandelene som i markedsandelsfiguren. Abonnement og omsetning beregnes hver for seg, slik at trendlinjen for kundemasse ikke blandes med trendlinjen for inntekter.</p>
+      <h3>Beregning</h3>
       <div class="formula">\\[
         \\hat{y}_{t} = \\alpha + \\beta t
       \\]</div>
@@ -82,78 +80,70 @@ const METHODS = {
         \\qquad
         \\alpha = \\bar{y} - \\beta\\bar{t}
       \\]</div>
-      <p>\(y_t\) er markedsandel i år \(t\). Trendlinjen forlenges tre år etter siste dataperiode. Historikken i Excel-eksporten står i egen blokk, og trendårene står i egen blokk.</p>
+      <p>Her er \\(y_t\\) markedsandelen i år \\(t\\), \\(\\beta\\) er årlig endring i prosentpoeng, og \\(\\alpha\\) er nivået linjen starter fra. Trendlinjen forlenges tre år etter siste tilgjengelige helår.</p>
+      <h3>Slik bør figuren leses</h3>
+      <p>Bruk framskrivingen som en visuell støtte for retningen i historikken, ikke som et fasitsvar på framtidig markedsandel. En bratt linje betyr at historikken har hatt tydelig bevegelse; en flat linje betyr at andelen har vært relativt stabil.</p>
     `,
   },
   "segment-share": {
     title: "Markedsandeler per segment",
     html: `
-      <p>Figuren viser markedsandeler separat for privatmarkedet og bedriftsmarkedet.</p>
-      <h3>Filtre</h3>
-      <ul>
-        <li>Felles: <code>dk = 'Mobiltelefoni'</code>, <code>tp = 'Sum'</code>, <code>sk = 'Sluttbruker'</code>, <code>delar = 'Helår'</code>.</li>
-        <li>Segment: <code>ms IN ('Privat', 'Bedrift')</code>.</li>
-        <li>Abonnement: <code>hg = 'Abonnement'</code>, <code>n1 IN ('Fakturert', 'Kontantkort')</code>, <code>n2 = 'Ingen'</code>.</li>
-        <li>Omsetning: <code>hg = 'Inntekter'</code>.</li>
-      </ul>
-      <h3>Formel</h3>
+      <p>Figuren deler sluttbrukermarkedet i privatmarked og bedriftsmarked. Dette er viktig fordi konkurransebildet kan være forskjellig i de to segmentene: en aktør kan ha sterk posisjon i privatmarkedet og svakere posisjon i bedriftsmarkedet, eller motsatt.</p>
+      <h3>Hva inngår?</h3>
+      <p>Det brukes helårstall for mobiltelefoni i sluttbrukermarkedet. Abonnement inkluderer ordinære fakturerte abonnement og kontantkort. Omsetning er årsinntekt fra mobiltelefoni. Privat og bedrift behandles som to separate markeder i denne figuren.</p>
+      <h3>Beregning</h3>
       <div class="formula">\\[
         \\text{Andel}_{g,s,y} =
         \\frac{\\sum \\text{svar}_{g,s,y}}{\\sum_h \\text{svar}_{h,s,y}} \\cdot 100
       \\]</div>
-      <p>Andelen beregnes innenfor hvert segment \(s\). Privat og bedrift har derfor hver sin nevner.</p>
+      <p>Andelen beregnes innenfor segmentet \\(s\\). Det betyr at privatmarkedet har sin egen total, og bedriftsmarkedet har sin egen total. En andel i privatmarkedet skal derfor ikke summeres sammen med en andel i bedriftsmarkedet.</p>
+      <h3>Slik bør figuren leses</h3>
+      <p>Se etter om aktørenes relative posisjon er lik i begge segmenter. Store forskjeller mellom segmentene kan tyde på ulik kundesammensetning, ulik salgsmodell eller ulik konkurranseflate.</p>
     `,
   },
   "private-challengers": {
     title: "Privatmarkedet: øvrige tilbydere",
     html: `
-      <p>Figuren trekker ut utvalgte mindre tilbydere i privatmarkedet og viser hvor stor andel de har innenfor privatmarkedet.</p>
-      <h3>Filtre</h3>
-      <ul>
-        <li><code>dk = 'Mobiltelefoni'</code>, <code>ms = 'Privat'</code>, <code>tp = 'Sum'</code>, <code>sk = 'Sluttbruker'</code>, <code>delar = 'Helår'</code>.</li>
-        <li>Abonnement bruker <code>hg = 'Abonnement'</code>, <code>n1 IN ('Fakturert', 'Kontantkort')</code> og <code>n2 = 'Ingen'</code>.</li>
-        <li>Omsetning bruker <code>hg = 'Inntekter'</code>.</li>
-      </ul>
+      <p>Figuren løfter fram utvalgte mindre tilbydere i privatmarkedet. I hovedfiguren ligger disse ofte samlet i Øvrige, men her vises de hver for seg slik at utviklingen blant utfordrerne blir lettere å se.</p>
+      <h3>Hva inngår?</h3>
+      <p>Grunnlaget er helårstall for privatmarkedet innen mobiltelefoni. Abonnement er ordinære mobilabonnement og kontantkort. Omsetning er årsinntekt fra privatmarkedet. Tilbydere uten relevant rapportering for et år vil ikke få en synlig verdi for det året.</p>
       <h3>Utvalg</h3>
-      <p>Utvalget er Fjordkraft, Chili mobil, Lycamobile, Xplora, Happybytes og Plussmobil. Navn standardiseres fra <code>fusnavn</code>.</p>
-      <h3>Formel</h3>
+      <p>Figuren viser Fjordkraft, Chili mobil, Lycamobile, Xplora, Happybytes og Plussmobil. Utvalget er gjort for å vise aktører som er små i totalmarkedet, men som kan ha tydelig bevegelse i privatmarkedet.</p>
+      <h3>Beregning</h3>
       <div class="formula">\\[
         \\text{Andel}_{i,y} =
         \\frac{\\sum \\text{svar}_{i,y}}{\\sum_j \\text{svar}_{j,y}} \\cdot 100
       \\]</div>
-      <p>Nevneren er totalen i privatmarkedet for samme år og grunnlag, ikke bare summen av de viste tilbyderne.</p>
+      <p>Nevneren er hele privatmarkedet i samme år og på samme grunnlag. Andelen viser derfor tilbyderens størrelse i markedet, ikke tilbyderens andel av bare de aktørene som er tegnet inn i figuren.</p>
+      <h3>Slik bør figuren leses</h3>
+      <p>Små absolutte endringer kan gi synlige utslag fordi aktørene har lave markedsandeler. Bruk figuren til å se retning og relativ utvikling, og bruk Excel-eksporten dersom du trenger eksakte tall.</p>
     `,
   },
   "business-challengers": {
     title: "Bedriftsmarkedet: øvrige tilbydere",
     html: `
-      <p>Figuren viser utvalgte mindre tilbydere i bedriftsmarkedet. Dette brukes for å få fram utviklingen blant aktører som ellers drukner i totalbildet.</p>
-      <h3>Filtre</h3>
-      <ul>
-        <li><code>dk = 'Mobiltelefoni'</code>, <code>ms = 'Bedrift'</code>, <code>tp = 'Sum'</code>, <code>sk = 'Sluttbruker'</code>, <code>delar = 'Helår'</code>.</li>
-        <li>Abonnement bruker <code>hg = 'Abonnement'</code>, <code>n1 IN ('Fakturert', 'Kontantkort')</code> og <code>n2 = 'Ingen'</code>.</li>
-        <li>Omsetning bruker <code>hg = 'Inntekter'</code>.</li>
-      </ul>
+      <p>Figuren viser utvalgte mindre tilbydere i bedriftsmarkedet. Den er laget for å gjøre utviklingen blant bedriftsrettede utfordrere synlig, selv om de har lavere andeler enn de største aktørene.</p>
+      <h3>Hva inngår?</h3>
+      <p>Grunnlaget er helårstall for bedriftsmarkedet innen mobiltelefoni. Abonnement inkluderer ordinære bedriftsabonnement. Omsetning er årsinntekt fra bedriftsmarkedet. Tallene beregnes separat fra privatmarkedet.</p>
       <h3>Utvalg</h3>
-      <p>Utvalget er Unifon, Nortel, Saga mobil og SMB mobil. Serien identifiseres primært fra <code>levnavn</code>.</p>
-      <h3>Formel</h3>
+      <p>Figuren viser Unifon, Nortel, Saga mobil og SMB mobil. Disse aktørene er valgt fordi de er relevante for å følge konkurransen i bedriftsmarkedet, men ofte blir for små til å leses tydelig i totalfiguren.</p>
+      <h3>Beregning</h3>
       <div class="formula">\\[
         \\text{Andel}_{i,y} =
         \\frac{\\sum \\text{svar}_{i,y}}{\\sum_j \\text{svar}_{j,y}} \\cdot 100
       \\]</div>
-      <p>Nevneren er totalen i bedriftsmarkedet for samme år og grunnlag.</p>
+      <p>Nevneren er hele bedriftsmarkedet i samme år og på samme grunnlag. Dermed kan andelene sammenlignes med hovedbildet for bedriftsmarkedet, ikke bare med de andre viste utfordrerne.</p>
+      <h3>Slik bør figuren leses</h3>
+      <p>Se særlig på om en aktør vokser jevnt over flere år eller om utviklingen skyldes enkelthopp. I små serier kan rapporteringsendringer og kundeporteføljer gi tydelige utslag.</p>
     `,
   },
   "arpu-segment": {
     title: "ARPU per segment",
     html: `
-      <p>ARPU viser gjennomsnittlig omsetning per abonnement per måned. Omsetningen er årsinntekt, mens abonnementstallene er et beholdningsmål. Derfor brukes gjennomsnittet av to helårssnapshots som abonnementsgrunnlag.</p>
-      <h3>Filtre</h3>
-      <ul>
-        <li>Omsetning: <code>dk = 'Mobiltelefoni'</code>, <code>hg = 'Inntekter'</code>, <code>ms IN ('Privat', 'Bedrift')</code>, <code>tp = 'Sum'</code>, <code>sk = 'Sluttbruker'</code>, <code>delar = 'Helår'</code>.</li>
-        <li>Abonnement: <code>hg = 'Abonnement'</code>, <code>n1 IN ('Fakturert', 'Kontantkort')</code>, <code>n2 = 'Ingen'</code> med samme segment- og helårsfilter.</li>
-      </ul>
-      <h3>Formel</h3>
+      <p>ARPU viser gjennomsnittlig inntekt per abonnement per måned. Den brukes for å sammenligne inntektsnivået i privatmarkedet og bedriftsmarkedet, og kan påvirkes av prisnivå, produktmiks, rabattbruk, databruk og hvilke kundetyper som inngår i segmentet.</p>
+      <h3>Hva inngår?</h3>
+      <p>Telleren er helårsinntekt for mobiltelefoni i segmentet. Nevneren er abonnement i samme segment. Siden inntekten opptjenes gjennom hele året, mens abonnement er en beholdning på et tidspunkt, bruker vi gjennomsnittlig abonnementsbeholdning for året.</p>
+      <h3>Beregning av abonnementsgrunnlag</h3>
       <div class="formula">\\[
         \\bar{A}_{s,y} = \\frac{A_{s,y-1} + A_{s,y}}{2}
       \\]</div>
@@ -161,22 +151,18 @@ const METHODS = {
         \\text{ARPU}_{s,y} =
         \\frac{I_{s,y} \\cdot 1000}{12 \\cdot \\bar{A}_{s,y}}
       \\]</div>
-      <p>\(I_{s,y}\) er inntekter i tusen kroner for segment \(s\) og år \(y\). \(A_{s,y}\) er abonnement ved helårssnapshot. Dersom foregående år ikke finnes i datasettet, brukes årets snapshot som både start- og sluttverdi.</p>
+      <p>\\(I_{s,y}\\) er årsinntekt i tusen kroner for segment \\(s\\) og år \\(y\\). Faktoren 1000 gjør inntekten om fra tusen kroner til kroner. \\(\\bar{A}_{s,y}\\) er gjennomsnittet av abonnementsbeholdningen ved utgangen av året før og ved utgangen av året som beregnes. For første tilgjengelige år brukes årets abonnementstall som beste tilgjengelige anslag.</p>
+      <h3>Slik bør figuren leses</h3>
+      <p>ARPU er ikke en listepris. Den er en gjennomsnittsberegning av faktisk rapportert omsetning delt på abonnementsgrunnlaget. En økning kan skyldes høyere priser, endret kundemiks eller lavere abonnementsgrunnlag, og bør derfor tolkes sammen med utviklingen i abonnement og omsetning.</p>
     `,
   },
   "arpu-provider": {
     title: "ARPU per tilbyder",
     html: `
-      <p>ARPU per tilbyder beregnes på samme måte som ARPU per segment, men med tilbydergruppe i tillegg. Dette gjør at endringer i beholdning gjennom året håndteres bedre enn ved å bruke bare årets sluttsnapshot.</p>
-      <h3>Filtre</h3>
-      <ul>
-        <li><code>dk = 'Mobiltelefoni'</code>, <code>ms IN ('Privat', 'Bedrift')</code>, <code>tp = 'Sum'</code>, <code>sk = 'Sluttbruker'</code>, <code>delar = 'Helår'</code>.</li>
-        <li>Omsetning: <code>hg = 'Inntekter'</code>.</li>
-        <li>Abonnement: <code>hg = 'Abonnement'</code>, <code>n1 IN ('Fakturert', 'Kontantkort')</code>, <code>n2 = 'Ingen'</code>.</li>
-      </ul>
-      <h3>Tilbydergrupper</h3>
-      <p>Telenor, Telia og Ice/Lyse identifiseres fra navn. I tillegg vises utvalgte mindre aktører som Fjordkraft, Chili mobil, Plussmobil, Happybytes og Unifon der de finnes i datagrunnlaget.</p>
-      <h3>Formel</h3>
+      <p>ARPU per tilbyder viser gjennomsnittlig månedlig inntekt per abonnement for utvalgte aktører. Beregningen gjøres separat for privatmarkedet og bedriftsmarkedet, fordi inntektsnivå og kundesammensetning ofte er ulike i de to segmentene.</p>
+      <h3>Hva inngår?</h3>
+      <p>For hver tilbydergruppe hentes helårsinntekt og abonnement i samme segment. Tilbydere samles etter markedsnavn der det er nødvendig for å få en sammenhengende tidsserie. En aktør vises bare der det finnes tilstrekkelig grunnlag for både omsetning og abonnement.</p>
+      <h3>Beregning av abonnementsgrunnlag</h3>
       <div class="formula">\\[
         \\bar{A}_{i,s,y} = \\frac{A_{i,s,y-1} + A_{i,s,y}}{2}
       \\]</div>
@@ -184,104 +170,108 @@ const METHODS = {
         \\text{ARPU}_{i,s,y} =
         \\frac{I_{i,s,y} \\cdot 1000}{12 \\cdot \\bar{A}_{i,s,y}}
       \\]</div>
-      <p>For første tilgjengelige år brukes årets abonnementssnapshot som snittgrunnlag, siden foregående helår ikke ligger i filen.</p>
+      <p>\\(I_{i,s,y}\\) er årsinntekt i tusen kroner for tilbyder \\(i\\), segment \\(s\\) og år \\(y\\). \\(\\bar{A}_{i,s,y}\\) er gjennomsnittlig abonnementsbeholdning gjennom året, beregnet som snittet av årets og foregående års beholdning. Resultatet deles på 12 for å få kroner per måned.</p>
+      <h3>Slik bør figuren leses</h3>
+      <p>Sammenlign aktører innenfor samme segment. Privat-ARPU og bedrifts-ARPU bør ikke leses som samme type kundegrunnlag. Store hopp kan komme av endret kundemiks, endret rapportering eller at en aktør har lavt volum.</p>
     `,
   },
   "nok-per-gb-total": {
     title: "Omsetning per GB totalt",
     html: `
-      <p>Figuren viser forholdet mellom inntekter og datatrafikk. Tallene er ikke ARPU; de viser hvor mange kroner inntekt som svarer til én GB datatrafikk.</p>
-      <h3>Filtre</h3>
-      <ul>
-        <li>Inntekter: <code>dk = 'Mobiltelefoni'</code>, <code>hg = 'Inntekter'</code>, <code>tp = 'Sum'</code>, <code>sk = 'Sluttbruker'</code>, <code>delar = 'Helår'</code>.</li>
-        <li>Datatrafikk: <code>hg = 'Trafikk'</code>, <code>n1 = 'Data'</code> med samme sum-, sluttbruker- og helårsfilter.</li>
-      </ul>
-      <h3>Formel</h3>
+      <p>Figuren viser hvor mye rapportert omsetning som tilsvarer én gigabyte datatrafikk. Dette er ikke en pris per datapakke og ikke en ARPU-beregning. Det er et forholdstall mellom samlet inntekt og samlet databruk.</p>
+      <h3>Hva inngår?</h3>
+      <p>Telleren er helårsinntekt fra mobiltelefoni i sluttbrukermarkedet. Nevneren er rapportert datatrafikk i gigabyte for samme marked og år. Beregningen gjøres for hver hovedgruppe av tilbydere.</p>
+      <h3>Beregning</h3>
       <div class="formula">\\[
         \\text{Kroner per GB}_{g,y} =
         \\frac{I_{g,y} \\cdot 1000}{D_{g,y}}
       \\]</div>
-      <p>\(I_{g,y}\) er inntekter i tusen kroner. \(D_{g,y}\) er datatrafikk i GB.</p>
+      <p>\\(I_{g,y}\\) er årsinntekt i tusen kroner for markedsgruppe \\(g\\) i år \\(y\\). \\(D_{g,y}\\) er datatrafikk målt i GB. Faktoren 1000 gjør inntekten om til kroner før den deles på trafikkvolumet.</p>
+      <h3>Slik bør figuren leses</h3>
+      <p>En fallende verdi betyr normalt at datatrafikken vokser raskere enn inntektene. Det kan skje selv om abonnementene ikke blir billigere, fordi kundene bruker mer data innenfor abonnementene sine.</p>
     `,
   },
   "nok-per-gb-providers": {
     title: "Omsetning per GB for utvalgte tilbydere",
     html: `
-      <p>Denne figuren bruker samme formel som totalfiguren for kroner per GB, men viser utvalgte tilbydere hver for seg.</p>
-      <h3>Filtre</h3>
-      <ul>
-        <li>Inntekter: <code>hg = 'Inntekter'</code>, <code>dk = 'Mobiltelefoni'</code>, <code>tp = 'Sum'</code>, <code>sk = 'Sluttbruker'</code>, <code>delar = 'Helår'</code>.</li>
-        <li>Trafikk: <code>hg = 'Trafikk'</code>, <code>n1 = 'Data'</code> med samme øvrige filtre.</li>
-      </ul>
-      <h3>Formel</h3>
+      <p>Denne figuren bruker samme prinsipp som totalfiguren for kroner per GB, men viser utvalgte tilbydere hver for seg. Den kan brukes til å se om forholdet mellom inntekter og datatrafikk utvikler seg forskjellig mellom aktørene.</p>
+      <h3>Hva inngår?</h3>
+      <p>For hver tilbyder brukes helårsinntekt fra mobiltelefoni og rapportert datatrafikk i GB. En tilbyder må ha både inntekter og trafikkgrunnlag for å kunne vises som egen serie.</p>
+      <h3>Beregning</h3>
       <div class="formula">\\[
         \\text{Kroner per GB}_{i,y} =
         \\frac{I_{i,y} \\cdot 1000}{D_{i,y}}
       \\]</div>
-      <p>Tilbydere uten komplett inntekts- og trafikkgrunnlag vises ikke som egen serie.</p>
+      <p>\\(I_{i,y}\\) er årsinntekt i tusen kroner for tilbyder \\(i\\) i år \\(y\\). \\(D_{i,y}\\) er tilbyderens datatrafikk målt i GB. Resultatet viser kroner inntekt per GB datatrafikk.</p>
+      <h3>Slik bør figuren leses</h3>
+      <p>Forskjeller mellom tilbydere kan skyldes ulik kundemiks, ulike pakker, ulik andel bedriftskunder eller forskjeller i rapportert trafikk. Figuren bør derfor brukes som et sammenlignende forholdstall, ikke som en direkte prisindikator.</p>
     `,
   },
   totals: {
     title: "Totaler",
     html: `
-      <p>Totalfigurene viser samlet antall abonnement og samlet omsetning i sluttbrukermarkedet.</p>
-      <h3>Filtre</h3>
-      <ul>
-        <li>Abonnement: <code>dk = 'Mobiltelefoni'</code>, <code>hg = 'Abonnement'</code>, <code>n1 IN ('Fakturert', 'Kontantkort')</code>, <code>n2 = 'Ingen'</code>, <code>tp = 'Sum'</code>, <code>sk = 'Sluttbruker'</code>, <code>delar = 'Helår'</code>.</li>
-        <li>Inntekter: <code>hg = 'Inntekter'</code> med samme sum-, sluttbruker- og helårsfilter.</li>
-      </ul>
-      <h3>Formel</h3>
+      <p>Totalfigurene viser størrelsen på sluttbrukermarkedet over tid. Den ene figuren viser samlet antall abonnement, og den andre viser samlet omsetning. De to siste figurene viser hvordan disse totalene fordeler seg mellom hovedaktørene.</p>
+      <h3>Hva inngår?</h3>
+      <p>Abonnement omfatter ordinære fakturerte abonnement og kontantkort for mobiltelefoni. Omsetning er rapportert årsinntekt fra sluttbrukermarkedet. Alle tall er helårstall, slik at periodene kan sammenlignes direkte.</p>
+      <h3>Beregning</h3>
       <div class="formula">\\[
         \\text{Total}_{y} = \\sum_i \\text{svar}_{i,y}
       \\]</div>
-      <p>For inntekter er verdiene i datagrunnlaget oppgitt i tusen kroner.</p>
+      <p>Totalen i år \\(y\\) er summen av alle relevante tilbydere. For inntekter er grunnverdiene rapportert i tusen kroner, men vises som absolutte tall i appen og i eksportene.</p>
+      <h3>Slik bør figuren leses</h3>
+      <p>Bruk totalene for å skille mellom markedsvekst og forskyvning mellom aktører. En aktør kan tape markedsandel selv om antall abonnement øker, dersom totalmarkedet vokser raskere.</p>
     `,
   },
   "provider-share-trend": {
     title: "Tilbyderandeler i totaler",
     html: `
-      <p>Figurene viser hvordan totalabonnement og totalinntekt fordeler seg på de samme tilbydergruppene som i hovedmarkedsandelene.</p>
-      <h3>Filtre</h3>
-      <p>Samme filtre som i totalfigurene brukes. Deretter grupperes <code>fusnavn</code> til Telenor, Telia, Lyse Tele (Ice) og Øvrige.</p>
-      <h3>Formel</h3>
+      <p>Figurene viser hvordan totalabonnement og totalinntekt fordeler seg på hovedaktørene. De bruker samme markedsgrupper som hovedfiguren for markedsandeler, men ligger sammen med totalene for å gjøre det lettere å se volum og andel i samme visning.</p>
+      <h3>Hva inngår?</h3>
+      <p>Grunnlaget er helårstall for mobiltelefoni i sluttbrukermarkedet. For abonnement brukes ordinære mobilabonnement og kontantkort. For inntekt brukes samlet årsinntekt. Tilbyderne samles i Telenor, Telia, Lyse Tele (Ice) og Øvrige.</p>
+      <h3>Beregning</h3>
       <div class="formula">\\[
         \\text{Andel}_{g,y} =
         \\frac{\\sum \\text{svar}_{g,y}}{\\sum_h \\text{svar}_{h,y}} \\cdot 100
       \\]</div>
+      <p>Formelen er den samme som for markedsandeler. Forskjellen er at denne visningen er plassert sammen med totalvolumene, slik at andelene kan tolkes mot utviklingen i hele markedet.</p>
+      <h3>Slik bør figuren leses</h3>
+      <p>Sammenlign andelsutviklingen med totalutviklingen. Hvis totalmarkedet vokser samtidig som en aktørs andel faller, kan aktørens absolutte størrelse likevel være stabil eller økende.</p>
     `,
   },
   wholesale: {
-    title: "Wholesale market shares",
+    title: "Grossistandeler",
     html: `
-      <p>Grossisttabellen beregner hvor stor del av abonnementene som ligger under Telenor, Telia og Lyse Tele (Ice), inkludert tjenestetilbydere som kjøper tilgang.</p>
-      <h3>Filtre</h3>
-      <ul>
-        <li><code>dk = 'Mobiltelefoni'</code>, <code>hg = 'Abonnement'</code>, <code>n1 IN ('Fakturert', 'Kontantkort')</code>, <code>n2 = 'Ingen'</code>, <code>tp = 'Sum'</code>, <code>sk = 'Sluttbruker'</code>, <code>delar = 'Helår'</code>.</li>
-      </ul>
-      <h3>Tilgangskjøpere</h3>
-      <p>Startforslaget for hvilken tilbyder som hører til hvilken grossist kommer fra <code>tilgangskjøper-valg.xlsx</code>. Dette er en årsspesifikk mapping. Tallene hentes fortsatt fra <code>mobil.parquet</code>.</p>
-      <h3>Formel</h3>
+      <p>Grossistandeler viser hvor stor del av abonnementsmassen som ligger på de tre mobilnettene når tilgangskjøpere legges til nettverkseieren de kjøper tilgang hos. Dette er et annet perspektiv enn sluttbrukerandelene, fordi abonnement fra en tjenestetilbyder flyttes til den grossisten som leverer nettverkstilgangen.</p>
+      <h3>Hva inngår?</h3>
+      <p>Grunnlaget er helårstall for ordinære mobilabonnement og kontantkort. Alle tilbydere med abonnement i valgt år tas med. Telenor, Telia og Lyse Tele (Ice) er grossistene som kan motta abonnement fra tilgangskjøpere.</p>
+      <h3>Tilgangskjøpere og år</h3>
+      <p>Sammensetningen kan være ulik fra år til år. Derfor velger appen grossisttilordning for hvert enkelt år, og du kan justere den ved å dra en tilbyder til riktig grossist. Endringen påvirker bare året du står på, slik at for eksempel 2025 kan kontrolleres uten å endre 2024.</p>
+      <h3>Beregning</h3>
       <div class="formula">\\[
         \\text{Grossistandel}_{G,y} =
         \\frac{\\sum_{i \\in G_y} A_{i,y}}{\\sum_j A_{j,y}} \\cdot 100
       \\]</div>
-      <p>\(G_y\) er tilbyderne som er lagt under grossist \(G\) i valgt år. Drag-and-drop endrer bare mappingen i nettleseren og brukes direkte i tabellen.</p>
+      <p>\\(G_y\\) er mengden av tilbydere som er lagt under grossist \\(G\\) i år \\(y\\). \\(A_{i,y}\\) er abonnement for tilbyder \\(i\\) i samme år. Nevneren er alle abonnement som inngår i grossistberegningen.</p>
+      <h3>Slik bør figuren leses</h3>
+      <p>Hvis du flytter en tilgangskjøper mellom grossister, oppdateres grossistandelene og konsentrasjonstallene med en gang. Dette gjør det mulig å teste og dokumentere ulike forutsetninger for hvem som hører til hvilken grossist i et bestemt år.</p>
     `,
   },
   concentration: {
     title: "Markedskonsentrasjon",
     html: `
-      <p>Konsentrasjonstabellene viser CR2 og HHI for to grunnlag: omsetning i sluttbrukermarkedet og abonnement i grossistmarkedet.</p>
+      <p>Konsentrasjonstabellene viser hvor konsentrert markedet er målt med CR2 og HHI. Det vises to grunnlag: omsetning i sluttbrukermarkedet og abonnement i grossistmarkedet. Tabellen for omsetning følger sluttbrukeraktørene, mens grossisttabellen følger nettverkseierne etter at tilgangskjøpere er lagt til riktig grossist.</p>
       <h3>CR2</h3>
       <div class="formula">\\[
         \\text{CR2}_{y} = 100 \\cdot (s_{1,y} + s_{2,y})
       \\]</div>
-      <p>CR2 er samlet markedsandel for de to største aktørene i valgt grunnlag og år.</p>
+      <p>CR2 er samlet markedsandel for de to største aktørene i valgt år. Dersom CR2 er 82 prosent, betyr det at de to største aktørene samlet står for 82 prosent av grunnlaget i tabellen.</p>
       <h3>HHI</h3>
       <div class="formula">\\[
         \\text{HHI}_{y} = \\sum_i s_{i,y}^{2}
       \\]</div>
-      <p>\(s_{i,y}\) er markedsandelen som desimaltall, for eksempel 0,40 for 40 prosent. Omsetningstabellen bruker sluttbrukerinntekter fra <code>mobil.parquet</code>. Grossisttabellen bruker abonnement etter årsspesifikk grossistmapping.</p>
+      <p>\\(s_{i,y}\\) er aktørens markedsandel som desimaltall, for eksempel 0,40 for 40 prosent. HHI blir høyere når få aktører har store andeler, og lavere når markedet er jevnere fordelt. I denne appen vises HHI som et tall mellom 0 og 1.</p>
+      <h3>Slik bør tabellene leses</h3>
+      <p>Omsetningstabellen og grossisttabellen må ikke tolkes som samme marked. Omsetningstabellen sier noe om inntektskonsentrasjon i sluttbrukermarkedet. Grossisttabellen sier noe om konsentrasjon i nettverkstilgangen når abonnement fra tilgangskjøpere legges til grossisten de bruker.</p>
     `,
   },
 };
@@ -738,7 +728,7 @@ function renderTotals() {
   return `
     ${toolbar(
       "",
-      `<span class="chart-note">Helår · temaene på slide 13 og 14, bygget fra Parquet</span>`,
+      `<span class="chart-note">Helår · samlet utvikling i abonnement og inntekter</span>`,
     )}
     <div class="panel-grid">
       ${chartPanel({
@@ -803,7 +793,7 @@ function renderWholesale() {
   return `
     ${toolbar(
       segmented("wholesaleYear", years.map(String), String(selectedYear)),
-      `<span class="chart-note">Helår · dra tilbydere mellom grossistene. Verdiene beregnes fra Parquet.</span>`,
+      `<span class="chart-note">Helår · dra tilbydere mellom grossistene for valgt år</span>`,
     )}
     <div class="panel-grid single">
       ${renderWholesaleBuilder(selectedWholesale, selectedYear)}
@@ -811,7 +801,7 @@ function renderWholesale() {
     <div style="height:14px"></div>
     <div class="panel-grid single">
       ${tablePanel({
-        title: "Wholesale market shares (helår)",
+        title: "Grossistandeler (helår)",
         exportId: "wholesale",
         dynamicId: "wholesale",
         rows: wholesaleMatrix,
@@ -923,8 +913,9 @@ function renderWholesaleBuilder(yearRows, year) {
         </div>
       </div>
       <p class="panel-caption">
-        Tabellen under beregnes fra abonnementstall i <code>mobil.parquet</code>. PPT-data brukes ikke i beregningen.
-        Startforslaget hentes fra <code>tilgangskjøper-valg.xlsx</code>, med én sammensetning per år.
+        Tabellen under beregnes fra rapporterte abonnementstall. Tilgangskjøpere legges til
+        grossisten de kjøpte tilgang hos i valgt år. Du kan justere sammensetningen ved å
+        dra tilbydere mellom grossistene.
       </p>
       <div class="owner-grid">
         ${zones
@@ -1124,9 +1115,8 @@ function renderData() {
           </div>
         </div>
         <p class="panel-caption">
-          Kilden er ${escapeHtml(meta.source)}. Dataene i appen er forhåndsbygget med ${escapeHtml(
-            meta.built_from,
-          )}, slik at hele løsningen kan hostes statisk.
+          Appen bygger på helårsrapporterte mobilmarkedstall for ${meta.first_year}-${meta.latest_year}.
+          Nedlastingene under gir tallene bak figurene i Excel-format.
         </p>
       </section>
     </div>
