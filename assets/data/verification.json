@@ -1,0 +1,335 @@
+{
+  "status": "ok",
+  "latest_year": 2025,
+  "powerpoint_checks": [
+    {
+      "label": "Abonnement total: Telenor",
+      "current": 40.442,
+      "powerpoint": 40.6947,
+      "delta": -0.2527,
+      "tolerance": 3.5
+    },
+    {
+      "label": "Abonnement total: Telia",
+      "current": 32.8295,
+      "powerpoint": 33.3952,
+      "delta": -0.5658,
+      "tolerance": 3.5
+    },
+    {
+      "label": "Abonnement total: Lyse Tele (Ice)",
+      "current": 17.1359,
+      "powerpoint": 16.6179,
+      "delta": 0.518,
+      "tolerance": 3.5
+    },
+    {
+      "label": "Abonnement total: Øvrige",
+      "current": 9.5927,
+      "powerpoint": 9.2921,
+      "delta": 0.3005,
+      "tolerance": 3.5
+    },
+    {
+      "label": "Omsetning total: Telenor",
+      "current": 50.7565,
+      "powerpoint": 51.5663,
+      "delta": -0.8099,
+      "tolerance": 3.5
+    },
+    {
+      "label": "Omsetning total: Telia",
+      "current": 30.3398,
+      "powerpoint": 30.6906,
+      "delta": -0.3509,
+      "tolerance": 3.5
+    },
+    {
+      "label": "Omsetning total: Lyse Tele (Ice)",
+      "current": 12.0285,
+      "powerpoint": 12.0541,
+      "delta": -0.0256,
+      "tolerance": 3.5
+    },
+    {
+      "label": "Omsetning total: Øvrige",
+      "current": 6.8753,
+      "powerpoint": 5.6889,
+      "delta": 1.1864,
+      "tolerance": 3.5
+    },
+    {
+      "label": "Abonnement privat: Telenor",
+      "current": 36.3058,
+      "powerpoint": 36.5376,
+      "delta": -0.2318,
+      "tolerance": 4.5
+    },
+    {
+      "label": "Abonnement privat: Telia",
+      "current": 31.6704,
+      "powerpoint": 32.3211,
+      "delta": -0.6507,
+      "tolerance": 4.5
+    },
+    {
+      "label": "Abonnement privat: Lyse Tele (Ice)",
+      "current": 21.9221,
+      "powerpoint": 21.327,
+      "delta": 0.5951,
+      "tolerance": 4.5
+    },
+    {
+      "label": "Abonnement privat: Øvrige",
+      "current": 10.1017,
+      "powerpoint": 9.8143,
+      "delta": 0.2874,
+      "tolerance": 4.5
+    },
+    {
+      "label": "Abonnement bedrift: Telenor",
+      "current": 50.736,
+      "powerpoint": 51.0786,
+      "delta": -0.3426,
+      "tolerance": 4.5
+    },
+    {
+      "label": "Abonnement bedrift: Telia",
+      "current": 35.7142,
+      "powerpoint": 36.0784,
+      "delta": -0.3642,
+      "tolerance": 4.5
+    },
+    {
+      "label": "Abonnement bedrift: Lyse Tele (Ice)",
+      "current": 5.224,
+      "powerpoint": 4.8552,
+      "delta": 0.3688,
+      "tolerance": 4.5
+    },
+    {
+      "label": "Abonnement bedrift: Øvrige",
+      "current": 8.3258,
+      "powerpoint": 7.9878,
+      "delta": 0.338,
+      "tolerance": 4.5
+    },
+    {
+      "label": "Omsetning privat: Telenor",
+      "current": 48.0818,
+      "powerpoint": 49.2426,
+      "delta": -1.1608,
+      "tolerance": 5.0
+    },
+    {
+      "label": "Omsetning privat: Telia",
+      "current": 31.1393,
+      "powerpoint": 31.4674,
+      "delta": -0.3281,
+      "tolerance": 5.0
+    },
+    {
+      "label": "Omsetning privat: Lyse Tele (Ice)",
+      "current": 14.8618,
+      "powerpoint": 15.2186,
+      "delta": -0.3568,
+      "tolerance": 5.0
+    },
+    {
+      "label": "Omsetning privat: Øvrige",
+      "current": 5.9171,
+      "powerpoint": 4.0715,
+      "delta": 1.8457,
+      "tolerance": 5.0
+    },
+    {
+      "label": "Omsetning bedrift: Telenor",
+      "current": 58.0229,
+      "powerpoint": 57.4258,
+      "delta": 0.597,
+      "tolerance": 5.0
+    },
+    {
+      "label": "Omsetning bedrift: Telia",
+      "current": 28.1676,
+      "powerpoint": 28.7321,
+      "delta": -0.5645,
+      "tolerance": 5.0
+    },
+    {
+      "label": "Omsetning bedrift: Lyse Tele (Ice)",
+      "current": 4.3312,
+      "powerpoint": 4.0745,
+      "delta": 0.2566,
+      "tolerance": 5.0
+    },
+    {
+      "label": "Omsetning bedrift: Øvrige",
+      "current": 9.4784,
+      "powerpoint": 9.7676,
+      "delta": -0.2892,
+      "tolerance": 5.0
+    },
+    {
+      "label": "ARPU Bedrift",
+      "current": 271.1922,
+      "powerpoint": 289.2433,
+      "delta": -18.0512,
+      "tolerance": 52.06380044349279
+    },
+    {
+      "label": "ARPU Privat",
+      "current": 294.3973,
+      "powerpoint": 295.2019,
+      "delta": -0.8046,
+      "tolerance": 53.136337005147325
+    },
+    {
+      "label": "NOK per GB Telenor",
+      "current": 26.1913,
+      "powerpoint": 27.0472,
+      "delta": -0.8559,
+      "tolerance": 9.466503717932408
+    },
+    {
+      "label": "NOK per GB Telia",
+      "current": 19.8685,
+      "powerpoint": 14.5515,
+      "delta": 5.3169,
+      "tolerance": 8
+    },
+    {
+      "label": "NOK per GB Ice",
+      "current": 14.9182,
+      "powerpoint": 15.4993,
+      "delta": -0.5811,
+      "tolerance": 8
+    },
+    {
+      "label": "NOK per GB Øvrige",
+      "current": 23.3543,
+      "powerpoint": 25.1111,
+      "delta": -1.7568,
+      "tolerance": 8.788871715059914
+    },
+    {
+      "label": "Wholesale table 2020: Telenor",
+      "current": 51.5659,
+      "powerpoint": 51.6,
+      "delta": -0.0341,
+      "tolerance": 1.0
+    },
+    {
+      "label": "Wholesale table 2021: Telenor",
+      "current": 51.0886,
+      "powerpoint": 51.1,
+      "delta": -0.0114,
+      "tolerance": 1.0
+    },
+    {
+      "label": "Wholesale table 2022: Telenor",
+      "current": 50.3685,
+      "powerpoint": 50.0,
+      "delta": 0.3685,
+      "tolerance": 1.0
+    },
+    {
+      "label": "Wholesale table 2023: Telenor",
+      "current": 47.6108,
+      "powerpoint": 47.6,
+      "delta": 0.0108,
+      "tolerance": 1.0
+    },
+    {
+      "label": "Wholesale table 2024: Telenor",
+      "current": 46.5983,
+      "powerpoint": 46.6,
+      "delta": -0.0017,
+      "tolerance": 1.0
+    },
+    {
+      "label": "Wholesale table 2020: Telia",
+      "current": 37.4763,
+      "powerpoint": 37.5,
+      "delta": -0.0237,
+      "tolerance": 1.0
+    },
+    {
+      "label": "Wholesale table 2021: Telia",
+      "current": 37.2076,
+      "powerpoint": 37.2,
+      "delta": 0.0076,
+      "tolerance": 1.0
+    },
+    {
+      "label": "Wholesale table 2022: Telia",
+      "current": 37.0511,
+      "powerpoint": 37.0,
+      "delta": 0.0511,
+      "tolerance": 1.0
+    },
+    {
+      "label": "Wholesale table 2023: Telia",
+      "current": 37.8153,
+      "powerpoint": 37.8,
+      "delta": 0.0153,
+      "tolerance": 1.0
+    },
+    {
+      "label": "Wholesale table 2024: Telia",
+      "current": 37.3551,
+      "powerpoint": 37.4,
+      "delta": -0.0449,
+      "tolerance": 1.0
+    },
+    {
+      "label": "Wholesale table 2020: Lyse Tele (Ice)",
+      "current": 10.9578,
+      "powerpoint": 11.0,
+      "delta": -0.0422,
+      "tolerance": 1.0
+    },
+    {
+      "label": "Wholesale table 2021: Lyse Tele (Ice)",
+      "current": 11.7038,
+      "powerpoint": 11.7,
+      "delta": 0.0038,
+      "tolerance": 1.0
+    },
+    {
+      "label": "Wholesale table 2022: Lyse Tele (Ice)",
+      "current": 12.5804,
+      "powerpoint": 13.0,
+      "delta": -0.4196,
+      "tolerance": 1.0
+    },
+    {
+      "label": "Wholesale table 2023: Lyse Tele (Ice)",
+      "current": 14.5739,
+      "powerpoint": 14.6,
+      "delta": -0.0261,
+      "tolerance": 1.0
+    },
+    {
+      "label": "Wholesale table 2024: Lyse Tele (Ice)",
+      "current": 16.0466,
+      "powerpoint": 16.0,
+      "delta": 0.0466,
+      "tolerance": 1.0
+    },
+    {
+      "label": "Grossist CR2 table",
+      "current": 83.9534,
+      "powerpoint": 83.95,
+      "delta": 0.0034,
+      "tolerance": 0.5
+    },
+    {
+      "label": "Grossist HHI table",
+      "current": 0.3824,
+      "powerpoint": 0.3824,
+      "delta": 0.0,
+      "tolerance": 0.01
+    }
+  ]
+}

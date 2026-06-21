@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Statistikkapp for mobilmarkedet" />
+    <title>Mobilmarkedet | statistikk</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [["\\(", "\\)"]],
+          displayMath: [["\\[", "\\]"]],
+        },
+        options: {
+          enableMenu: false,
+        },
+      };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script defer src="./assets/app.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div>
+            <h1>Mobilmarkedet</h1>
+            <p>
+              Markedsandeler, utfordrere og prisutvikling
+              <span id="data-period"></span>
+            </p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <a class="icon-link" href="./data/mobil.parquet" download title="Last ned kildedata">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <path d="M7 10l5 5 5-5"></path>
+              <path d="M12 15V3"></path>
+            </svg>
+            <span>Kildedata</span>
+          </a>
+          <button class="icon-link" type="button" data-export="market-share" title="Last ned hovedtall">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <path d="M14 2v6h6"></path>
+              <path d="M8 13h8"></path>
+              <path d="M8 17h6"></path>
+            </svg>
+            <span>Hovedtall</span>
+          </button>
+        </div>
+      </header>
+
+      <nav class="tabs" aria-label="Hovedvisninger">
+        <button type="button" data-view="overview" aria-selected="true">Overblikk</button>
+        <button type="button" data-view="segments">Segmenter</button>
+        <button type="button" data-view="challengers">Utfordrere</button>
+        <button type="button" data-view="prices">Pris</button>
+        <button type="button" data-view="totals">Totaler</button>
+        <button type="button" data-view="wholesale">Grossist og konsentrasjon</button>
+        <button type="button" data-view="data">Datagrunnlag</button>
+      </nav>
+
+      <main>
+        <section id="view-content" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <div class="tooltip" id="tooltip" role="status" aria-live="polite"></div>
+    <div class="modal-backdrop" id="method-modal" hidden>
+      <section class="method-dialog" role="dialog" aria-modal="true" aria-labelledby="method-title">
+        <div class="method-head">
+          <div>
+            <span class="eyebrow">Metode</span>
+            <h2 id="method-title">Beregning</h2>
+          </div>
+          <button class="icon-button" type="button" data-close-method aria-label="Lukk forklaring" title="Lukk">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="method-body" id="method-body"></div>
+      </section>
+    </div>
+  </body>
+</html>
