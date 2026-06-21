@@ -96,6 +96,28 @@ async function waitForExpression(cdp, expression, timeoutMs = 10000) {
   throw new Error(`Timeout waiting for expression: ${expression}`);
 }
 
+function forbiddenUiExpression() {
+  const forbidden = [
+    "mobil.parquet",
+    "tilgangskjøper-valg",
+    "PowerPoint",
+    "PPT",
+    "PPT-data",
+    "Parquet",
+    "dk =",
+    "hg =",
+    "tp =",
+    "sk =",
+    "delar",
+    "fusnavn",
+    "levnavn",
+    "grnavn",
+    "slide",
+    "bygget fra",
+  ];
+  return `(${JSON.stringify(forbidden)}).filter((term) => document.body.innerText.includes(term))`;
+}
+
 async function screenshot(cdp, filename) {
   const result = await cdp.send("Page.captureScreenshot", {
     format: "png",
@@ -171,8 +193,12 @@ async function main() {
   await evaluate(cdp, "document.querySelector('[data-method=\"market-share\"]').click()");
   await waitForExpression(
     cdp,
-    "!!document.querySelector('#method-modal:not([hidden])') && document.body.innerText.includes('Markedsandel') && document.body.innerText.includes(\"dk = 'Mobiltelefoni'\")",
+    "!!document.querySelector('#method-modal:not([hidden])') && document.body.innerText.includes('Hva inngår?') && document.body.innerText.includes('Beregning') && document.body.innerText.includes('Slik bør figuren leses')",
   );
+  let forbiddenTerms = await evaluate(cdp, forbiddenUiExpression());
+  if (forbiddenTerms.length) {
+    throw new Error(`Method text contains internal references: ${forbiddenTerms.join(", ")}`);
+  }
   await evaluate(cdp, "document.querySelector('[data-close-method]').click()");
   await waitForExpression(cdp, "document.querySelector('#method-modal').hidden");
   await evaluate(cdp, "document.querySelector('[data-state=\"metric\"][data-value=\"Omsetning\"]').click()");
@@ -193,8 +219,12 @@ async function main() {
   await evaluate(cdp, "document.querySelector('[data-method=\"arpu-segment\"]').click()");
   await waitForExpression(
     cdp,
-    "document.body.innerText.includes('gjennomsnittet av to helårssnapshots') && document.body.innerText.includes('ARPU')",
+    "document.body.innerText.includes('gjennomsnittlig abonnementsbeholdning') && document.body.innerText.includes('ARPU')",
   );
+  forbiddenTerms = await evaluate(cdp, forbiddenUiExpression());
+  if (forbiddenTerms.length) {
+    throw new Error(`ARPU method text contains internal references: ${forbiddenTerms.join(", ")}`);
+  }
   await evaluate(cdp, "document.querySelector('[data-close-method]').click()");
 
   await evaluate(cdp, "document.querySelector('[data-view=\"wholesale\"]').click()");
@@ -210,6 +240,10 @@ async function main() {
   );
   if (oldWholesaleText) {
     throw new Error("Wholesale view still contains old period/independent/mixed concentration text");
+  }
+  forbiddenTerms = await evaluate(cdp, forbiddenUiExpression());
+  if (forbiddenTerms.length) {
+    throw new Error(`Wholesale view contains internal references: ${forbiddenTerms.join(", ")}`);
   }
   await evaluate(cdp, "document.querySelector('[data-reset-wholesale]').click()");
   await evaluate(cdp, "document.querySelector('[data-state=\"wholesaleYear\"][data-value=\"2025\"]').click()");

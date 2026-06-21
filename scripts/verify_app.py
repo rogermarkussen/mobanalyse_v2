@@ -40,6 +40,30 @@ def chart_latest(chart_name: str, multiply: float = 1.0) -> dict[str, float]:
     return values
 
 
+def chart_points(chart_name: str, multiply: float = 1.0) -> dict[str, dict[int, float]]:
+    with ZipFile(PPTX) as archive:
+        root = ET.fromstring(archive.read(f"ppt/charts/{chart_name}.xml"))
+    values: dict[str, dict[int, float]] = {}
+    for series in root.findall(".//c:ser", NS):
+        name_node = series.find(".//c:tx//c:v", NS)
+        if name_node is None or not name_node.text:
+            continue
+        name = normalize_name(name_node.text)
+        categories = [node.text or "" for node in series.findall(".//c:cat//c:strCache//c:pt/c:v", NS)]
+        if not categories:
+            categories = [
+                node.text or "" for node in series.findall(".//c:cat//c:numCache//c:pt/c:v", NS)
+            ]
+        series_values = [
+            float(node.text) * multiply
+            for node in series.findall(".//c:val//c:numCache//c:pt/c:v", NS)
+        ]
+        for category, value in zip(categories, series_values):
+            if category.isdigit():
+                values.setdefault(name, {})[int(category)] = value
+    return values
+
+
 def slide_tables(slide_number: int) -> list[list[list[str]]]:
     with ZipFile(PPTX) as archive:
         root = ET.fromstring(archive.read(f"ppt/slides/slide{slide_number}.xml"))
@@ -126,6 +150,24 @@ def verify_static_files() -> None:
     found = [term for term in forbidden_ui if term in app_js]
     if found:
         raise AssertionError(f"UI-koden inneholder gamle periode/uavhengig-valg: {found}")
+    forbidden_public_text = [
+        "mobil.parquet",
+        "tilgangskjøper-valg.xlsx",
+        "PowerPoint",
+        "PPT-data",
+        "Parquet",
+        "dk =",
+        "hg =",
+        "tp =",
+        "sk =",
+        "fusnavn",
+        "levnavn",
+        "grnavn",
+        "bygget fra",
+    ]
+    found_public = [term for term in forbidden_public_text if term in app_js]
+    if found_public:
+        raise AssertionError(f"UI-tekst inneholder interne referanser: {found_public}")
 
 
 def verify_exports(data: dict) -> None:
@@ -313,17 +355,63 @@ def verify_wholesale_tables(data: dict) -> list[dict]:
                 )
             )
 
-    slide12 = slide_tables(12)[1]
-    whole_year_row = next(row for row in slide12 if row and row[0] == "2024")
-    ppt_cr2 = parse_percent(whole_year_row[1])
-    ppt_hhi = parse_decimal(whole_year_row[2])
-    grossist = next(
-        row
-        for row in data["grossistConcentrationDefault"]
-        if row["period"] == "Helår" and row["ar"] == 2024
-    )
-    checks.append(assert_close("Grossist CR2 table", float(grossist["cr2"]), ppt_cr2, 0.5))
-    checks.append(assert_close("Grossist HHI table", float(grossist["hhi"]), ppt_hhi, 0.01))
+    retail_table = slide_tables(12)[0]
+    for whole_year_row in retail_table[2:]:
+        if not whole_year_row or not whole_year_row[0].isdigit():
+            continue
+        year = int(whole_year_row[0])
+        if not 2022 <= year <= 2024:
+            continue
+        current = next(
+            row
+            for row in data["concentration"]
+            if row["metric"] == "Omsetning" and row["ar"] == year
+        )
+        checks.append(
+            assert_close(
+                f"Sluttbruker omsetning CR2 table {year}",
+                float(current["cr2"]),
+                parse_percent(whole_year_row[1]),
+                0.5,
+            )
+        )
+        checks.append(
+            assert_close(
+                f"Sluttbruker omsetning HHI table {year}",
+                float(current["hhi"]),
+                parse_decimal(whole_year_row[2]),
+                0.01,
+            )
+        )
+
+    grossist_table = slide_tables(12)[1]
+    for whole_year_row in grossist_table[2:]:
+        if not whole_year_row or not whole_year_row[0].isdigit():
+            continue
+        year = int(whole_year_row[0])
+        if not 2022 <= year <= 2024:
+            continue
+        current = next(
+            row
+            for row in data["grossistConcentrationDefault"]
+            if row["period"] == "Helår" and row["ar"] == year
+        )
+        checks.append(
+            assert_close(
+                f"Grossist CR2 table {year}",
+                float(current["cr2"]),
+                parse_percent(whole_year_row[1]),
+                0.5,
+            )
+        )
+        checks.append(
+            assert_close(
+                f"Grossist HHI table {year}",
+                float(current["hhi"]),
+                parse_decimal(whole_year_row[2]),
+                0.01,
+            )
+        )
     return checks
 
 
@@ -332,14 +420,33 @@ def verify_powerpoint_baseline(data: dict) -> list[dict]:
     checks: list[dict] = []
 
     chart_map = [
-        ("chart1", "marketShare", {"metric": "Abonnement"}, "tilbyder", 100.0, 3.5, "Abonnement total"),
-        ("chart2", "marketShare", {"metric": "Omsetning"}, "tilbyder", 100.0, 3.5, "Omsetning total"),
+        (
+            "chart1",
+            "marketShare",
+            {"metric": "Abonnement"},
+            "tilbyder",
+            100.0,
+            1.0,
+            3.5,
+            "Abonnement total",
+        ),
+        (
+            "chart2",
+            "marketShare",
+            {"metric": "Omsetning"},
+            "tilbyder",
+            100.0,
+            1.0,
+            3.5,
+            "Omsetning total",
+        ),
         (
             "chart5",
             "segmentShare",
             {"metric": "Abonnement", "segment": "Privat"},
             "tilbyder",
             100.0,
+            1.0,
             4.5,
             "Abonnement privat",
         ),
@@ -349,6 +456,7 @@ def verify_powerpoint_baseline(data: dict) -> list[dict]:
             {"metric": "Abonnement", "segment": "Bedrift"},
             "tilbyder",
             100.0,
+            1.0,
             4.5,
             "Abonnement bedrift",
         ),
@@ -358,6 +466,7 @@ def verify_powerpoint_baseline(data: dict) -> list[dict]:
             {"metric": "Omsetning", "segment": "Privat"},
             "tilbyder",
             100.0,
+            1.0,
             5.0,
             "Omsetning privat",
         ),
@@ -367,12 +476,38 @@ def verify_powerpoint_baseline(data: dict) -> list[dict]:
             {"metric": "Omsetning", "segment": "Bedrift"},
             "tilbyder",
             100.0,
+            1.0,
             5.0,
             "Omsetning bedrift",
         ),
     ]
 
-    for chart, dataset, base_match, provider_key, multiplier, tolerance, label in chart_map:
+    for (
+        chart,
+        dataset,
+        base_match,
+        provider_key,
+        multiplier,
+        historical_tolerance,
+        latest_tolerance,
+        label,
+    ) in chart_map:
+        for provider, year_values in chart_points(chart, multiplier).items():
+            for year, baseline in year_values.items():
+                if 2020 <= year <= 2024:
+                    current = find_value(
+                        data[dataset],
+                        **base_match,
+                        **{provider_key: provider, "ar": year},
+                    )
+                    checks.append(
+                        assert_close(
+                            f"{label} {year}: {provider}",
+                            current,
+                            baseline,
+                            historical_tolerance,
+                        )
+                    )
         ppt_values = chart_latest(chart, multiplier)
         for provider, baseline in ppt_values.items():
             current = find_value(
@@ -380,11 +515,33 @@ def verify_powerpoint_baseline(data: dict) -> list[dict]:
                 **base_match,
                 **{provider_key: provider, "ar": latest},
             )
-            checks.append(assert_close(f"{label}: {provider}", current, baseline, tolerance))
+            checks.append(assert_close(f"{label} siste dekkpunkt: {provider}", current, baseline, latest_tolerance))
+
+    for segment, year_values in chart_points("chart13").items():
+        for year, baseline in year_values.items():
+            if 2020 <= year <= 2024:
+                current = find_value(data["arpuSegment"], segment=segment, ar=year)
+                checks.append(
+                    assert_relative(f"ARPU {segment} {year}", current, baseline, rel=0.12, minimum=25)
+                )
 
     for segment, baseline in chart_latest("chart13").items():
         current = find_value(data["arpuSegment"], segment=segment, ar=latest)
         checks.append(assert_relative(f"ARPU {segment}", current, baseline, rel=0.18, minimum=35))
+
+    for provider, year_values in chart_points("chart16").items():
+        for year, baseline in year_values.items():
+            if 2020 <= year <= 2024:
+                current = find_value(data["nokPerGbTotal"], tilbyder=provider, ar=year)
+                checks.append(
+                    assert_relative(
+                        f"NOK per GB {provider} {year}",
+                        current,
+                        baseline,
+                        rel=0.15,
+                        minimum=5,
+                    )
+                )
 
     for provider, baseline in chart_latest("chart16").items():
         current = find_value(data["nokPerGbTotal"], tilbyder=provider, ar=latest)
@@ -393,6 +550,26 @@ def verify_powerpoint_baseline(data: dict) -> list[dict]:
         )
 
     return checks
+
+
+def summarize_baseline_checks(checks: list[dict]) -> dict:
+    groups: dict[str, int] = {}
+    max_tolerance_ratio = 0.0
+    largest_relative_check = None
+    for check in checks:
+        group = str(check["label"]).split(":")[0].rsplit(" ", 1)[0]
+        groups[group] = groups.get(group, 0) + 1
+        tolerance = float(check["tolerance"])
+        ratio = abs(float(check["delta"])) / tolerance if tolerance else 0.0
+        if ratio > max_tolerance_ratio:
+            max_tolerance_ratio = ratio
+            largest_relative_check = check
+    return {
+        "check_count": len(checks),
+        "max_tolerance_ratio": round(max_tolerance_ratio, 4),
+        "largest_relative_check": largest_relative_check,
+        "groups": dict(sorted(groups.items())),
+    }
 
 
 def verify_no_invalid_numbers(data: dict) -> None:
@@ -424,6 +601,7 @@ def main() -> None:
     report = {
         "status": "ok",
         "latest_year": data["metadata"]["latest_year"],
+        "powerpoint_summary": summarize_baseline_checks(baseline_checks),
         "powerpoint_checks": baseline_checks,
     }
     report_path = DIST / "assets" / "data" / "verification.json"

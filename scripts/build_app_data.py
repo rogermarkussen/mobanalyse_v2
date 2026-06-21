@@ -1507,7 +1507,7 @@ def main() -> None:
         "wholesale": write_export(
             "wholesale",
             "wholesale-market-shares",
-            "Wholesale market shares",
+            "Grossistandeler",
             wholesale_default,
             [
                 ("period", "Periode", "text"),
@@ -1519,7 +1519,7 @@ def main() -> None:
             xlsx_sheets=[
                 {
                     "name": "Grossistmarked",
-                    "title": "Wholesale market shares",
+                    "title": "Grossistandeler",
                     "row_key": "grossist",
                     "row_label": "grossist",
                     "row_order": WHOLESALE_OWNERS,
@@ -1630,8 +1630,8 @@ def main() -> None:
     payload = {
         "metadata": {
             **metadata,
-            "source": "data/mobil.parquet",
-            "built_from": "DuckDB CLI",
+            "source": "Helårsrapporterte mobilmarkedstall",
+            "built_from": "Statisk datauttak",
         },
         "order": {
             "groups": ["Telenor", "Telia", "Lyse Tele (Ice)", "Øvrige"],
