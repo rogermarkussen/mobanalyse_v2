@@ -651,6 +651,32 @@ body.modal-open {
   margin-top: 5px;
 }
 
+.method-advanced p {
+  margin-top: 8px;
+}
+
+.method-code {
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: #12365b;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin: 6px 0 10px;
+  overflow-x: auto;
+  padding: 10px 12px;
+  white-space: pre;
+}
+
+.method-code code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  display: block;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  padding: 0;
+}
+
 .formula {
   background: #f4f8fb;
   border: 1px solid var(--line);
