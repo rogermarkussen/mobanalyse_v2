@@ -39,6 +39,8 @@ Alle visninger i den statiske appen er helårsvisninger. Grossistfanen bruker
 `tilgangskjøper-valg.xlsx` som startforslag for hvilken tilbyder som hører til
 hvilken grossist per år, mens alle abonnement-, omsetnings- og
 konsentrasjonstall beregnes fra `data/mobil.parquet`.
+Mobilt bredbånd er en egen hovedvisning med totaler og tilbyderandeler for
+helår 2020-2025.
 
 ARPU beregnes med gjennomsnittlig abonnementsgrunnlag gjennom året:
 for år `y` brukes snittet av abonnement helår `y-1` og abonnement helår `y`.

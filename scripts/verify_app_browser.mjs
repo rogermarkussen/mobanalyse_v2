@@ -166,6 +166,7 @@ async function main() {
     ["challengers", "øvrige tilbydere", 1],
     ["prices", "Omsetning per kunde", 1],
     ["totals", "Totalt antall abonnement", 4],
+    ["mobile-broadband", "Andel inntekt", 4],
     ["wholesale", "Velg hvem som hører til hvilken grossist", 0],
     ["data", "Excel-eksporter", 0],
   ];
@@ -268,7 +269,7 @@ async function main() {
   await cdp.send("Page.reload", { ignoreCache: true });
   await waitForExpression(
     cdp,
-    "!document.querySelector('.kpi') && document.querySelectorAll('.tabs button').length >= 7 && document.querySelectorAll('.chart svg').length >= 2",
+    "!document.querySelector('.kpi') && document.querySelectorAll('.tabs button').length >= 8 && document.querySelectorAll('.chart svg').length >= 2",
   );
   const overflow = await evaluate(
     cdp,

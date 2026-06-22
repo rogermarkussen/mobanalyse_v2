@@ -57,6 +57,21 @@ def provider_group(column: str = "fusnavn", other: str = "'Øvrige'") -> str:
     """
 
 
+def mobile_broadband_provider_group(column: str = "fusnavn", other: str = "'Andre'") -> str:
+    name = f"lower({column})"
+    return f"""
+        CASE
+            WHEN contains({name}, 'telenor') THEN 'Telenor'
+            WHEN contains({name}, 'telia') THEN 'Telia'
+            WHEN {name} = 'unifon' THEN 'Unifon'
+            WHEN {name} IN ('ice communication norge', 'lyse tele')
+                OR contains({name}, 'lyse')
+                OR contains({name}, 'ice') THEN 'Lyse Tele (Ice)'
+            ELSE {other}
+        END
+    """
+
+
 def provider_price_group(column: str = "fusnavn", other: str = "NULL") -> str:
     name = f"lower({column})"
     return f"""
@@ -121,8 +136,10 @@ def linear_projection(rows: list[dict], periods_ahead: int = 3) -> list[dict]:
     return projection
 
 
-def default_access_owner(provider: str) -> str:
+def default_access_owner(provider: str, year: int | None = None) -> str:
     name = provider.lower()
+    if "lycamobile" in name and year is not None and year >= 2023:
+        return "Telenor"
     if "lyse" in name or "ice" in name:
         return "Lyse Tele (Ice)"
     if name in {"telia norge", "chili mobil", "fjordkraft mobil"}:
@@ -187,7 +204,7 @@ def build_wholesale_assignment_template(provider_subscriptions: list[dict]) -> d
 
     template: dict[str, dict[str, str]] = {
         str(year): {
-            provider: default_access_owner(provider)
+            provider: default_access_owner(provider, year)
             for provider in sorted(providers)
         }
         for year, providers in sorted(providers_by_year.items())
@@ -212,6 +229,10 @@ def build_wholesale_assignment_template(provider_subscriptions: list[dict]) -> d
             provider = aliases.get(alias, alias)
             if provider in providers_by_year[year]:
                 template[year_key][provider] = owner
+
+    for year, providers in providers_by_year.items():
+        if year >= 2023 and "lycamobile norway ltd" in providers:
+            template[str(year)]["lycamobile norway ltd"] = "Telenor"
 
     return template
 
@@ -1231,6 +1252,92 @@ def main() -> None:
         """
     )
 
+    mobile_broadband_totals = run_duckdb(
+        """
+        WITH abonnement AS (
+            SELECT
+                ar,
+                delar AS period,
+                'Abonnement' AS metric,
+                sum(svar) AS value
+            FROM read_parquet('data/mobil.parquet')
+            WHERE dk = 'Mobilt bredbånd'
+                AND hg = 'Abonnement'
+                AND n1 = 'Ingen'
+                AND n2 = 'Ingen'
+                AND tp = 'Sum'
+                AND sk = 'Sluttbruker'
+                AND delar = 'Helår'
+            GROUP BY ar, period
+        ),
+        inntekter AS (
+            SELECT
+                ar,
+                delar AS period,
+                'Inntekter' AS metric,
+                sum(svar) AS value
+            FROM read_parquet('data/mobil.parquet')
+            WHERE dk = 'Mobilt bredbånd'
+                AND hg = 'Inntekter'
+                AND tp = 'Sum'
+                AND sk = 'Sluttbruker'
+                AND delar = 'Helår'
+            GROUP BY ar, period
+        )
+        SELECT * FROM abonnement
+        UNION ALL
+        SELECT * FROM inntekter
+        ORDER BY metric, period, ar;
+        """
+    )
+
+    mobile_broadband_provider_share = run_duckdb(
+        f"""
+        WITH base AS (
+            SELECT
+                ar,
+                delar AS period,
+                'Abonnement' AS metric,
+                {mobile_broadband_provider_group()} AS tilbyder,
+                sum(svar) AS absolute
+            FROM read_parquet('data/mobil.parquet')
+            WHERE dk = 'Mobilt bredbånd'
+                AND hg = 'Abonnement'
+                AND n1 = 'Ingen'
+                AND n2 = 'Ingen'
+                AND tp = 'Sum'
+                AND sk = 'Sluttbruker'
+                AND delar = 'Helår'
+            GROUP BY ar, period, tilbyder
+
+            UNION ALL
+
+            SELECT
+                ar,
+                delar AS period,
+                'Omsetning' AS metric,
+                {mobile_broadband_provider_group()} AS tilbyder,
+                sum(svar) AS absolute
+            FROM read_parquet('data/mobil.parquet')
+            WHERE dk = 'Mobilt bredbånd'
+                AND hg = 'Inntekter'
+                AND tp = 'Sum'
+                AND sk = 'Sluttbruker'
+                AND delar = 'Helår'
+            GROUP BY ar, period, tilbyder
+        )
+        SELECT
+            metric,
+            period,
+            ar,
+            tilbyder,
+            absolute,
+            100.0 * absolute / sum(absolute) OVER (PARTITION BY metric, period, ar) AS value
+        FROM base
+        ORDER BY metric, period, ar, value DESC;
+        """
+    )
+
     wholesale_assignment_template = build_wholesale_assignment_template(provider_subscriptions)
     wholesale_buckets: dict[tuple[str, int, str], dict[str, float]] = defaultdict(
         lambda: {"abonnement": 0.0}
@@ -1278,6 +1385,7 @@ def main() -> None:
     group_order = ["Telenor", "Telia", "Lyse Tele (Ice)", "Øvrige"]
     private_order = ["Fjordkraft", "Chili mobil", "Lycamobile", "Xplora", "Happybytes", "Plussmobil"]
     business_order = ["Unifon", "Nortel", "Saga mobil", "SMB mobil"]
+    mobile_broadband_order = ["Telenor", "Telia", "Unifon", "Lyse Tele (Ice)", "Andre"]
     price_order = [
         "Telenor",
         "Telia",
@@ -1625,6 +1733,52 @@ def main() -> None:
                 row_order=group_order,
             ),
         ),
+        "mobile-broadband-totals": write_export(
+            "mobile-broadband-totals",
+            "mobile-broadband-totals",
+            "Mobilt bredbånd: totale abonnement og inntekter",
+            mobile_broadband_totals,
+            [
+                ("metric", "Grunnlag", "text"),
+                ("period", "Periode", "text"),
+                ("ar", "År", "number"),
+                ("value", "Verdi", "number"),
+            ],
+            xlsx_sheets=[
+                value_sheet(
+                    "Totaler",
+                    "Mobilt bredbånd: totale abonnement og inntekter",
+                    mobile_broadband_totals,
+                    "metric",
+                    "grunnlag",
+                    value_key="value",
+                    kind="number",
+                    row_order=["Abonnement", "Inntekter"],
+                )
+            ],
+        ),
+        "mobile-broadband-provider-share": write_export(
+            "mobile-broadband-provider-share",
+            "mobile-broadband-provider-share",
+            "Mobilt bredbånd: tilbyderandeler",
+            mobile_broadband_provider_share,
+            [
+                ("metric", "Grunnlag", "text"),
+                ("period", "Periode", "text"),
+                ("ar", "År", "number"),
+                ("tilbyder", "Tilbyder", "text"),
+                ("absolute", "Verdi", "number"),
+                ("value", "Andel (%)", "percent"),
+            ],
+            xlsx_sheets=metric_value_sheets(
+                "Mobilt bredbånd: tilbyderandeler",
+                mobile_broadband_provider_share,
+                "tilbyder",
+                "tilbyder",
+                ["Abonnement", "Omsetning"],
+                row_order=mobile_broadband_order,
+            ),
+        ),
     }
 
     payload = {
@@ -1644,6 +1798,7 @@ def main() -> None:
                 "Plussmobil",
             ],
             "businessChallengers": ["Unifon", "Nortel", "Saga mobil", "SMB mobil"],
+            "mobileBroadband": mobile_broadband_order,
             "priceProviders": [
                 "Telenor",
                 "Telia",
@@ -1674,6 +1829,8 @@ def main() -> None:
         "concentration": concentration,
         "totals": totals,
         "providerShareTrend": provider_share_trend,
+        "mobileBroadbandTotals": mobile_broadband_totals,
+        "mobileBroadbandProviderShare": mobile_broadband_provider_share,
     }
 
     (DATA_DIR / "app-data.json").write_text(

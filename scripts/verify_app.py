@@ -219,13 +219,15 @@ def verify_xlsx_layouts(data: dict) -> None:
 
 
 def verify_sums(data: dict) -> None:
-    for dataset_name in ["marketShare", "segmentShare"]:
+    for dataset_name in ["marketShare", "segmentShare", "mobileBroadbandProviderShare"]:
         buckets: dict[tuple, float] = {}
         for row in data[dataset_name]:
             if dataset_name == "marketShare":
                 key = (row["metric"], row["ar"])
-            else:
+            elif dataset_name == "segmentShare":
                 key = (row["metric"], row["segment"], row["ar"])
+            else:
+                key = (row["metric"], row["period"], row["ar"])
             buckets[key] = buckets.get(key, 0.0) + float(row["value"])
         bad = [(key, value) for key, value in buckets.items() if abs(value - 100) > 0.05]
         if bad:
@@ -251,6 +253,8 @@ def verify_hel_year_and_wholesale_contract(data: dict) -> None:
     period_datasets = [
         "totals",
         "providerShareTrend",
+        "mobileBroadbandTotals",
+        "mobileBroadbandProviderShare",
         "providerSubscriptions",
         "wholesaleDefault",
         "grossistConcentrationDefault",
@@ -281,7 +285,9 @@ def verify_hel_year_and_wholesale_contract(data: dict) -> None:
         ("2020", "lyse tele"): "Lyse Tele (Ice)",
         ("2022", "fjordkraft mobil"): "Telenor",
         ("2023", "fjordkraft mobil"): "Telia",
-        ("2025", "lycamobile norway ltd"): "Telia",
+        ("2023", "lycamobile norway ltd"): "Telenor",
+        ("2024", "lycamobile norway ltd"): "Telenor",
+        ("2025", "lycamobile norway ltd"): "Telenor",
     }
     for (year, provider), owner in expected_assignments.items():
         current = template.get(year, {}).get(provider)
