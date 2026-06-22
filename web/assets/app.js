@@ -45,12 +45,13 @@ const FORMATTERS = {
   }),
 };
 
-function advancedBlock({ filter, groupBy, note }) {
+function advancedBlock({ filter, groupBy, metricNote, note }) {
   return `
       <div class="method-advanced">
         <h3>For de avanserte</h3>
         <p>Filter fra <code>data/mobil.parquet</code>:</p>
         <pre class="method-code"><code>${escapeHtml(filter.trim())}</code></pre>
+        ${metricNote ? `<p>${escapeHtml(metricNote)}</p>` : ""}
         ${
           groupBy
             ? `<p>group_by-sum:</p>
@@ -94,6 +95,8 @@ GROUP BY ar, metric, markedsgruppe(fusnavn)
 sum(svar) AS absolute
 value = 100 * absolute / sum(absolute) OVER (PARTITION BY metric, ar)
         `,
+        metricNote:
+          "Her betyr metric grunnlaget som beregnes: 'Abonnement' for rader med hg = 'Abonnement', og 'Omsetning' for rader med hg = 'Inntekter'.",
       })}
       <p>Telleren er verdien for markedsgruppen \\(g\\) i år \\(y\\). Nevneren er totalen for alle markedsgrupper i samme år og samme grunnlag. Summen av andelene skal derfor være 100 prosent innenfor hvert år.</p>
       <h3>Slik bør figuren leses</h3>
@@ -134,8 +137,10 @@ AND (
 GROUP BY ar, metric, markedsgruppe(fusnavn)
 sum(svar) AS absolute
 historisk_andel = 100 * absolute / sum(absolute) OVER (PARTITION BY metric, ar)
-lineær trend beregnes per metric og tilbyder fra historisk_andel
+lineær trend beregnes per grunnlag (metric) og tilbyder fra historisk_andel
         `,
+        metricNote:
+          "Her betyr metric grunnlaget som framskrives: 'Abonnement' for abonnementsandeler og 'Omsetning' for omsetningsandeler.",
       })}
       <p>Her er \\(y_t\\) markedsandelen i år \\(t\\), \\(\\beta\\) er årlig endring i prosentpoeng, og \\(\\alpha\\) er nivået linjen starter fra. Trendlinjen forlenges tre år etter siste tilgjengelige helår.</p>
       <h3>Slik bør figuren leses</h3>
@@ -172,6 +177,8 @@ GROUP BY ar, ms, metric, markedsgruppe(fusnavn)
 sum(svar) AS absolute
 value = 100 * absolute / sum(absolute) OVER (PARTITION BY metric, ms, ar)
         `,
+        metricNote:
+          "Her betyr metric grunnlaget innen hvert segment: 'Abonnement' for rader med hg = 'Abonnement', og 'Omsetning' for rader med hg = 'Inntekter'.",
       })}
       <p>Andelen beregnes innenfor segmentet \\(s\\). Det betyr at privatmarkedet har sin egen total, og bedriftsmarkedet har sin egen total. En andel i privatmarkedet skal derfor ikke summeres sammen med en andel i bedriftsmarkedet.</p>
       <h3>Slik bør figuren leses</h3>
@@ -210,6 +217,8 @@ sum(svar) AS absolute
 total = sum(svar) OVER (PARTITION BY ar, hg)
 value = 100 * absolute / total
         `,
+        metricNote:
+          "Her betyr metric grunnlaget i privatmarkedet: 'Abonnement' når hg = 'Abonnement', og 'Omsetning' når hg = 'Inntekter'.",
         note:
           "valgt_tilbyder er Fjordkraft, Chili mobil, Lycamobile, Xplora, Happybytes og Plussmobil.",
       })}
@@ -250,6 +259,8 @@ sum(svar) AS absolute
 total = sum(svar) OVER (PARTITION BY ar, hg)
 value = 100 * absolute / total
         `,
+        metricNote:
+          "Her betyr metric grunnlaget i bedriftsmarkedet: 'Abonnement' når hg = 'Abonnement', og 'Omsetning' når hg = 'Inntekter'.",
         note: "valgt_tilbyder er Unifon, Nortel, Saga mobil og SMB mobil.",
       })}
       <p>Nevneren er hele bedriftsmarkedet i samme år og på samme grunnlag. Dermed kan andelene sammenlignes med hovedbildet for bedriftsmarkedet, ikke bare med de andre viste utfordrerne.</p>
@@ -457,6 +468,8 @@ AND (
 GROUP BY ar, delar, metric
 sum(svar) AS value
         `,
+        metricNote:
+          "Her betyr metric totaltypen: 'Abonnement' for abonnementsrader, og 'Inntekter' for inntektsrader.",
       })}
       <p>Totalen i år \\(y\\) er summen av alle relevante tilbydere. For inntekter er grunnverdiene rapportert i tusen kroner, men vises som absolutte tall i appen og i eksportene.</p>
       <h3>Slik bør figuren leses</h3>
@@ -492,6 +505,8 @@ GROUP BY ar, delar, metric, markedsgruppe(fusnavn)
 sum(svar) AS absolute
 value = 100 * absolute / sum(absolute) OVER (PARTITION BY metric, delar, ar)
         `,
+        metricNote:
+          "Her betyr metric grunnlaget i totalfigurene: 'Abonnement' for abonnementsandeler, og 'Omsetning' for inntektsandeler.",
       })}
       <p>Formelen er den samme som for markedsandeler. Forskjellen er at denne visningen er plassert sammen med totalvolumene, slik at andelene kan tolkes mot utviklingen i hele markedet.</p>
       <h3>Slik bør figuren leses</h3>
