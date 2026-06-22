@@ -45,6 +45,23 @@ const FORMATTERS = {
   }),
 };
 
+function advancedBlock({ filter, groupBy, note }) {
+  return `
+      <div class="method-advanced">
+        <h3>For de avanserte</h3>
+        <p>Filter fra <code>data/mobil.parquet</code>:</p>
+        <pre class="method-code"><code>${escapeHtml(filter.trim())}</code></pre>
+        ${
+          groupBy
+            ? `<p>group_by-sum:</p>
+        <pre class="method-code"><code>${escapeHtml(groupBy.trim())}</code></pre>`
+            : ""
+        }
+        ${note ? `<p>${escapeHtml(note)}</p>` : ""}
+      </div>
+    `;
+}
+
 const METHODS = {
   "market-share": {
     title: "Markedsandeler",
@@ -59,6 +76,25 @@ const METHODS = {
         \\text{Markedsandel}_{g,y} =
         \\frac{\\sum \\text{svar}_{g,y}}{\\sum_h \\text{svar}_{h,y}} \\cdot 100
       \\]</div>
+      ${advancedBlock({
+        filter: `
+dk = 'Mobiltelefoni'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+AND (
+  (hg = 'Abonnement'
+   AND n1 IN ('Fakturert', 'Kontantkort')
+   AND n2 = 'Ingen')
+  OR hg = 'Inntekter'
+)
+        `,
+        groupBy: `
+GROUP BY ar, metric, markedsgruppe(fusnavn)
+sum(svar) AS absolute
+value = 100 * absolute / sum(absolute) OVER (PARTITION BY metric, ar)
+        `,
+      })}
       <p>Telleren er verdien for markedsgruppen \\(g\\) i år \\(y\\). Nevneren er totalen for alle markedsgrupper i samme år og samme grunnlag. Summen av andelene skal derfor være 100 prosent innenfor hvert år.</p>
       <h3>Slik bør figuren leses</h3>
       <p>Endringer fra år til år er prosentpoeng, ikke prosentvis vekst. Dersom en aktør går fra 40 til 42 prosent, er økningen 2 prosentpoeng. Sammenlign abonnement og omsetning for å se om en aktør har høyere inntektsandel enn abonnementsandel.</p>
@@ -80,6 +116,27 @@ const METHODS = {
         \\qquad
         \\alpha = \\bar{y} - \\beta\\bar{t}
       \\]</div>
+      ${advancedBlock({
+        filter: `
+Samme filter som markedsandeler:
+dk = 'Mobiltelefoni'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+AND (
+  (hg = 'Abonnement'
+   AND n1 IN ('Fakturert', 'Kontantkort')
+   AND n2 = 'Ingen')
+  OR hg = 'Inntekter'
+)
+        `,
+        groupBy: `
+GROUP BY ar, metric, markedsgruppe(fusnavn)
+sum(svar) AS absolute
+historisk_andel = 100 * absolute / sum(absolute) OVER (PARTITION BY metric, ar)
+lineær trend beregnes per metric og tilbyder fra historisk_andel
+        `,
+      })}
       <p>Her er \\(y_t\\) markedsandelen i år \\(t\\), \\(\\beta\\) er årlig endring i prosentpoeng, og \\(\\alpha\\) er nivået linjen starter fra. Trendlinjen forlenges tre år etter siste tilgjengelige helår.</p>
       <h3>Slik bør figuren leses</h3>
       <p>Bruk framskrivingen som en visuell støtte for retningen i historikken, ikke som et fasitsvar på framtidig markedsandel. En bratt linje betyr at historikken har hatt tydelig bevegelse; en flat linje betyr at andelen har vært relativt stabil.</p>
@@ -96,6 +153,26 @@ const METHODS = {
         \\text{Andel}_{g,s,y} =
         \\frac{\\sum \\text{svar}_{g,s,y}}{\\sum_h \\text{svar}_{h,s,y}} \\cdot 100
       \\]</div>
+      ${advancedBlock({
+        filter: `
+dk = 'Mobiltelefoni'
+AND ms IN ('Privat', 'Bedrift')
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+AND (
+  (hg = 'Abonnement'
+   AND n1 IN ('Fakturert', 'Kontantkort')
+   AND n2 = 'Ingen')
+  OR hg = 'Inntekter'
+)
+        `,
+        groupBy: `
+GROUP BY ar, ms, metric, markedsgruppe(fusnavn)
+sum(svar) AS absolute
+value = 100 * absolute / sum(absolute) OVER (PARTITION BY metric, ms, ar)
+        `,
+      })}
       <p>Andelen beregnes innenfor segmentet \\(s\\). Det betyr at privatmarkedet har sin egen total, og bedriftsmarkedet har sin egen total. En andel i privatmarkedet skal derfor ikke summeres sammen med en andel i bedriftsmarkedet.</p>
       <h3>Slik bør figuren leses</h3>
       <p>Se etter om aktørenes relative posisjon er lik i begge segmenter. Store forskjeller mellom segmentene kan tyde på ulik kundesammensetning, ulik salgsmodell eller ulik konkurranseflate.</p>
@@ -114,6 +191,28 @@ const METHODS = {
         \\text{Andel}_{i,y} =
         \\frac{\\sum \\text{svar}_{i,y}}{\\sum_j \\text{svar}_{j,y}} \\cdot 100
       \\]</div>
+      ${advancedBlock({
+        filter: `
+dk = 'Mobiltelefoni'
+AND hg IN ('Abonnement', 'Inntekter')
+AND ms = 'Privat'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+AND (
+  hg = 'Inntekter'
+  OR (n1 IN ('Fakturert', 'Kontantkort') AND n2 = 'Ingen')
+)
+        `,
+        groupBy: `
+GROUP BY ar, metric, valgt_tilbyder(fusnavn)
+sum(svar) AS absolute
+total = sum(svar) OVER (PARTITION BY ar, hg)
+value = 100 * absolute / total
+        `,
+        note:
+          "valgt_tilbyder er Fjordkraft, Chili mobil, Lycamobile, Xplora, Happybytes og Plussmobil.",
+      })}
       <p>Nevneren er hele privatmarkedet i samme år og på samme grunnlag. Andelen viser derfor tilbyderens størrelse i markedet, ikke tilbyderens andel av bare de aktørene som er tegnet inn i figuren.</p>
       <h3>Slik bør figuren leses</h3>
       <p>Små absolutte endringer kan gi synlige utslag fordi aktørene har lave markedsandeler. Bruk figuren til å se retning og relativ utvikling, og bruk Excel-eksporten dersom du trenger eksakte tall.</p>
@@ -132,6 +231,27 @@ const METHODS = {
         \\text{Andel}_{i,y} =
         \\frac{\\sum \\text{svar}_{i,y}}{\\sum_j \\text{svar}_{j,y}} \\cdot 100
       \\]</div>
+      ${advancedBlock({
+        filter: `
+dk = 'Mobiltelefoni'
+AND hg IN ('Abonnement', 'Inntekter')
+AND ms = 'Bedrift'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+AND (
+  hg = 'Inntekter'
+  OR (n1 IN ('Fakturert', 'Kontantkort') AND n2 = 'Ingen')
+)
+        `,
+        groupBy: `
+GROUP BY ar, metric, valgt_tilbyder(levnavn)
+sum(svar) AS absolute
+total = sum(svar) OVER (PARTITION BY ar, hg)
+value = 100 * absolute / total
+        `,
+        note: "valgt_tilbyder er Unifon, Nortel, Saga mobil og SMB mobil.",
+      })}
       <p>Nevneren er hele bedriftsmarkedet i samme år og på samme grunnlag. Dermed kan andelene sammenlignes med hovedbildet for bedriftsmarkedet, ikke bare med de andre viste utfordrerne.</p>
       <h3>Slik bør figuren leses</h3>
       <p>Se særlig på om en aktør vokser jevnt over flere år eller om utviklingen skyldes enkelthopp. I små serier kan rapporteringsendringer og kundeporteføljer gi tydelige utslag.</p>
@@ -151,6 +271,33 @@ const METHODS = {
         \\text{ARPU}_{s,y} =
         \\frac{I_{s,y} \\cdot 1000}{12 \\cdot \\bar{A}_{s,y}}
       \\]</div>
+      ${advancedBlock({
+        filter: `
+Abonnement:
+dk = 'Mobiltelefoni'
+AND hg = 'Abonnement'
+AND ms IN ('Privat', 'Bedrift')
+AND n1 IN ('Fakturert', 'Kontantkort')
+AND n2 = 'Ingen'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+
+Inntekter:
+dk = 'Mobiltelefoni'
+AND hg = 'Inntekter'
+AND ms IN ('Privat', 'Bedrift')
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+        `,
+        groupBy: `
+abonnement_snapshot: GROUP BY ar, ms; sum(svar) AS abonnement
+omsetning: GROUP BY ar, ms; sum(svar) AS omsetning
+abonnement = (abonnement_y + coalesce(abonnement_y-1, abonnement_y)) / 2
+value = omsetning * 1000 / abonnement / 12
+        `,
+      })}
       <p>\\(I_{s,y}\\) er årsinntekt i tusen kroner for segment \\(s\\) og år \\(y\\). Faktoren 1000 gjør inntekten om fra tusen kroner til kroner. \\(\\bar{A}_{s,y}\\) er gjennomsnittet av abonnementsbeholdningen ved utgangen av året før og ved utgangen av året som beregnes. For første tilgjengelige år brukes årets abonnementstall som beste tilgjengelige anslag.</p>
       <h3>Slik bør figuren leses</h3>
       <p>ARPU er ikke en listepris. Den er en gjennomsnittsberegning av faktisk rapportert omsetning delt på abonnementsgrunnlaget. En økning kan skyldes høyere priser, endret kundemiks eller lavere abonnementsgrunnlag, og bør derfor tolkes sammen med utviklingen i abonnement og omsetning.</p>
@@ -170,6 +317,35 @@ const METHODS = {
         \\text{ARPU}_{i,s,y} =
         \\frac{I_{i,s,y} \\cdot 1000}{12 \\cdot \\bar{A}_{i,s,y}}
       \\]</div>
+      ${advancedBlock({
+        filter: `
+Abonnement:
+dk = 'Mobiltelefoni'
+AND hg = 'Abonnement'
+AND ms IN ('Privat', 'Bedrift')
+AND n1 IN ('Fakturert', 'Kontantkort')
+AND n2 = 'Ingen'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+
+Inntekter:
+dk = 'Mobiltelefoni'
+AND hg = 'Inntekter'
+AND ms IN ('Privat', 'Bedrift')
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+        `,
+        groupBy: `
+abonnement_snapshot: GROUP BY ar, ms, arpu_tilbyder(fusnavn); sum(svar) AS abonnement
+omsetning: GROUP BY ar, ms, arpu_tilbyder(fusnavn); sum(svar) AS omsetning
+abonnement = (abonnement_y + coalesce(abonnement_y-1, abonnement_y)) / 2
+value = omsetning * 1000 / abonnement / 12
+        `,
+        note:
+          "arpu_tilbyder er utvalgte tilbydergrupper; rader uten valgt gruppe tas ikke med i figuren.",
+      })}
       <p>\\(I_{i,s,y}\\) er årsinntekt i tusen kroner for tilbyder \\(i\\), segment \\(s\\) og år \\(y\\). \\(\\bar{A}_{i,s,y}\\) er gjennomsnittlig abonnementsbeholdning gjennom året, beregnet som snittet av årets og foregående års beholdning. Resultatet deles på 12 for å få kroner per måned.</p>
       <h3>Slik bør figuren leses</h3>
       <p>Sammenlign aktører innenfor samme segment. Privat-ARPU og bedrifts-ARPU bør ikke leses som samme type kundegrunnlag. Store hopp kan komme av endret kundemiks, endret rapportering eller at en aktør har lavt volum.</p>
@@ -186,6 +362,29 @@ const METHODS = {
         \\text{Kroner per GB}_{g,y} =
         \\frac{I_{g,y} \\cdot 1000}{D_{g,y}}
       \\]</div>
+      ${advancedBlock({
+        filter: `
+Inntekter:
+dk = 'Mobiltelefoni'
+AND hg = 'Inntekter'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+
+Trafikk:
+dk = 'Mobiltelefoni'
+AND hg = 'Trafikk'
+AND n1 = 'Data'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+        `,
+        groupBy: `
+inntekter: GROUP BY ar, hovedgruppe(fusnavn); sum(svar) AS inntekter
+trafikk: GROUP BY ar, hovedgruppe(fusnavn); sum(svar) AS datatrafikk_gb
+value = inntekter * 1000 / datatrafikk_gb
+        `,
+      })}
       <p>\\(I_{g,y}\\) er årsinntekt i tusen kroner for markedsgruppe \\(g\\) i år \\(y\\). \\(D_{g,y}\\) er datatrafikk målt i GB. Faktoren 1000 gjør inntekten om til kroner før den deles på trafikkvolumet.</p>
       <h3>Slik bør figuren leses</h3>
       <p>En fallende verdi betyr normalt at datatrafikken vokser raskere enn inntektene. Det kan skje selv om abonnementene ikke blir billigere, fordi kundene bruker mer data innenfor abonnementene sine.</p>
@@ -202,6 +401,30 @@ const METHODS = {
         \\text{Kroner per GB}_{i,y} =
         \\frac{I_{i,y} \\cdot 1000}{D_{i,y}}
       \\]</div>
+      ${advancedBlock({
+        filter: `
+Inntekter:
+dk = 'Mobiltelefoni'
+AND hg = 'Inntekter'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+
+Trafikk:
+dk = 'Mobiltelefoni'
+AND hg = 'Trafikk'
+AND n1 = 'Data'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+        `,
+        groupBy: `
+inntekter: GROUP BY ar, arpu_tilbyder(fusnavn); sum(svar) AS inntekter
+trafikk: GROUP BY ar, arpu_tilbyder(fusnavn); sum(svar) AS datatrafikk_gb
+value = inntekter * 1000 / datatrafikk_gb
+        `,
+        note: "Kun rader med valgt tilbydergruppe inngår i tilbyderfiguren.",
+      })}
       <p>\\(I_{i,y}\\) er årsinntekt i tusen kroner for tilbyder \\(i\\) i år \\(y\\). \\(D_{i,y}\\) er tilbyderens datatrafikk målt i GB. Resultatet viser kroner inntekt per GB datatrafikk.</p>
       <h3>Slik bør figuren leses</h3>
       <p>Forskjeller mellom tilbydere kan skyldes ulik kundemiks, ulike pakker, ulik andel bedriftskunder eller forskjeller i rapportert trafikk. Figuren bør derfor brukes som et sammenlignende forholdstall, ikke som en direkte prisindikator.</p>
@@ -217,6 +440,24 @@ const METHODS = {
       <div class="formula">\\[
         \\text{Total}_{y} = \\sum_i \\text{svar}_{i,y}
       \\]</div>
+      ${advancedBlock({
+        filter: `
+dk = 'Mobiltelefoni'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+AND (
+  (hg = 'Abonnement'
+   AND n1 IN ('Fakturert', 'Kontantkort')
+   AND n2 = 'Ingen')
+  OR hg = 'Inntekter'
+)
+        `,
+        groupBy: `
+GROUP BY ar, delar, metric
+sum(svar) AS value
+        `,
+      })}
       <p>Totalen i år \\(y\\) er summen av alle relevante tilbydere. For inntekter er grunnverdiene rapportert i tusen kroner, men vises som absolutte tall i appen og i eksportene.</p>
       <h3>Slik bør figuren leses</h3>
       <p>Bruk totalene for å skille mellom markedsvekst og forskyvning mellom aktører. En aktør kan tape markedsandel selv om antall abonnement øker, dersom totalmarkedet vokser raskere.</p>
@@ -233,6 +474,25 @@ const METHODS = {
         \\text{Andel}_{g,y} =
         \\frac{\\sum \\text{svar}_{g,y}}{\\sum_h \\text{svar}_{h,y}} \\cdot 100
       \\]</div>
+      ${advancedBlock({
+        filter: `
+dk = 'Mobiltelefoni'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+AND (
+  (hg = 'Abonnement'
+   AND n1 IN ('Fakturert', 'Kontantkort')
+   AND n2 = 'Ingen')
+  OR hg = 'Inntekter'
+)
+        `,
+        groupBy: `
+GROUP BY ar, delar, metric, markedsgruppe(fusnavn)
+sum(svar) AS absolute
+value = 100 * absolute / sum(absolute) OVER (PARTITION BY metric, delar, ar)
+        `,
+      })}
       <p>Formelen er den samme som for markedsandeler. Forskjellen er at denne visningen er plassert sammen med totalvolumene, slik at andelene kan tolkes mot utviklingen i hele markedet.</p>
       <h3>Slik bør figuren leses</h3>
       <p>Sammenlign andelsutviklingen med totalutviklingen. Hvis totalmarkedet vokser samtidig som en aktørs andel faller, kan aktørens absolutte størrelse likevel være stabil eller økende.</p>
@@ -251,6 +511,27 @@ const METHODS = {
         \\text{Grossistandel}_{G,y} =
         \\frac{\\sum_{i \\in G_y} A_{i,y}}{\\sum_j A_{j,y}} \\cdot 100
       \\]</div>
+      ${advancedBlock({
+        filter: `
+dk = 'Mobiltelefoni'
+AND hg = 'Abonnement'
+AND n1 IN ('Fakturert', 'Kontantkort')
+AND n2 = 'Ingen'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+        `,
+        groupBy: `
+Fra mobil.parquet:
+GROUP BY ar, lower(fusnavn)
+sum(svar) AS abonnement
+
+Etter grossisttilordning i figuren:
+GROUP BY ar, grossist
+sum(abonnement) AS abonnement
+value = 100 * abonnement / sum(abonnement) OVER (PARTITION BY ar)
+        `,
+      })}
       <p>\\(G_y\\) er mengden av tilbydere som er lagt under grossist \\(G\\) i år \\(y\\). \\(A_{i,y}\\) er abonnement for tilbyder \\(i\\) i samme år. Nevneren er alle abonnement som inngår i grossistberegningen.</p>
       <h3>Slik bør figuren leses</h3>
       <p>Hvis du flytter en tilgangskjøper mellom grossister, oppdateres grossistandelene og konsentrasjonstallene med en gang. Dette gjør det mulig å teste og dokumentere ulike forutsetninger for hvem som hører til hvilken grossist i et bestemt år.</p>
@@ -270,6 +551,32 @@ const METHODS = {
         \\text{HHI}_{y} = \\sum_i s_{i,y}^{2}
       \\]</div>
       <p>\\(s_{i,y}\\) er aktørens markedsandel som desimaltall, for eksempel 0,40 for 40 prosent. HHI blir høyere når få aktører har store andeler, og lavere når markedet er jevnere fordelt. I denne appen vises HHI som et tall mellom 0 og 1.</p>
+      ${advancedBlock({
+        filter: `
+Sluttbrukeromsetning:
+dk = 'Mobiltelefoni'
+AND hg = 'Inntekter'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+
+Grossistabonnement:
+dk = 'Mobiltelefoni'
+AND hg = 'Abonnement'
+AND n1 IN ('Fakturert', 'Kontantkort')
+AND n2 = 'Ingen'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+        `,
+        groupBy: `
+Sluttbruker: GROUP BY ar, fusnavn; sum(svar) AS absolute
+Grossist: GROUP BY ar, grossist; sum(abonnement) AS absolute
+share = absolute / sum(absolute) OVER (PARTITION BY ar)
+CR2 = 100 * sum(de to største share)
+HHI = sum(share * share)
+        `,
+      })}
       <h3>Slik bør tabellene leses</h3>
       <p>Omsetningstabellen og grossisttabellen må ikke tolkes som samme marked. Omsetningstabellen sier noe om inntektskonsentrasjon i sluttbrukermarkedet. Grossisttabellen sier noe om konsentrasjon i nettverkstilgangen når abonnement fra tilgangskjøpere legges til grossisten de bruker.</p>
     `,

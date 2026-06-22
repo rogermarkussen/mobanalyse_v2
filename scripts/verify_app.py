@@ -151,18 +151,10 @@ def verify_static_files() -> None:
     if found:
         raise AssertionError(f"UI-koden inneholder gamle periode/uavhengig-valg: {found}")
     forbidden_public_text = [
-        "mobil.parquet",
         "tilgangskjøper-valg.xlsx",
         "PowerPoint",
+        "PPT",
         "PPT-data",
-        "Parquet",
-        "dk =",
-        "hg =",
-        "tp =",
-        "sk =",
-        "fusnavn",
-        "levnavn",
-        "grnavn",
         "bygget fra",
     ]
     found_public = [term for term in forbidden_public_text if term in app_js]

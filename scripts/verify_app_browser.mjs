@@ -98,20 +98,10 @@ async function waitForExpression(cdp, expression, timeoutMs = 10000) {
 
 function forbiddenUiExpression() {
   const forbidden = [
-    "mobil.parquet",
     "tilgangskjøper-valg",
     "PowerPoint",
     "PPT",
     "PPT-data",
-    "Parquet",
-    "dk =",
-    "hg =",
-    "tp =",
-    "sk =",
-    "delar",
-    "fusnavn",
-    "levnavn",
-    "grnavn",
     "slide",
     "bygget fra",
   ];
@@ -193,7 +183,7 @@ async function main() {
   await evaluate(cdp, "document.querySelector('[data-method=\"market-share\"]').click()");
   await waitForExpression(
     cdp,
-    "!!document.querySelector('#method-modal:not([hidden])') && document.body.innerText.includes('Hva inngår?') && document.body.innerText.includes('Beregning') && document.body.innerText.includes('Slik bør figuren leses')",
+    "!!document.querySelector('#method-modal:not([hidden])') && document.body.innerText.includes('Hva inngår?') && document.body.innerText.includes('Beregning') && document.body.innerText.includes('For de avanserte') && document.body.innerText.includes('group_by-sum') && document.body.innerText.includes('Slik bør figuren leses')",
   );
   let forbiddenTerms = await evaluate(cdp, forbiddenUiExpression());
   if (forbiddenTerms.length) {
@@ -219,7 +209,7 @@ async function main() {
   await evaluate(cdp, "document.querySelector('[data-method=\"arpu-segment\"]').click()");
   await waitForExpression(
     cdp,
-    "document.body.innerText.includes('gjennomsnittlig abonnementsbeholdning') && document.body.innerText.includes('ARPU')",
+    "document.body.innerText.includes('gjennomsnittlig abonnementsbeholdning') && document.body.innerText.includes('ARPU') && document.body.innerText.includes('For de avanserte') && document.body.innerText.includes('group_by-sum')",
   );
   forbiddenTerms = await evaluate(cdp, forbiddenUiExpression());
   if (forbiddenTerms.length) {
