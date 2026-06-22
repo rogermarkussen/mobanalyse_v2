@@ -15,6 +15,7 @@ const COLORS = {
   "Lyse (Ice)": "#c99700",
   Ice: "#c99700",
   "Øvrige": "#26845b",
+  Andre: "#4f9bd6",
   Fjordkraft: "#385624",
   "Chili mobil": "#c43b35",
   Lycamobile: "#12365b",
@@ -513,6 +514,83 @@ value = 100 * absolute / sum(absolute) OVER (PARTITION BY metric, delar, ar)
       <p>Sammenlign andelsutviklingen med totalutviklingen. Hvis totalmarkedet vokser samtidig som en aktørs andel faller, kan aktørens absolutte størrelse likevel være stabil eller økende.</p>
     `,
   },
+  "mobile-broadband-totals": {
+    title: "Mobilt bredbånd: totaler",
+    html: `
+      <p>Totalfigurene viser utviklingen i mobilt bredbånd som eget sluttbrukermarked. Den ene figuren viser samlet antall abonnement, og den andre viser samlet inntekt.</p>
+      <h3>Hva inngår?</h3>
+      <p>Alle beregninger bruker helårstall for mobilt bredbånd i sluttbrukermarkedet. Abonnement hentes fra sumraden for abonnement. Inntekter hentes fra inntektsradene samlet, slik at inntekt fra abonnement, datatrafikk og øvrige inntekter inngår.</p>
+      <h3>Beregning</h3>
+      <div class="formula">\\[
+        \\text{Total}_{y} = \\sum_i \\text{svar}_{i,y}
+      \\]</div>
+      ${advancedBlock({
+        filter: `
+Abonnement:
+dk = 'Mobilt bredbånd'
+AND hg = 'Abonnement'
+AND n1 = 'Ingen'
+AND n2 = 'Ingen'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+
+Inntekter:
+dk = 'Mobilt bredbånd'
+AND hg = 'Inntekter'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+        `,
+        groupBy: `
+GROUP BY ar, metric
+sum(svar) AS value
+        `,
+        metricNote:
+          "Her betyr metric totaltypen: 'Abonnement' for abonnementsrader, og 'Inntekter' for inntektsrader.",
+      })}
+      <h3>Slik bør figuren leses</h3>
+      <p>Bruk totalene for å se om markedet samlet vokser eller faller. Andelsfigurene under viser deretter hvem endringen fordeler seg på.</p>
+    `,
+  },
+  "mobile-broadband-provider-share": {
+    title: "Mobilt bredbånd: tilbyderandeler",
+    html: `
+      <p>Figurene viser hvordan abonnement og inntekt for mobilt bredbånd fordeler seg mellom de største tilbydergruppene. Tilbyderne grupperes fra fusjonsnavn slik at serien følger samme navnegrunnlag over tid.</p>
+      <h3>Hva inngår?</h3>
+      <p>Grunnlaget er det samme som i totalfigurene for mobilt bredbånd. Abonnement er sumraden for abonnement, og inntekt er samlede inntektsrader. Alle tall er helårstall i sluttbrukermarkedet.</p>
+      <h3>Gruppering</h3>
+      <p>Figuren viser Telenor, Telia, Unifon, Lyse Tele (Ice) og Andre. Rader som ikke treffer en av de navngitte gruppene samles i Andre.</p>
+      <h3>Beregning</h3>
+      <div class="formula">\\[
+        \\text{Andel}_{g,y} =
+        \\frac{\\sum \\text{svar}_{g,y}}{\\sum_h \\text{svar}_{h,y}} \\cdot 100
+      \\]</div>
+      ${advancedBlock({
+        filter: `
+dk = 'Mobilt bredbånd'
+AND tp = 'Sum'
+AND sk = 'Sluttbruker'
+AND delar = 'Helår'
+AND (
+  (hg = 'Abonnement'
+   AND n1 = 'Ingen'
+   AND n2 = 'Ingen')
+  OR hg = 'Inntekter'
+)
+        `,
+        groupBy: `
+GROUP BY ar, metric, markedsgruppe_mbb(fusnavn)
+sum(svar) AS absolute
+value = 100 * absolute / sum(absolute) OVER (PARTITION BY metric, ar)
+        `,
+        metricNote:
+          "Her betyr metric grunnlaget: 'Abonnement' for abonnementsandeler og 'Omsetning' for inntektsandeler.",
+      })}
+      <h3>Slik bør figuren leses</h3>
+      <p>En økende andel betyr at tilbydergruppen vokser relativt til resten av mobilt bredbånd-markedet. Sammenlign med totalfigurene for å skille mellom relativ vekst og endring i hele markedet.</p>
+    `,
+  },
   wholesale: {
     title: "Grossistandeler",
     html: `
@@ -744,6 +822,7 @@ function render() {
   if (state.view === "challengers") content.innerHTML = renderChallengers();
   if (state.view === "prices") content.innerHTML = renderPrices();
   if (state.view === "totals") content.innerHTML = renderTotals();
+  if (state.view === "mobile-broadband") content.innerHTML = renderMobileBroadband();
   if (state.view === "wholesale") content.innerHTML = renderWholesale();
   if (state.view === "data") content.innerHTML = renderData();
 
@@ -1088,6 +1167,62 @@ function renderTotals() {
         order: appData.order.groups,
         unit: "percent",
         yMax: 60,
+      })}
+    </div>
+  `;
+}
+
+function renderMobileBroadband() {
+  const period = "Helår";
+  const totalRows = appData.mobileBroadbandTotals.filter((row) => row.period === period);
+  const shareRows = appData.mobileBroadbandProviderShare.filter((row) => row.period === period);
+  return `
+    ${toolbar(
+      "",
+      `<span class="chart-note">Helår · mobilt bredbånd</span>`,
+    )}
+    <div class="panel-grid">
+      ${chartPanel({
+        title: "Totalt antall abonnement",
+        eyebrow: period,
+        exportId: "mobile-broadband-totals",
+        data: totalRows.filter((row) => row.metric === "Abonnement"),
+        seriesKey: "metric",
+        order: ["Abonnement"],
+        unit: "number",
+        yMax: 350000,
+        yStep: 50000,
+      })}
+      ${chartPanel({
+        title: "Totale inntekter",
+        eyebrow: period,
+        exportId: "mobile-broadband-totals",
+        data: totalRows.filter((row) => row.metric === "Inntekter"),
+        seriesKey: "metric",
+        order: ["Inntekter"],
+        unit: "number",
+        yMax: 1400000,
+        yStep: 200000,
+      })}
+      ${chartPanel({
+        title: "Andel abonnement",
+        eyebrow: period,
+        exportId: "mobile-broadband-provider-share",
+        data: shareRows.filter((row) => row.metric === "Abonnement"),
+        order: appData.order.mobileBroadband,
+        unit: "percent",
+        yMax: 50,
+        yStep: 5,
+      })}
+      ${chartPanel({
+        title: "Andel inntekt",
+        eyebrow: period,
+        exportId: "mobile-broadband-provider-share",
+        data: shareRows.filter((row) => row.metric === "Omsetning"),
+        order: appData.order.mobileBroadband,
+        unit: "percent",
+        yMax: 50,
+        yStep: 5,
       })}
     </div>
   `;
@@ -1545,9 +1680,10 @@ function drawLineChart(container, config) {
   );
   const allYears = [...new Set(data.map((row) => Number(row.ar)))].sort((a, b) => a - b);
   const maxValue = Math.max(...data.map((row) => Number(row.value || 0)));
-  const bounds = chartBounds(container, allYears, config.yMax || niceMax(maxValue));
+  const bounds = chartBounds(container, allYears, config.yMax || niceMax(maxValue), config.yStep);
   const svg = createSvg(bounds.width, bounds.height);
   drawAxes(svg, bounds, config.unit);
+  const endpointOffsets = endpointLabelOffsets(data, series, seriesKey, bounds);
 
   series.forEach((name) => {
     const rows = data
@@ -1559,6 +1695,7 @@ function drawLineChart(container, config) {
       unit: config.unit,
       seriesKey,
       dashed: false,
+      endpointOffset: endpointOffsets.get(name) || 0,
     });
   });
 
@@ -1571,7 +1708,7 @@ function drawProjectionChart(container, config) {
   const data = actual.concat(projection);
   const allYears = [...new Set(data.map((row) => Number(row.ar)))].sort((a, b) => a - b);
   const maxValue = Math.max(...data.map((row) => Number(row.value || 0)));
-  const bounds = chartBounds(container, allYears, config.yMax || niceMax(maxValue));
+  const bounds = chartBounds(container, allYears, config.yMax || niceMax(maxValue), config.yStep);
   const svg = createSvg(bounds.width, bounds.height);
   drawAxes(svg, bounds, config.unit);
 
@@ -1642,16 +1779,62 @@ function drawSeries(svg, rows, name, bounds, options) {
     const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
     label.setAttribute("class", "endpoint-label");
     label.setAttribute("x", Math.min(last.x + 8, bounds.width - 50));
-    label.setAttribute("y", clamp(last.y + 4, bounds.margin.top + 8, bounds.height - bounds.margin.bottom - 4));
+    label.setAttribute(
+      "y",
+      clamp(
+        last.y + 4 + (options.endpointOffset || 0),
+        bounds.margin.top + 8,
+        bounds.height - bounds.margin.bottom - 4,
+      ),
+    );
     label.textContent = formatByUnit(last.row.value, options.unit);
     svg.appendChild(label);
   }
 }
 
+function endpointLabelOffsets(data, series, seriesKey, bounds) {
+  const minGap = 14;
+  const top = bounds.margin.top + 8;
+  const bottom = bounds.height - bounds.margin.bottom - 4;
+  const labels = series
+    .map((name) => {
+      const rows = data
+        .filter((row) => row[seriesKey] === name)
+        .sort((a, b) => Number(a.ar) - Number(b.ar));
+      const last = rows[rows.length - 1];
+      if (!last) return null;
+      const rawY = clamp(scaleY(Number(last.value), bounds) + 4, top, bottom);
+      return { name, rawY, y: rawY };
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.y - b.y);
+
+  labels.forEach((label, index) => {
+    if (index === 0) return;
+    label.y = Math.max(label.y, labels[index - 1].y + minGap);
+  });
+
+  const overflow = labels.length ? labels[labels.length - 1].y - bottom : 0;
+  if (overflow > 0) {
+    labels.forEach((label) => {
+      label.y -= overflow;
+    });
+  }
+
+  for (let index = labels.length - 2; index >= 0; index -= 1) {
+    labels[index].y = Math.min(labels[index].y, labels[index + 1].y - minGap);
+  }
+  labels.forEach((label) => {
+    label.y = clamp(label.y, top, bottom);
+  });
+
+  return new Map(labels.map((label) => [label.name, label.y - label.rawY]));
+}
+
 function drawAxes(svg, bounds, unit) {
   const grid = document.createElementNS("http://www.w3.org/2000/svg", "g");
   grid.setAttribute("class", "grid");
-  const ticks = yTicks(bounds.yMax);
+  const ticks = yTicks(bounds);
   ticks.forEach((tick) => {
     const y = scaleY(tick, bounds);
     const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
@@ -1687,7 +1870,7 @@ function drawAxes(svg, bounds, unit) {
   svg.appendChild(axis);
 }
 
-function chartBounds(container, years, yMax) {
+function chartBounds(container, years, yMax, yStep) {
   const rect = container.getBoundingClientRect();
   const width = Math.max(420, Math.round(rect.width || 720));
   const height = Math.max(280, Math.round(rect.height || 340));
@@ -1698,6 +1881,7 @@ function chartBounds(container, years, yMax) {
     xMin: Math.min(...years),
     xMax: Math.max(...years),
     yMax,
+    yStep,
     margin: { top: 18, right: 74, bottom: 48, left: 54 },
   };
 }
@@ -1950,6 +2134,14 @@ function inferSeries(rows, key) {
 }
 
 function yTicks(max) {
+  if (typeof max === "object" && max.yStep) {
+    const ticks = [];
+    for (let value = 0; value <= max.yMax + max.yStep / 1000; value += max.yStep) {
+      ticks.push(value);
+    }
+    return ticks;
+  }
+  if (typeof max === "object") max = max.yMax;
   const count = 5;
   const step = max / count;
   return Array.from({ length: count + 1 }, (_, index) => step * index);

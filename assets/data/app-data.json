@@ -29,6 +29,13 @@
       "Saga mobil",
       "SMB mobil"
     ],
+    "mobileBroadband": [
+      "Telenor",
+      "Telia",
+      "Unifon",
+      "Lyse Tele (Ice)",
+      "Andre"
+    ],
     "priceProviders": [
       "Telenor",
       "Telia",
@@ -136,6 +143,20 @@
       "xlsxFilename": "provider-share-trend.xlsx",
       "xlsxPath": "assets/exports/provider-share-trend.xlsx",
       "label": "Tilbyderandeler abonnement og inntekt"
+    },
+    "mobile-broadband-totals": {
+      "csvFilename": "mobile-broadband-totals.csv",
+      "csvPath": "assets/exports/mobile-broadband-totals.csv",
+      "xlsxFilename": "mobile-broadband-totals.xlsx",
+      "xlsxPath": "assets/exports/mobile-broadband-totals.xlsx",
+      "label": "Mobilt bredbånd: totale abonnement og inntekter"
+    },
+    "mobile-broadband-provider-share": {
+      "csvFilename": "mobile-broadband-provider-share.csv",
+      "csvPath": "assets/exports/mobile-broadband-provider-share.csv",
+      "xlsxFilename": "mobile-broadband-provider-share.xlsx",
+      "xlsxPath": "assets/exports/mobile-broadband-provider-share.xlsx",
+      "label": "Mobilt bredbånd: tilbyderandeler"
     }
   },
   "marketShare": [
@@ -4394,7 +4415,7 @@
       "fjordkraft mobil": "Telia",
       "happybytes": "Telenor",
       "intility": "Telenor",
-      "lycamobile norway ltd": "Telia",
+      "lycamobile norway ltd": "Telenor",
       "lyse tele": "Lyse Tele (Ice)",
       "plussmobil": "Telenor",
       "primafon": "Telenor",
@@ -4410,7 +4431,7 @@
       "fjordkraft mobil": "Telia",
       "happybytes": "Telenor",
       "intility": "Telenor",
-      "lycamobile norway ltd": "Telia",
+      "lycamobile norway ltd": "Telenor",
       "lyse tele": "Lyse Tele (Ice)",
       "plussmobil": "Telenor",
       "primafon": "Telenor",
@@ -4426,7 +4447,7 @@
       "fjordkraft mobil": "Telia",
       "happybytes": "Telenor",
       "intility": "Telenor",
-      "lycamobile norway ltd": "Telia",
+      "lycamobile norway ltd": "Telenor",
       "lyse tele": "Lyse Tele (Ice)",
       "plussmobil": "Telenor",
       "saga mobil": "Telenor",
@@ -4512,15 +4533,15 @@
       "period": "Helår",
       "ar": 2023,
       "grossist": "Telenor",
-      "abonnement": 2881610,
-      "value": 47.610810074898865
+      "abonnement": 2907583,
+      "value": 48.03994363914779
     },
     {
       "period": "Helår",
       "ar": 2023,
       "grossist": "Telia",
-      "abonnement": 2288743,
-      "value": 37.815286691555855
+      "abonnement": 2262770,
+      "value": 37.386153127306926
     },
     {
       "period": "Helår",
@@ -4533,15 +4554,15 @@
       "period": "Helår",
       "ar": 2024,
       "grossist": "Telenor",
-      "abonnement": 2841510,
-      "value": 46.59827248356685
+      "abonnement": 2864553,
+      "value": 46.97615747881192
     },
     {
       "period": "Helår",
       "ar": 2024,
       "grossist": "Telia",
-      "abonnement": 2277873,
-      "value": 37.355119896449374
+      "abonnement": 2254830,
+      "value": 36.977234901204305
     },
     {
       "period": "Helår",
@@ -4554,15 +4575,15 @@
       "period": "Helår",
       "ar": 2025,
       "grossist": "Telenor",
-      "abonnement": 2834779,
-      "value": 46.318374354841765
+      "abonnement": 2858055,
+      "value": 46.698688475090044
     },
     {
       "period": "Helår",
       "ar": 2025,
       "grossist": "Telia",
-      "abonnement": 2236674,
-      "value": 36.545742592893966
+      "abonnement": 2213398,
+      "value": 36.16542847264569
     }
   ],
   "grossistConcentrationDefault": [
@@ -4588,19 +4609,19 @@
       "period": "Helår",
       "ar": 2023,
       "cr2": 85.42609676645472,
-      "hhi": 0.3909183799013394
+      "hhi": 0.39179592859716794
     },
     {
       "period": "Helår",
       "ar": 2024,
       "cr2": 83.95339238001623,
-      "hhi": 0.38242975970405724
+      "hhi": 0.38315688885227
     },
     {
       "period": "Helår",
       "ar": 2025,
-      "cr2": 82.86411694773572,
-      "hhi": 0.37746215925222054
+      "cr2": 82.86411694773574,
+      "hhi": 0.37823442098844373
     }
   ],
   "concentration": [
@@ -5135,6 +5156,562 @@
       "tilbyder": "Øvrige",
       "absolute": 1450426,
       "value": 6.875308438848987
+    }
+  ],
+  "mobileBroadbandTotals": [
+    {
+      "ar": 2020,
+      "period": "Helår",
+      "metric": "Abonnement",
+      "value": 310489
+    },
+    {
+      "ar": 2021,
+      "period": "Helår",
+      "metric": "Abonnement",
+      "value": 286832
+    },
+    {
+      "ar": 2022,
+      "period": "Helår",
+      "metric": "Abonnement",
+      "value": 268285
+    },
+    {
+      "ar": 2023,
+      "period": "Helår",
+      "metric": "Abonnement",
+      "value": 249228
+    },
+    {
+      "ar": 2024,
+      "period": "Helår",
+      "metric": "Abonnement",
+      "value": 231144
+    },
+    {
+      "ar": 2025,
+      "period": "Helår",
+      "metric": "Abonnement",
+      "value": 216497
+    },
+    {
+      "ar": 2020,
+      "period": "Helår",
+      "metric": "Inntekter",
+      "value": 1211513
+    },
+    {
+      "ar": 2021,
+      "period": "Helår",
+      "metric": "Inntekter",
+      "value": 1128872
+    },
+    {
+      "ar": 2022,
+      "period": "Helår",
+      "metric": "Inntekter",
+      "value": 1015514
+    },
+    {
+      "ar": 2023,
+      "period": "Helår",
+      "metric": "Inntekter",
+      "value": 926079
+    },
+    {
+      "ar": 2024,
+      "period": "Helår",
+      "metric": "Inntekter",
+      "value": 838781
+    },
+    {
+      "ar": 2025,
+      "period": "Helår",
+      "metric": "Inntekter",
+      "value": 772562
+    }
+  ],
+  "mobileBroadbandProviderShare": [
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2020,
+      "tilbyder": "Telenor",
+      "absolute": 125745,
+      "value": 40.49901928892811
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2020,
+      "tilbyder": "Telia",
+      "absolute": 99280,
+      "value": 31.975367887429183
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2020,
+      "tilbyder": "Lyse Tele (Ice)",
+      "absolute": 78379,
+      "value": 25.24372844126523
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2020,
+      "tilbyder": "Andre",
+      "absolute": 6026,
+      "value": 1.9408094972768761
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2020,
+      "tilbyder": "Unifon",
+      "absolute": 1059,
+      "value": 0.34107488510059936
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2021,
+      "tilbyder": "Telenor",
+      "absolute": 109660,
+      "value": 38.23143861214927
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2021,
+      "tilbyder": "Telia",
+      "absolute": 99343,
+      "value": 34.63455960283371
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2021,
+      "tilbyder": "Lyse Tele (Ice)",
+      "absolute": 66531,
+      "value": 23.195110726836614
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2021,
+      "tilbyder": "Andre",
+      "absolute": 9256,
+      "value": 3.2269760696156635
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2021,
+      "tilbyder": "Unifon",
+      "absolute": 2042,
+      "value": 0.7119149885647348
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2022,
+      "tilbyder": "Telia",
+      "absolute": 99011,
+      "value": 36.90515682949103
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2022,
+      "tilbyder": "Telenor",
+      "absolute": 95868,
+      "value": 35.73364146336918
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2022,
+      "tilbyder": "Lyse Tele (Ice)",
+      "absolute": 57453,
+      "value": 21.414913245242932
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2022,
+      "tilbyder": "Unifon",
+      "absolute": 8671,
+      "value": 3.2320107348528615
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2022,
+      "tilbyder": "Andre",
+      "absolute": 7282,
+      "value": 2.7142777270440015
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2023,
+      "tilbyder": "Telia",
+      "absolute": 93918,
+      "value": 37.68356685444653
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2023,
+      "tilbyder": "Telenor",
+      "absolute": 88423,
+      "value": 35.4787584059576
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2023,
+      "tilbyder": "Lyse Tele (Ice)",
+      "absolute": 50907,
+      "value": 20.425875102315953
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2023,
+      "tilbyder": "Unifon",
+      "absolute": 8117,
+      "value": 3.256857174956265
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2023,
+      "tilbyder": "Andre",
+      "absolute": 7863,
+      "value": 3.1549424623236555
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2024,
+      "tilbyder": "Telia",
+      "absolute": 89446,
+      "value": 38.69708926037448
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2024,
+      "tilbyder": "Telenor",
+      "absolute": 79328,
+      "value": 34.31973142283598
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2024,
+      "tilbyder": "Lyse Tele (Ice)",
+      "absolute": 45616,
+      "value": 19.734883881909113
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2024,
+      "tilbyder": "Unifon",
+      "absolute": 9810,
+      "value": 4.244107569307444
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2024,
+      "tilbyder": "Andre",
+      "absolute": 6944,
+      "value": 3.0041878655729763
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2025,
+      "tilbyder": "Telia",
+      "absolute": 90970,
+      "value": 42.0190580008037
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2025,
+      "tilbyder": "Telenor",
+      "absolute": 68505,
+      "value": 31.642470796362073
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2025,
+      "tilbyder": "Lyse Tele (Ice)",
+      "absolute": 40597,
+      "value": 18.751760994378674
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2025,
+      "tilbyder": "Unifon",
+      "absolute": 10230,
+      "value": 4.725238686910211
+    },
+    {
+      "metric": "Abonnement",
+      "period": "Helår",
+      "ar": 2025,
+      "tilbyder": "Andre",
+      "absolute": 6195,
+      "value": 2.861471521545333
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2020,
+      "tilbyder": "Telenor",
+      "absolute": 466907,
+      "value": 38.539165489763626
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2020,
+      "tilbyder": "Telia",
+      "absolute": 405533,
+      "value": 33.47326854932634
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2020,
+      "tilbyder": "Lyse Tele (Ice)",
+      "absolute": 318732,
+      "value": 26.308590993245637
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2020,
+      "tilbyder": "Andre",
+      "absolute": 16309,
+      "value": 1.3461679734348704
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2020,
+      "tilbyder": "Unifon",
+      "absolute": 4032,
+      "value": 0.33280699422952953
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2021,
+      "tilbyder": "Telenor",
+      "absolute": 401703,
+      "value": 35.584459531284324
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2021,
+      "tilbyder": "Telia",
+      "absolute": 396857,
+      "value": 35.1551814554706
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2021,
+      "tilbyder": "Lyse Tele (Ice)",
+      "absolute": 303333,
+      "value": 26.87045121147482
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2021,
+      "tilbyder": "Andre",
+      "absolute": 18773,
+      "value": 1.6629874777654154
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2021,
+      "tilbyder": "Unifon",
+      "absolute": 8206,
+      "value": 0.7269203240048473
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2022,
+      "tilbyder": "Telia",
+      "absolute": 377903,
+      "value": 37.212977861457354
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2022,
+      "tilbyder": "Telenor",
+      "absolute": 336176,
+      "value": 33.10402416904149
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2022,
+      "tilbyder": "Lyse Tele (Ice)",
+      "absolute": 255607,
+      "value": 25.170209371805804
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2022,
+      "tilbyder": "Andre",
+      "absolute": 23843,
+      "value": 2.347875066222622
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2022,
+      "tilbyder": "Unifon",
+      "absolute": 21985,
+      "value": 2.164913531472732
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2023,
+      "tilbyder": "Telia",
+      "absolute": 357271,
+      "value": 38.578890137882404
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2023,
+      "tilbyder": "Telenor",
+      "absolute": 296784,
+      "value": 32.0473739281422
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2023,
+      "tilbyder": "Lyse Tele (Ice)",
+      "absolute": 219540,
+      "value": 23.706400857810188
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2023,
+      "tilbyder": "Unifon",
+      "absolute": 28928,
+      "value": 3.1237075886614423
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2023,
+      "tilbyder": "Andre",
+      "absolute": 23556,
+      "value": 2.5436274875037657
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2024,
+      "tilbyder": "Telia",
+      "absolute": 327930,
+      "value": 39.096021488326514
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2024,
+      "tilbyder": "Telenor",
+      "absolute": 264286,
+      "value": 31.508343655852958
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2024,
+      "tilbyder": "Lyse Tele (Ice)",
+      "absolute": 194190,
+      "value": 23.151454312865933
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2024,
+      "tilbyder": "Unifon",
+      "absolute": 29378,
+      "value": 3.5024636943373775
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2024,
+      "tilbyder": "Andre",
+      "absolute": 22997,
+      "value": 2.7417168486172194
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2025,
+      "tilbyder": "Telia",
+      "absolute": 314491,
+      "value": 40.707541918965724
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2025,
+      "tilbyder": "Telenor",
+      "absolute": 226420,
+      "value": 29.307680160297814
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2025,
+      "tilbyder": "Lyse Tele (Ice)",
+      "absolute": 181268,
+      "value": 23.46323013557488
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2025,
+      "tilbyder": "Unifon",
+      "absolute": 26881,
+      "value": 3.479461842544676
+    },
+    {
+      "metric": "Omsetning",
+      "period": "Helår",
+      "ar": 2025,
+      "tilbyder": "Andre",
+      "absolute": 23502,
+      "value": 3.0420859426169033
     }
   ]
 }

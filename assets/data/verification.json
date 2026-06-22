@@ -1323,16 +1323,16 @@
     },
     {
       "label": "Wholesale table 2023: Telenor",
-      "current": 47.6108,
+      "current": 48.0399,
       "powerpoint": 47.6,
-      "delta": 0.0108,
+      "delta": 0.4399,
       "tolerance": 1.0
     },
     {
       "label": "Wholesale table 2024: Telenor",
-      "current": 46.5983,
+      "current": 46.9762,
       "powerpoint": 46.6,
-      "delta": -0.0017,
+      "delta": 0.3762,
       "tolerance": 1.0
     },
     {
@@ -1358,16 +1358,16 @@
     },
     {
       "label": "Wholesale table 2023: Telia",
-      "current": 37.8153,
+      "current": 37.3862,
       "powerpoint": 37.8,
-      "delta": 0.0153,
+      "delta": -0.4138,
       "tolerance": 1.0
     },
     {
       "label": "Wholesale table 2024: Telia",
-      "current": 37.3551,
+      "current": 36.9772,
       "powerpoint": 37.4,
-      "delta": -0.0449,
+      "delta": -0.4228,
       "tolerance": 1.0
     },
     {
@@ -1470,9 +1470,9 @@
     },
     {
       "label": "Grossist HHI table 2023",
-      "current": 0.3909,
+      "current": 0.3918,
       "powerpoint": 0.3909,
-      "delta": 0.0,
+      "delta": 0.0009,
       "tolerance": 0.01
     },
     {
@@ -1484,9 +1484,9 @@
     },
     {
       "label": "Grossist HHI table 2024",
-      "current": 0.3824,
+      "current": 0.3832,
       "powerpoint": 0.3824,
-      "delta": 0.0,
+      "delta": 0.0008,
       "tolerance": 0.01
     }
   ]
